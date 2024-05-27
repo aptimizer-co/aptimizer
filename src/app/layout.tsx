@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "@/components";
 
 export const metadata: Metadata = {
   title: "앱티마이저",
@@ -15,8 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-KR">
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
