@@ -65,3 +65,54 @@
 .buttonLogin:active {
   background-color: #1f4298;
 }
+
+/* 반응형 컨테이너 */
+
+/* 컨테이너 유틸리티 클래스 */
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+/* 반응형 */
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    /* max-width: 768px; */
+    width: 100%;
+    padding: 0 1.6rem;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    /* max-width: 640px; */
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .buttonLogin {
+    display: none;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  /* .container {
+    max-width: 475px;
+  } */
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    /* width: 100%; */
+  }
+}

@@ -3,7 +3,7 @@ import s from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={`container ${s.header}`}>
+    <header className={`${s.container} ${s.header}`}>
       {/* 1. 로고 */}
       <h1>
         <Image src="/svg/logo.svg" alt="앱티마이저 로고" width={160} height={40} />
