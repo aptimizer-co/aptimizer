@@ -6,7 +6,7 @@ const Header = () => {
     <header className={`container ${s.header}`}>
       {/* 1. 로고 */}
       <h1>
-        <Image src="/svg/logo.svg" alt="앱티마이저 로고" width={200} height={50} />
+        <Image src="/svg/logo.svg" alt="앱티마이저 로고" width={160} height={40} />
       </h1>
 
       {/* 2. 네비게이션 */}

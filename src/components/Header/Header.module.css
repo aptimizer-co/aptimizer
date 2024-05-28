@@ -1,9 +1,10 @@
 /* 헤더 */
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8rem;
+  height: 6rem;
   font-weight: 500;
   margin-bottom: 7.2rem;
 }
@@ -22,8 +23,8 @@
   width: 10rem;
   height: 4rem;
   border-radius: 0.6rem;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 500;
   background-color: white;
   transition: background-color 200ms ease-in-out;
@@ -49,8 +50,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 500;
   color: white;
   transition: background-color 200ms ease-in-out;

@@ -41,6 +41,6 @@ button {
 /* 컨테이너 유틸리티 클래스 */
 
 .container {
-  width: 114rem;
+  max-width: 1140px;
   border: 1px solid black;
 }

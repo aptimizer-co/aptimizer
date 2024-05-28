@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="ko-KR">
       <body>
         <Header />
-        {children}
+        {/* {children} */}
       </body>
     </html>
   );
