@@ -65,6 +65,8 @@
   background-color: #1f4298;
 }
 
+/* 모바일 */
+
 .mobileButton {
   display: none;
   background-color: transparent;
@@ -105,9 +107,7 @@
   transition: background-color 200ms ease-in-out;
 }
 
-/* 반응형 컨테이너 */
-
-/* 컨테이너 유틸리티 클래스 */
+/* 반응형 */
 
 .container {
   max-width: 1140px;
@@ -120,7 +120,6 @@
 /* lg */
 @media (max-width: 1024px) {
   .container {
-    /* max-width: 768px; */
     width: 100%;
     padding: 0 1.6rem;
   }
@@ -128,9 +127,6 @@
 
 /* md */
 @media (max-width: 768px) {
-  .container {
-    /* max-width: 640px; */
-  }
   .header {
     margin-bottom: 0;
   }
@@ -149,19 +145,5 @@
 
   .mobileNav {
     display: block;
-  }
-}
-
-/* sm */
-@media (max-width: 640px) {
-  /* .container {
-    max-width: 475px;
-  } */
-}
-
-/* xs */
-@media (max-width: 475px) {
-  .container {
-    /* width: 100%; */
   }
 }
