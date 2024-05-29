@@ -23,4 +23,14 @@
   font-size: 5rem;
   font-weight: bold;
   line-height: 7.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: title 2s forwards;
+}
+
+@keyframes title {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

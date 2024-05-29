@@ -1,6 +1,6 @@
 import s from "./page.module.css";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={`container ${s.home}`}>
       <section className={s.hero}>
@@ -12,4 +12,6 @@ export default function Home() {
       </section>
     </main>
   );
-}
+};
+
+export default Home;
