@@ -1,5 +1,15 @@
 import s from "./page.module.css";
 
 export default function Home() {
-  return <main className={`container ${s.home}`}>메인 페이지</main>;
+  return (
+    <main className={`container ${s.home}`}>
+      <section className={s.hero}>
+        <p className={s.title}>
+          누구나 적성을 찾아 자신의 상상과 열정을
+          <br />
+          실현시키는 세상을 만드는 기업
+        </p>
+      </section>
+    </main>
+  );
 }

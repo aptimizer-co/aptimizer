@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components";
+import { Header } from "@/src/components/index";
 
 export const metadata: Metadata = {
   title: "앱티마이저",
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="ko-KR">
       <body>
         <Header />
-        {/* {children} */}
+        {children}
       </body>
     </html>
   );
