@@ -1,10 +1,10 @@
 /* 헤더 */
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8rem;
-  font-weight: 500;
+  height: 6rem;
   margin-bottom: 7.2rem;
 }
 
@@ -22,8 +22,8 @@
   width: 10rem;
   height: 4rem;
   border-radius: 0.6rem;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 500;
   background-color: white;
   transition: background-color 200ms ease-in-out;
@@ -49,8 +49,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 500;
   color: white;
   transition: background-color 200ms ease-in-out;
@@ -63,4 +63,87 @@
 
 .buttonLogin:active {
   background-color: #1f4298;
+}
+
+/* 모바일 */
+
+.mobileButton {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.mobileNav {
+  width: 100%;
+  display: none;
+}
+
+.mobileNav ul {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  padding: 0.8rem 0;
+}
+
+.mobileNav li {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: #fff;
+  transition: background-color 200ms ease-in-out;
+}
+
+.mobileNav li:hover {
+  background-color: #e8e8ee;
+  transition: background-color 200ms ease-in-out;
+}
+
+.mobileNav li:active {
+  background-color: #cdced6;
+  transition: background-color 200ms ease-in-out;
+}
+
+/* 반응형 */
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 반응형 */
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 0 1.6rem;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 0;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .buttonLogin {
+    display: none;
+  }
+
+  .mobileButton {
+    display: block;
+  }
+
+  .mobileNav {
+    display: block;
+  }
 }
