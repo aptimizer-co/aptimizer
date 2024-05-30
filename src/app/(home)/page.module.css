@@ -1,12 +1,20 @@
-.home {
+/* .home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.heroSection {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero {
-  background-image: url("../../../public/svg/hero.svg");
+/* 히어로 배너 - PC */
+.heroPC {
+  background-image: url("../../../public/svg/hero-pc.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +24,34 @@
   align-items: center;
   justify-content: center;
 }
+
+/* 히어로 배너 - 태블릿 */
+.heroTablet {
+  background-image: url("../../../public/svg/hero-tablet.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 히어로 배너 - 모바일 */
+.heroMobile {
+  background-image: url("../../../public/svg/hero-mobile.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 히어로 콘텐츠 - PC, 태블릿 */
 
 .heroContent {
   cursor: default;
@@ -28,8 +64,11 @@
   animation: heroContent 2s forwards;
 }
 
+/* 히어로 콘텐츠 - 모바일 */
+
 .heroContentMobile {
   display: none;
+  cursor: default;
   text-align: center;
   font-size: 2.4rem;
   line-height: 3.6rem;
@@ -54,10 +93,6 @@
 }
 
 @media (max-width: 1024px) {
-  .hero {
-    height: 80vh;
-  }
-
   .heroContent {
     font-size: 4rem;
     line-height: 6rem;
@@ -65,8 +100,12 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    height: 60vh;
+  .heroPC {
+    display: none;
+  }
+
+  .heroTablet {
+    display: flex;
   }
 
   .heroContent {
@@ -76,8 +115,16 @@
 }
 
 @media (max-width: 425px) {
+  .heroTablet {
+    display: none;
+  }
+
   .heroContent {
     display: none;
+  }
+
+  .heroMobile {
+    display: flex;
   }
 
   .heroContentMobile {
