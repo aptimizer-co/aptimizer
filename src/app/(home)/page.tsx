@@ -4,8 +4,16 @@ const Home = () => {
   return (
     <main className={`container ${s.home}`}>
       <section className={s.hero}>
-        <p className={s.title}>
+        <p className={s.heroContent}>
           누구나 적성을 찾아 자신의 상상과 열정을
+          <br />
+          실현시키는 세상을 만드는 기업
+        </p>
+        {/* 모바일용 컨텐트 */}
+        <p className={s.heroContentMobile}>
+          누구나 적성을 찾아
+          <br />
+          자신의 상상과 열정을
           <br />
           실현시키는 세상을 만드는 기업
         </p>
