@@ -1,9 +1,8 @@
-/* .home {
-  width: 100%;
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+}
 
 .heroSection {
   width: 100%;
