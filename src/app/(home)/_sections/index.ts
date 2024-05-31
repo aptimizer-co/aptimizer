@@ -1,2 +1,2 @@
 export { default as HeroSection } from "./HeroSection/HeroSection";
-export { default as Services } from "./Services/Services";
+export { default as ServiceSection } from "./ServiceSection/ServiceSection";
