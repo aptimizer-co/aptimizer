@@ -188,7 +188,7 @@
   }
 
   .productImgContainer {
-    width: 40rem;
+    width: 75%;
     height: 25rem;
   }
 
@@ -206,7 +206,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .navMobile {
     display: flex;
     flex-direction: column;
@@ -234,7 +234,7 @@
   }
 
   .productImgContainer {
-    width: 30rem;
+    width: 100%;
     height: 20rem;
   }
 
@@ -252,8 +252,16 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
+  .product {
+    padding: 2rem;
+  }
+
   .navMobile div li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
   }
 
   .productImgContainer {
