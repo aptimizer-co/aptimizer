@@ -1,0 +1,46 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.label {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.star {
+  color: red;
+  position: absolute;
+  font-size: 1.4rem;
+  top: -0.6rem;
+}
+
+.input {
+  padding: 1.6rem 0.8rem;
+  border: 1px solid #cdced6;
+}
+
+.input::placeholder {
+  font-size: 1.6rem;
+  color: #cdced6;
+}
+
+.textarea {
+  padding: 1.6rem 0.8rem;
+  border: 1px solid #cdced6;
+}
+
+.textarea::placeholder {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: #cdced6;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
