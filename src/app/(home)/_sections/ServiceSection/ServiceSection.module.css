@@ -79,22 +79,23 @@
   color: #ffffff;
 }
 
+/* 모바일 네비게이션 */
+.navMobile {
+  display: none;
+}
+
 /* 서비스 */
 
 .product {
   border: 0.2rem solid #d2d9ea;
   border-radius: 2rem;
-  width: 82.8rem;
+  max-width: 82.8rem;
   padding: 4rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .productImgContainer {
-  width: 500px;
-  height: 330px;
+  width: 50rem;
+  height: 30rem;
   margin: 0 auto;
   position: relative;
   margin-bottom: 4rem;
@@ -145,4 +146,127 @@
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 1.6rem;
+  }
+
+  .serviceContainer {
+    flex-direction: column;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .navMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .navMobile div {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: space-between;
+  }
+
+  .navMobile div li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cdced6;
+    background-color: #eff6ff;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: 5rem;
+    font-weight: 600;
+    padding: 0 0.8rem;
+  }
+
+  .productImgContainer {
+    width: 75%;
+    height: 25rem;
+  }
+
+  .productTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .productDesc {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .navMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navMobile div {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .navMobile div li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cdced6;
+    background-color: #eff6ff;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+  }
+
+  .productImgContainer {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .productTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .productDesc {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .product {
+    padding: 2rem;
+  }
+
+  .navMobile div li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
+  }
+
+  .productImgContainer {
+    width: 20rem;
+    height: 15rem;
+    margin-bottom: 2.4rem;
+  }
 }
