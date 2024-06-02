@@ -20,18 +20,45 @@
 }
 
 .input {
-  padding: 1.6rem 0.8rem;
+  padding: 1.6rem 1.6rem;
   border: 1px solid #cdced6;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  color: #000000;
+  border-radius: 0.6rem;
 }
 
 .input::placeholder {
   font-size: 1.6rem;
+  font-weight: 400;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   color: #cdced6;
 }
 
+.input:active {
+  border-color: #000000;
+}
+
 .textarea {
-  padding: 1.6rem 0.8rem;
+  padding: 1.6rem 1.6rem;
   border: 1px solid #cdced6;
+  font-weight: 400;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  border-radius: 0.6rem;
+  height: 30rem;
+  resize: none;
 }
 
 .textarea::placeholder {
@@ -39,8 +66,12 @@
   line-height: 2.4rem;
   font-weight: 400;
   color: #cdced6;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+.textarea:active {
+  border: 1px solid black;
 }
