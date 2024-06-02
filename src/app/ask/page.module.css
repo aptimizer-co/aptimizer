@@ -19,6 +19,12 @@
   max-width: 1140px;
 }
 
+.info {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 4rem;
+}
+
 .askSection {
   margin-bottom: 6rem;
 }

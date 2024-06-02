@@ -10,6 +10,10 @@ const AskPage = () => {
         </div>
       </div>
       <section className={`${s.container} ${s.askSection}`}>
+        <div className={s.info}>
+          <p>궁금한 사항을 남겨주시면 빠른 시일 내에 답변드리겠습니다.</p>
+          <p>09:00 - 18:00 (평일)</p>
+        </div>
         <Input
           type="input"
           label="성함"
