@@ -1,5 +1,5 @@
-import { Input } from "@/src/components";
-import s from "./page.module.css";
+import { Input } from '@/src/components';
+import s from './page.module.css';
 
 const AskPage = () => {
   return (
@@ -34,6 +34,9 @@ const AskPage = () => {
           name="question"
           placeholder="문의사항을 입력하세요."
         />
+        <div className={s.buttonContainer}>
+          <button className={s.button}>문의하기</button>
+        </div>
       </section>
     </main>
   );

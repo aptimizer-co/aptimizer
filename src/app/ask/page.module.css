@@ -3,7 +3,7 @@
 } */
 
 .banner {
-  background-image: url("../../../public/png/banner.png");
+  background-image: url('../../../public/png/banner.png');
   background-size: cover;
   background-position: center;
   height: 30rem;
@@ -22,9 +22,45 @@
   max-width: 1140px;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 8rem;
+  height: 4rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: #d2d9ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  color: white;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #798ec1;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:active {
+  background-color: #1f4298;
+}
+
 /* 반응형 디자인 */
 .container {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 1.6rem;
+  }
 }
