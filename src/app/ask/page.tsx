@@ -1,5 +1,5 @@
-import { Input } from '@/src/components';
-import s from './page.module.css';
+import { Input } from "@/src/components";
+import s from "./page.module.css";
 
 const AskPage = () => {
   return (
@@ -9,7 +9,7 @@ const AskPage = () => {
           <h2 className={s.title}>문의하기</h2>
         </div>
       </div>
-      <section className={s.container}>
+      <section className={`${s.container} ${s.askSection}`}>
         <Input
           type="input"
           label="성함"

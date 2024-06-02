@@ -1,12 +1,9 @@
-/* .ask {
-  width: 100%;
-} */
-
 .banner {
-  background-image: url('../../../public/png/banner.png');
+  background-image: url("../../../public/png/banner.png");
   background-size: cover;
   background-position: center;
   height: 30rem;
+  margin-bottom: 6rem;
 }
 
 .bannerInner {
@@ -20,6 +17,10 @@
   font-weight: 700;
   color: white;
   max-width: 1140px;
+}
+
+.askSection {
+  margin-bottom: 6rem;
 }
 
 .buttonContainer {
