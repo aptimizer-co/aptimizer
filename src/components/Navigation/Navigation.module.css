@@ -1,0 +1,39 @@
+.ul {
+  display: flex;
+}
+
+.li {
+  font-size: 1.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  color: #798ec1;
+  padding: 0 1.6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.li.active {
+  color: #1f4298;
+}
+
+.li.active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #1f4298;
+  position: absolute;
+  bottom: 0;
+}
+
+.li:hover {
+  color: #1f4298;
+}
+
+/* 반응형 */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
