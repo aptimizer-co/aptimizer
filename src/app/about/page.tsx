@@ -1,5 +1,11 @@
 import { Navigation } from "@/src/components";
-import { BannerSection, HistorySection, IntroSection, LocationSection, PerformanceSection } from "./_sections";
+import {
+  BannerSection,
+  HistorySection,
+  IntroSection,
+  LocationSection,
+  PerformanceSection,
+} from "./_sections";
 import s from "./page.module.css";
 
 const AboutPage = () => {
@@ -8,15 +14,15 @@ const AboutPage = () => {
       {/* 1. 배너 섹션 */}
       <BannerSection />
       {/* 2. 네비게이션 */}
-      <Navigation />
+      {/* <Navigation /> */}
       {/* 3. 인트로 섹션 */}
-      <IntroSection />
+      {/* <IntroSection /> */}
       {/* 4. 히스토리 섹션 */}
-      <HistorySection />
+      {/* <HistorySection /> */}
       {/* 5. 퍼포먼스 섹션 */}
-      <PerformanceSection />
+      {/* <PerformanceSection /> */}
       {/* 6. 위치 섹션 */}
-      <LocationSection />
+      {/* <LocationSection /> */}
     </main>
   );
 };
