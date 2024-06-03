@@ -7,8 +7,7 @@
   position: relative;
   width: 50rem;
   height: 45rem;
-  display: flex;
-  align-items: center;
+  transform: translateY(10%);
 }
 
 .innerContainer {
@@ -23,15 +22,6 @@
   flex-wrap: wrap;
 }
 
-.wave {
-  position: absolute;
-  width: 100%;
-  height: 50vh;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
 /* 반응형 */
 .container {
   max-width: 1140px;
@@ -41,6 +31,51 @@
 
 @media (max-width: 1140px) {
   .container {
-    padding: 0 1.6rem;
+    padding: 8rem 1.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image {
+    width: 40rem;
+    height: 35rem;
+  }
+
+  .innerContainer {
+    justify-content: space-around;
+  }
+
+  .PerformanceCardContainer {
+    width: 41.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 30rem;
+    height: 25rem;
+  }
+
+  .PerformanceCardContainer {
+    width: 31.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 25rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+  }
+
+  .PerformanceCardContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }

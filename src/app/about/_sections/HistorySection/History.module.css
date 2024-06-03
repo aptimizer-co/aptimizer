@@ -1,6 +1,10 @@
+.section {
+  padding: 8rem 0;
+  background-color: #eff6ff;
+}
+
 .history {
   position: relative;
-  padding: 8rem 0;
 }
 
 .innerContainer {
@@ -9,7 +13,7 @@
 
 .historyTitle {
   font-size: 2.1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 3.15rem;
   margin-bottom: 0.8rem;
 }
@@ -60,5 +64,18 @@
     margin: 0 auto;
     transform: translateY(0);
     margin-bottom: 6rem;
+  }
+
+  .historyTitle {
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .timeLine {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
   }
 }

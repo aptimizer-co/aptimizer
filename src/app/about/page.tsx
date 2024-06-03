@@ -20,7 +20,7 @@ const AboutPage = () => {
       {/* 4. 히스토리 섹션 */}
       <HistorySection />
       {/* 5. 퍼포먼스 섹션 */}
-      {/* <PerformanceSection /> */}
+      <PerformanceSection />
       {/* 6. 위치 섹션 */}
       <LocationSection />
     </main>
