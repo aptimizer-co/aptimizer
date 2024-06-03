@@ -1,5 +1,5 @@
 import { Navigation } from "@/src/components";
-import { BannerSection, IntroSection } from "./_sections";
+import { BannerSection, IntroSection, LocationSection } from "./_sections";
 import s from "./page.module.css";
 
 const AboutPage = () => {
@@ -11,6 +11,8 @@ const AboutPage = () => {
       <Navigation />
       {/* 3. 인트로 섹션 */}
       <IntroSection />
+      {/* 6. 위치 섹션 */}
+      <LocationSection />
     </main>
   );
 };
