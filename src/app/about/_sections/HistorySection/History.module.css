@@ -55,6 +55,8 @@
 @media (max-width: 425px) {
   .image {
     position: static;
+    width: 25rem;
+    height: 20rem;
     margin: 0 auto;
     transform: translateY(0);
     margin-bottom: 6rem;
