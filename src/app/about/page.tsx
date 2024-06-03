@@ -16,7 +16,7 @@ const AboutPage = () => {
       {/* 2. 네비게이션 */}
       {/* <Navigation /> */}
       {/* 3. 인트로 섹션 */}
-      {/* <IntroSection /> */}
+      <IntroSection />
       {/* 4. 히스토리 섹션 */}
       {/* <HistorySection /> */}
       {/* 5. 퍼포먼스 섹션 */}
