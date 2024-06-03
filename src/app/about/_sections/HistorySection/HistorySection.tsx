@@ -1,12 +1,13 @@
 import Image from "next/image";
+import { SectionTitle, SectionSubtitle } from "@/src/components";
 import HistoryImage from "@/public/png/about-history.png";
 import s from "./History.module.css";
 
 const HistorySection = () => {
   return (
     <section className={`${s.container} ${s.history}`}>
-      <h2 className={s.title}>HISTORY</h2>
-      <p className={s.subtitle}>앱티마이저가 걸어온 길</p>
+      <SectionTitle>HISTORY</SectionTitle>
+      <SectionSubtitle>앱티마이저가 걸어온 길</SectionSubtitle>
 
       <div className={s.innerContainer}>
         <p className={s.historyTitle}>진단도구 개발</p>
