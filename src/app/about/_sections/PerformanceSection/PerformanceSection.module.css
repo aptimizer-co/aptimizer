@@ -15,7 +15,7 @@
   justify-content: space-between;
 }
 
-.PerformanceCardContainer {
+.performanceCardContainer {
   display: flex;
   gap: 1.6rem;
   width: 51.6rem;
@@ -45,7 +45,7 @@
     justify-content: space-around;
   }
 
-  .PerformanceCardContainer {
+  .performanceCardContainer {
     width: 41.6rem;
   }
 }
@@ -56,7 +56,7 @@
     height: 25rem;
   }
 
-  .PerformanceCardContainer {
+  .performanceCardContainer {
     width: 31.6rem;
   }
 }
@@ -73,7 +73,7 @@
     margin-bottom: 8rem;
   }
 
-  .PerformanceCardContainer {
+  .performanceCardContainer {
     width: 100%;
     flex-direction: column;
     align-items: center;

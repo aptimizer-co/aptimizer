@@ -15,7 +15,7 @@ const PerformanceSection = () => {
           <Image src={PerformanceImage} alt="데이터 이미지" fill />
         </div>
 
-        <div className={s.PerformanceCardContainer}>
+        <div className={s.performanceCardContainer}>
           <PerformanceCard type="students" />
           <PerformanceCard type="handshake" />
           <PerformanceCard type="data" />
