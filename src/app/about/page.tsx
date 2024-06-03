@@ -18,7 +18,7 @@ const AboutPage = () => {
       {/* 3. 인트로 섹션 */}
       <IntroSection />
       {/* 4. 히스토리 섹션 */}
-      {/* <HistorySection /> */}
+      <HistorySection />
       {/* 5. 퍼포먼스 섹션 */}
       {/* <PerformanceSection /> */}
       {/* 6. 위치 섹션 */}

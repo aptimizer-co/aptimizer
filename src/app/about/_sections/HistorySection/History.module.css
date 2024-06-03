@@ -22,9 +22,9 @@
 
 .image {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   width: 50rem;
   height: 40rem;
 }
@@ -33,4 +33,30 @@
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .image {
+    right: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 35rem;
+    height: 28rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .image {
+    position: static;
+    margin: 0 auto;
+    transform: translateY(0);
+    margin-bottom: 6rem;
+  }
 }
