@@ -4,7 +4,7 @@ import { HeroSection, ServiceSection } from "./_sections";
 const Home = () => {
   return (
     <main className={`container ${s.home}`}>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <ServiceSection />
     </main>
   );

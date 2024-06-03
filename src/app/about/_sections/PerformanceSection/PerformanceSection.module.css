@@ -1,0 +1,46 @@
+.performanceSection {
+  padding: 8rem 0;
+  position: relative;
+}
+
+.image {
+  position: relative;
+  width: 50rem;
+  height: 45rem;
+  display: flex;
+  align-items: center;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.PerformanceCardContainer {
+  display: flex;
+  gap: 1.6rem;
+  width: 51.6rem;
+  flex-wrap: wrap;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* 반응형 */
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 1.6rem;
+  }
+}

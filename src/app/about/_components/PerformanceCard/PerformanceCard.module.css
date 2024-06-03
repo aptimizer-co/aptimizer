@@ -1,0 +1,35 @@
+.performanceCard {
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.icon {
+  margin-bottom: 3.2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.numbers {
+  font-size: 3.6rem;
+  line-height: 5.4rem;
+  font-weight: 700;
+  color: #1f4298;
+}
+
+.counter {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  font-weight: 600;
+  color: black;
+}
