@@ -22,7 +22,7 @@ const AboutPage = () => {
       {/* 5. 퍼포먼스 섹션 */}
       {/* <PerformanceSection /> */}
       {/* 6. 위치 섹션 */}
-      {/* <LocationSection /> */}
+      <LocationSection />
     </main>
   );
 };
