@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
   border-radius: 1rem;
-  background-color: white;
+  background-color: #eff6ff;
 }
 
 .icon {
@@ -32,4 +32,106 @@
   line-height: 2.7rem;
   font-weight: 600;
   color: black;
+}
+
+@media (max-width: 1024px) {
+  .performanceCard {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .numbers {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #1f4298;
+  }
+
+  .counter {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .performanceCard {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .numbers {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #1f4298;
+  }
+
+  .counter {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    color: black;
+  }
+}
+
+@media (max-width: 425px) {
+  .performanceCard {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  .numbers {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #1f4298;
+  }
+
+  .counter {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    color: black;
+  }
 }
