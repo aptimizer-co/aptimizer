@@ -1,0 +1,81 @@
+.performanceSection {
+  padding: 8rem 0;
+  position: relative;
+}
+
+.image {
+  position: relative;
+  width: 50rem;
+  height: 45rem;
+  transform: translateY(10%);
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.performanceCardContainer {
+  display: flex;
+  gap: 1.6rem;
+  width: 51.6rem;
+  flex-wrap: wrap;
+}
+
+/* 반응형 */
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 8rem 1.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image {
+    width: 40rem;
+    height: 35rem;
+  }
+
+  .innerContainer {
+    justify-content: space-around;
+  }
+
+  .performanceCardContainer {
+    width: 41.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 30rem;
+    height: 25rem;
+  }
+
+  .performanceCardContainer {
+    width: 31.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 25rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+  }
+
+  .performanceCardContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}

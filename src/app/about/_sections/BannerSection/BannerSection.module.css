@@ -1,0 +1,40 @@
+.banner {
+  height: 30rem;
+  background-color: #1f4298;
+}
+
+.bannerInnerContainer {
+  display: flex;
+  align-items: center;
+  height: 30rem;
+}
+
+.bannerTitle {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 9rem;
+  color: white;
+  cursor: default;
+}
+
+/* 반응형 */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .bannerTitle {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .bannerTitle {
+    font-size: 4rem;
+  }
+}

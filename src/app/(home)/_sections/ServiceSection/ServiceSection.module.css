@@ -1,0 +1,285 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+/* 제목 */
+.title {
+  font-weight: 900;
+  font-size: 3.6rem;
+  line-height: 5.4rem;
+}
+
+.desc {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+.serviceContainer {
+  display: flex;
+  gap: 3.2rem;
+}
+
+/* 네비게이션 바 */
+.sidenav {
+  width: 28rem;
+  height: 60rem;
+  border: 0.2rem solid #d2d9ea;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.b2c {
+  margin-bottom: 3.2rem;
+}
+
+.b2c h3 {
+  cursor: default;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.7rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.b2b h3 {
+  cursor: default;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.7rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.ul li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-left: 1.6rem;
+  height: 5rem;
+  color: #e8e8ee;
+  border-radius: 1rem;
+}
+
+.active {
+  background-color: #1f4298;
+  color: #ffffff;
+}
+
+/* 모바일 네비게이션 */
+.navMobile {
+  display: none;
+}
+
+/* 서비스 */
+
+.product {
+  border: 0.2rem solid #d2d9ea;
+  border-radius: 2rem;
+  max-width: 82.8rem;
+  padding: 4rem;
+}
+
+.productImgContainer {
+  width: 50rem;
+  height: 30rem;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.productTitle {
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 3.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.productDesc {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.button {
+  margin: 0 auto;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: #d2d9ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  color: white;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #798ec1;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:active {
+  background-color: #1f4298;
+}
+
+/* 반응형 */
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 6rem 1.6rem;
+  }
+
+  .serviceContainer {
+    flex-direction: column;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .navMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .navMobile div {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: space-between;
+  }
+
+  .navMobile div li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cdced6;
+    background-color: #eff6ff;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: 5rem;
+    font-weight: 600;
+    padding: 0 0.8rem;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .navMobile div li:hover {
+    background-color: #798ec1;
+    color: white;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .navMobile div li:active {
+    background-color: #1f4298;
+    transition: background-color 200ms ease-in-out;
+    color: white;
+  }
+
+  .productImgContainer {
+    width: 75%;
+    height: 25rem;
+  }
+
+  .productTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .productDesc {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .navMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navMobile div {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .navMobile div li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cdced6;
+    background-color: #eff6ff;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+  }
+
+  .productImgContainer {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .productTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .productDesc {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .product {
+    padding: 2rem;
+  }
+
+  .navMobile div li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
+  }
+
+  .productImgContainer {
+    width: 20rem;
+    height: 15rem;
+    margin-bottom: 2.4rem;
+  }
+}

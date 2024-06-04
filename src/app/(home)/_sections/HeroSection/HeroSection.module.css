@@ -1,0 +1,89 @@
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage {
+  background-image: url("../../../../../public/svg/hero-pc.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  cursor: default;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 7.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroContent 2s forwards;
+}
+
+.heroContentMobile {
+  display: none;
+  cursor: default;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroContentMobile 2s forwards;
+}
+
+/* 애니메이션 */
+@keyframes heroContent {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroContentMobile {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .heroContent {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    background-image: url("../../../../../public/svg/hero-tablet.svg");
+  }
+
+  .heroContent {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .heroImage {
+    background-image: url("../../../../../public/svg/hero-mobile.svg");
+  }
+
+  .heroContent {
+    display: none;
+  }
+
+  .heroContentMobile {
+    display: block;
+  }
+}

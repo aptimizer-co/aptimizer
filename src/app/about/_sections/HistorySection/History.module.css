@@ -1,0 +1,81 @@
+.section {
+  padding: 8rem 0;
+  background-color: #eff6ff;
+}
+
+.history {
+  position: relative;
+}
+
+.innerContainer {
+  margin-bottom: 3.2rem;
+}
+
+.historyTitle {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 3.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.timeLine {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  font-weight: 400;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50rem;
+  height: 40rem;
+}
+
+/* 반응형 */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 1.6rem;
+  }
+
+  .image {
+    right: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 35rem;
+    height: 28rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .image {
+    position: static;
+    width: 25rem;
+    height: 20rem;
+    margin: 0 auto;
+    transform: translateY(0);
+    margin-bottom: 6rem;
+  }
+
+  .historyTitle {
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .timeLine {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+  }
+}
