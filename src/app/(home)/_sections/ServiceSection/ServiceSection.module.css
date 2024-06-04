@@ -185,6 +185,19 @@
     height: 5rem;
     font-weight: 600;
     padding: 0 0.8rem;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .navMobile div li:hover {
+    background-color: #798ec1;
+    color: white;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .navMobile div li:active {
+    background-color: #1f4298;
+    transition: background-color 200ms ease-in-out;
+    color: white;
   }
 
   .productImgContainer {
