@@ -1,6 +1,5 @@
 import Image from "next/image";
 import PerformanceImage from "@/public/png/about-performance.png";
-import Wave from "@/public/svg/wave.svg";
 import { SectionTitle, SectionSubtitle } from "@/src/components";
 import { PerformanceCard } from "@/src/app/about/_components";
 import s from "./PerformanceSection.module.css";
@@ -16,17 +15,13 @@ const PerformanceSection = () => {
           <Image src={PerformanceImage} alt="데이터 이미지" fill />
         </div>
 
-        <div className={s.PerformanceCardContainer}>
+        <div className={s.performanceCardContainer}>
           <PerformanceCard type="students" />
           <PerformanceCard type="handshake" />
           <PerformanceCard type="data" />
           <PerformanceCard type="experiment" />
         </div>
       </div>
-      {/* 
-      <div className={s.wave}>
-        <Image src={Wave} alt="데이터 이미지" fill />
-      </div> */}
     </section>
   );
 };

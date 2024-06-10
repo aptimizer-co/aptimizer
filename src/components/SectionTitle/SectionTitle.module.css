@@ -1,5 +1,11 @@
 .sectionTitle {
   font-size: 3.6rem;
   font-weight: 900;
-  line-height: 5.4rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 425px) {
+  .sectionTitle {
+    font-size: 3.2rem;
+  }
 }

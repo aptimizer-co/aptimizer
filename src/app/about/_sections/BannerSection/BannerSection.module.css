@@ -24,3 +24,9 @@
     font-size: var(--text-40);
   }
 }
+
+@media (max-width: 425px) {
+  .bannerTitle {
+    font-size: 4rem;
+  }
+}

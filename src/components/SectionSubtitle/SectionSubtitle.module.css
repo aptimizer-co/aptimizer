@@ -1,5 +1,11 @@
 .sectionSubtitle {
-  font-size: 2.1rem;
-  line-height: 3.15rem;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin-bottom: 6rem;
+}
+
+@media (max-width: 425px) {
+  .sectionSubtitle {
+    font-size: 1.6rem;
+  }
 }
