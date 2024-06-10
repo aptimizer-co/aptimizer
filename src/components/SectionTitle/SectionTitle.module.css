@@ -1,11 +1,11 @@
 .sectionTitle {
-  font-size: 3.6rem;
-  font-weight: 900;
-  margin-bottom: 0.8rem;
+  font-size: var(--text-32);
+  font-weight: var(--font-900);
+  margin-bottom: var(--spacing-8);
 }
 
 @media (max-width: 425px) {
   .sectionTitle {
-    font-size: 3.2rem;
+    font-size: var(--text-28);
   }
 }
