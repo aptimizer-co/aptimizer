@@ -1,7 +1,7 @@
 .sectionSubtitle {
   font-size: var(--text-16);
   font-weight: var(--font-400);
-  margin-bottom: var(--spacing-64);
+  margin-bottom: var(--spacing-56);
 }
 
 @media (max-width: 425px) {
