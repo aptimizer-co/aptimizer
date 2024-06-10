@@ -1,11 +1,12 @@
+import { Container } from "@/src/components";
 import s from "./BannerSection.module.css";
 
 const BannerSection = () => {
   return (
     <div className={s.banner}>
-      <div className={`${s.container} ${s.bannerInnerContainer}`}>
-        <span className={s.bannerTitle}>APTIMZER</span>
-      </div>
+      <Container style={s.container}>
+        <span className={s.bannerTitle}>EXCELLENCE FOR ALL</span>
+      </Container>
     </div>
   );
 };

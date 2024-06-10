@@ -1,0 +1,21 @@
+:root {
+  /* 폰트 크기 */
+  --text-18: 1.8rem;
+  --text-20: 2rem;
+  --text-40: 4rem;
+  --text-48: 4.8rem;
+
+  /* 폰트 무게 */
+  --font-400: 400;
+  --font-700: 700;
+  --font-900: 900;
+
+  /* 컬러 */
+  --primary: #1f4298;
+  --color-secondary: #798ec1;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* 간격 */
+  --spacing-60: 6rem;
+}
