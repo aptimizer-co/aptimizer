@@ -1,0 +1,33 @@
+:root {
+  /* 폰트 크기 */
+  --text-14: 1.4rem;
+  --text-16: 1.6rem;
+  --text-18: 1.8rem;
+  --text-20: 2rem;
+  --text-28: 2.8rem;
+  --text-32: 3.2rem;
+  --text-40: 4rem;
+  --text-48: 4.8rem;
+
+  /* 폰트 무게 */
+  --font-400: 400;
+  --font-700: 700;
+  --font-900: 900;
+
+  /* 컬러 */
+  --primary: #1f4298;
+  --secondary: #798ec1;
+  --quaternary: #eff6ff;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* 간격 */
+  --spacing-8: 0.8rem; /* 작은 간격 */
+  --spacing-16: 1.6rem; /* 보통 간격 */
+  --spacing-24: 2.4rem; /* 큰 간격 */
+  --spacing-32: 3.2rem;
+  --spacing-40: 4rem;
+  --spacing-48: 4.8rem;
+  --spacing-56: 5.6rem;
+  --spacing-64: 6.4rem; /* 섹션 간격 */
+}

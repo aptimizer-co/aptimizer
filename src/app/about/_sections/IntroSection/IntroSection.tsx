@@ -12,7 +12,7 @@ const IntroSection = () => {
         <div className={s.video}></div>
       </div> */}
 
-      <div className={s.video}>
+      {/* <div className={s.video}>
         <div className={s.overlay}>
           <Image
             className={s.play}
@@ -22,6 +22,16 @@ const IntroSection = () => {
             height={100}
           ></Image>
         </div>
+      </div> */}
+      <div className={s.videoContainer}>
+        <iframe
+          width="800"
+          height="450"
+          src="https://www.youtube.com/embed/a1jaQzP8feY?si=v6HeD-Rllmpa_BNA"
+          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          // referrerPolicy="strict-origin-when-cross-origin"
+          className={s.video}
+        />
       </div>
 
       <p className={s.message}>

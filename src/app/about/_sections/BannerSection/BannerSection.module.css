@@ -1,35 +1,27 @@
 .banner {
-  height: 30rem;
-  background-color: #1f4298;
+  background-color: var(--primary);
+  height: 25rem;
 }
 
-.bannerInnerContainer {
+.container {
   display: flex;
-  align-items: center;
-  height: 30rem;
+  flex-direction: column;
+  justify-content: center;
+  height: 25rem;
 }
 
 .bannerTitle {
-  font-size: 6rem;
-  font-weight: 900;
-  line-height: 9rem;
-  color: white;
+  color: var(--white);
+  font-size: var(--text-48);
+  font-weight: var(--font-900);
+  line-height: 120%;
   cursor: default;
 }
 
 /* 반응형 */
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1140px) {
-  .container {
-    padding: 0 1.6rem;
-  }
-
+@media (max-width: 320px) {
   .bannerTitle {
-    font-size: 5rem;
+    font-size: var(--text-40);
   }
 }
 
