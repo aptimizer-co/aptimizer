@@ -1,15 +1,10 @@
 .section {
   padding: var(--spacing-64) 0;
-  background-color: var(--quaternary);
 }
 
 .map {
   width: 100%;
   height: 40rem;
-  background-image: url("../../../../../public/png/map.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 2rem;
   margin-bottom: var(--spacing-32);
 }
@@ -22,12 +17,12 @@
 /* 반응형 */
 @media (max-width: 768px) {
   .map {
-    height: 30rem;
+    height: 35rem;
   }
 }
 
 @media (max-width: 425px) {
   .map {
-    height: 20rem;
+    height: 30rem;
   }
 }
