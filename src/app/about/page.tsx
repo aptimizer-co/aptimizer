@@ -1,11 +1,5 @@
 import { Navigation } from "@/src/components";
-import {
-  BannerSection,
-  HistorySection,
-  IntroSection,
-  LocationSection,
-  PerformanceSection,
-} from "./_sections";
+import { BannerSection, HistorySection, IntroSection, LocationSection, PerformanceSection } from "./_sections";
 import s from "./page.module.css";
 
 const AboutPage = () => {

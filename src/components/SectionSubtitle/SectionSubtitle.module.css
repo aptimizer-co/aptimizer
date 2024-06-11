@@ -1,11 +1,11 @@
 .sectionSubtitle {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 6rem;
+  font-size: var(--text-16);
+  font-weight: var(--font-400);
+  margin-bottom: var(--spacing-56);
 }
 
 @media (max-width: 425px) {
   .sectionSubtitle {
-    font-size: 1.6rem;
+    font-size: var(--text-14);
   }
 }
