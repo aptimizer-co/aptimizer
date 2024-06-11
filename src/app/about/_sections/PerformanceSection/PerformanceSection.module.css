@@ -1,6 +1,11 @@
 .performanceSection {
-  padding: 8rem 0;
+  padding: var(--spacing-64) 0;
   position: relative;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .image {
@@ -10,28 +15,17 @@
   transform: translateY(10%);
 }
 
-.innerContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
 .performanceCardContainer {
   display: flex;
-  gap: 1.6rem;
+  gap: var(--spacing-16);
   width: 51.6rem;
   flex-wrap: wrap;
 }
 
 /* 반응형 */
-.container {
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media (max-width: 1140px) {
   .container {
-    padding: 8rem 1.6rem;
+    padding: 0 var(--spacing-16);
   }
 }
 
@@ -42,7 +36,7 @@
   }
 
   .innerContainer {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .performanceCardContainer {
@@ -70,12 +64,11 @@
     width: 25rem;
     height: 20rem;
     margin: 0 auto;
-    margin-bottom: 8rem;
+    margin-bottom: var(--spacing-64);
   }
 
   .performanceCardContainer {
     width: 100%;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
 }
