@@ -10,44 +10,33 @@
 .videoContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: var(--spacing-56);
 }
 
 .video {
   border-radius: 2rem;
-  margin-bottom: var(--spacing-56);
 }
 
 .message {
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 4.8rem;
+  font-size: var(--text-32);
+  font-weight: var(--font-700);
+  line-height: 150%;
   text-align: center;
 }
 
 .messageMobile {
   display: none;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 3.6rem;
+  font-size: var(--text-24);
+  font-weight: var(--font-700);
+  line-height: 150%;
   text-align: center;
 }
 
 /* 반응형 */
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1140px) {
-  .container {
-    padding: 8rem 1.6rem;
-  }
-}
-
 @media (max-width: 768px) {
   .video {
     width: 60rem;
-    height: 30rem;
+    height: 34rem;
   }
 }
 
@@ -62,11 +51,6 @@
 
   .video {
     width: 100%;
-    height: 20rem;
-  }
-
-  .play {
-    width: 8rem;
-    height: 8rem;
+    height: 22rem;
   }
 }
