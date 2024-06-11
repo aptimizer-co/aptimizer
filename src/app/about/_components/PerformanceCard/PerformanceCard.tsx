@@ -14,7 +14,13 @@ const PerformanceCard = ({ type }: IPerformanceCard) => {
     case "students":
       return (
         <div className={s.performanceCard}>
-          <Image className={s.icon} src={StudentsSVG} alt="학생 아이콘" width={48} height={48} />
+          <Image
+            className={s.icon}
+            src={StudentsSVG}
+            alt="학생 아이콘"
+            width={48}
+            height={48}
+          />
           <p className={s.title}>멘토링한 학생</p>
           <p className={s.numbers}>
             32,000 <span className={s.counter}>명</span>
@@ -24,7 +30,13 @@ const PerformanceCard = ({ type }: IPerformanceCard) => {
     case "experiment":
       return (
         <div className={s.performanceCard}>
-          <Image className={s.icon} src={ExperimentSVG} alt="실험 아이콘" width={48} height={48} />
+          <Image
+            className={s.icon}
+            src={ExperimentSVG}
+            alt="실험 아이콘"
+            width={48}
+            height={48}
+          />
           <p className={s.title}>석박사급 인력</p>
           <p className={s.numbers}>
             20 <span className={s.counter}>명</span>
@@ -34,8 +46,14 @@ const PerformanceCard = ({ type }: IPerformanceCard) => {
     case "handshake":
       return (
         <div className={s.performanceCard}>
-          <Image className={s.icon} src={HandshakeSVG} alt="협력사 아이콘" width={48} height={48} />
-          <p className={s.title}>함께하는 협력사</p>
+          <Image
+            className={s.icon}
+            src={HandshakeSVG}
+            alt="협력사 아이콘"
+            width={48}
+            height={48}
+          />
+          <p className={s.title}>협력사</p>
           <p className={s.numbers}>
             4 <span className={s.counter}>곳</span>
           </p>
@@ -44,8 +62,14 @@ const PerformanceCard = ({ type }: IPerformanceCard) => {
     case "data":
       return (
         <div className={s.performanceCard}>
-          <Image className={s.icon} src={DataSVG} alt="데이터 아이콘" width={48} height={48} />
-          <p className={s.title}>보유한 학생 데이터</p>
+          <Image
+            className={s.icon}
+            src={DataSVG}
+            alt="데이터 아이콘"
+            width={48}
+            height={48}
+          />
+          <p className={s.title}>보유 학생 데이터</p>
           <p className={s.numbers}>
             260,000 <span className={s.counter}>개</span>
           </p>
@@ -55,7 +79,13 @@ const PerformanceCard = ({ type }: IPerformanceCard) => {
 
   return (
     <div className={s.performanceCard}>
-      <Image className={s.icon} src={StudentsSVG} alt="학생 아이콘" width={48} height={48} />
+      <Image
+        className={s.icon}
+        src={StudentsSVG}
+        alt="학생 아이콘"
+        width={48}
+        height={48}
+      />
       <p className={s.title}>멘토링 학생</p>
       <p className={s.numbers}>
         32,000 <span className={s.counter}>명</span>
