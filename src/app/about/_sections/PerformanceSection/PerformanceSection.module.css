@@ -12,7 +12,9 @@
   position: relative;
   width: 50rem;
   height: 45rem;
-  transform: translateY(10%);
+  transform: translateY(20%);
+  opacity: 0;
+  animation: image 2s forwards;
 }
 
 .performanceCardContainer {
@@ -20,6 +22,24 @@
   gap: var(--spacing-16);
   width: 51.6rem;
   flex-wrap: wrap;
+  transform: translateY(10%);
+  opacity: 0;
+  animation: performanceCardContainer 2s forwards;
+}
+
+/* 애니메이션 */
+@keyframes image {
+  to {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+}
+
+@keyframes performanceCardContainer {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 /* 반응형 */

@@ -35,7 +35,6 @@
   height: 40rem;
   opacity: 0;
   animation: image 2s forwards;
-  animation-delay: 0.5s;
 }
 
 /* 애니메이션 */
