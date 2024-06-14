@@ -2,6 +2,12 @@
   padding: var(--spacing-64) 0;
 }
 
+.introAnimate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: introAnimate 2s forwards;
+}
+
 .innerContainer {
   max-width: 1140px;
   margin: 0 auto;
@@ -11,9 +17,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: var(--spacing-56);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: videoContainer 2s forwards;
 }
 
 .video {
@@ -25,9 +28,6 @@
   font-weight: var(--font-700);
   line-height: 150%;
   text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: message 2s forwards;
 }
 
 .messageMobile {
@@ -38,15 +38,7 @@
   text-align: center;
 }
 
-/* 애니메이션 */
-@keyframes videoContainer {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes message {
+@keyframes introAnimate {
   to {
     opacity: 1;
     transform: translateY(0);

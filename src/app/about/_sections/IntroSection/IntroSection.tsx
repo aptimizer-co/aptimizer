@@ -1,9 +1,15 @@
+"use client";
+import { useInView } from "react-intersection-observer";
 import { Container, SectionTitle, SectionSubtitle } from "@/src/components";
 import s from "./IntroSection.module.css";
 
 const IntroSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <section className={s.intro}>
+    <section className={`${s.intro} ${inView ? s.introAnimate : ""}`} ref={ref}>
       <Container style={s.container}>
         <SectionTitle>INTRODUCTION</SectionTitle>
         <SectionSubtitle>앱티마이저는 어떤 기업인가</SectionSubtitle>
@@ -12,8 +18,8 @@ const IntroSection = () => {
             width="800"
             height="450"
             src="https://www.youtube.com/embed/a1jaQzP8feY?si=v6HeD-Rllmpa_BNA"
-            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            // referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
             className={s.video}
           />
         </div>
