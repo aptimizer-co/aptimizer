@@ -1,6 +1,12 @@
-.section {
+.historySection {
   padding: var(--spacing-64) 0;
   background-color: var(--quaternary);
+}
+
+.historySectionAnimate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: historySectionAnimate 2s forwards;
 }
 
 .history {
@@ -9,9 +15,6 @@
 
 .timeLineContainer {
   margin-bottom: var(--spacing-32);
-  opacity: 0;
-  transform: translateY(20%);
-  animation: timeLineContainer 2s forwards;
 }
 
 .timeLineTitle {
@@ -32,22 +35,13 @@
   transform: translateY(-30%);
   width: 50rem;
   height: 40rem;
-  opacity: 0;
-  animation: image 2s forwards;
 }
 
 /* 애니메이션 */
-@keyframes timeLineContainer {
+@keyframes historySectionAnimate {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes image {
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
   }
 }
 

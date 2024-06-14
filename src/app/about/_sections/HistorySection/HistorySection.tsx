@@ -1,11 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import { Container, SectionTitle, SectionSubtitle } from "@/src/components";
 import HistoryImage from "@/public/png/about-history.png";
 import s from "./History.module.css";
 
 const HistorySection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <section className={s.section}>
+    <section className={`${s.historySection} ${inView ? s.historySectionAnimate : ""}`} ref={ref}>
       <Container style={s.container}>
         <div className={s.history}>
           <SectionTitle>HISTORY</SectionTitle>
