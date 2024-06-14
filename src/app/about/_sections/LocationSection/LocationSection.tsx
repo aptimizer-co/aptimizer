@@ -1,9 +1,16 @@
+"use client";
+
+import { useInView } from "react-intersection-observer";
 import { Container, SectionTitle, SectionSubtitle } from "@/src/components";
 import s from "./Location.module.css";
 
 const LocationSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <section className={s.section}>
+    <section className={`${s.locationSection} ${inView ? s.locationSectionAnimate : ""}`} ref={ref}>
       <Container style={s.container}>
         <SectionTitle>LOCATION</SectionTitle>
         <SectionSubtitle>찾으러 오시는 길</SectionSubtitle>

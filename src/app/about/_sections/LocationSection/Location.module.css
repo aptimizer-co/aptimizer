@@ -1,5 +1,12 @@
-.section {
+.locationSection {
   padding: var(--spacing-64) 0;
+  /* background-color: rgb(249, 250, 251); */
+}
+
+.locationSectionAnimate {
+  opacity: 0;
+  transform: translateY(10%);
+  animation: locationSectionAnimate 2s forwards;
 }
 
 .map {
@@ -7,27 +14,15 @@
   height: 40rem;
   border-radius: 2rem;
   margin-bottom: var(--spacing-32);
-  opacity: 0;
-  transform: translateY(10%);
-  animation: map 2s forwards;
 }
 
 .text {
   font-size: var(--text-16);
   margin-bottom: var(--spacing-8);
-  opacity: 0;
-  transform: translateY(200%);
-  animation: text 2s forwards;
 }
 
-@keyframes map {
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-@keyframes text {
+/* 애니메이션 */
+@keyframes locationSectionAnimate {
   to {
     opacity: 1;
     transform: translateY(0);
