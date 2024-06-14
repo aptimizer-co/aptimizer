@@ -1,8 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { ServiceButton } from "./_components";
 import s from "./ServiceSection.module.css";
 import Aptifit from "@/public/png/aptifit.png";
 
 const ServiceSection = () => {
+  const [activeService, setActiveService] = useState(0);
+
   return (
     <section className={`${s.container} ${s.service}`}>
       <h2 className={s.title}>SERVICE</h2>
@@ -13,17 +19,46 @@ const ServiceSection = () => {
           <div className={s.b2c}>
             <h3>개인을 위한 서비스</h3>
             <ul className={s.ul}>
-              <li className={s.active}>앱티핏 검사</li>
-              <li>진로챗봇 서비스</li>
-              <li>진로 PT 서비스 구독</li>
+              <ServiceButton
+                id={0}
+                active={activeService}
+                setActive={setActiveService}
+              >
+                앱티핏 검사
+              </ServiceButton>
+              <ServiceButton
+                id={1}
+                active={activeService}
+                setActive={setActiveService}
+              >
+                진로챗봇 서비스
+              </ServiceButton>
+              <ServiceButton
+                id={2}
+                active={activeService}
+                setActive={setActiveService}
+              >
+                진로 PT 서비스 구독
+              </ServiceButton>
             </ul>
           </div>
           <div className={s.b2b}>
             <h3>단체를 위한 서비스</h3>
             <ul className={s.ul}>
-              <li>프리미엄 교육 서비스</li>
-              <li>맞춤 서비스 상담</li>
-              <li>앱티핏 검사 단체 구매</li>
+              <ServiceButton
+                id={3}
+                active={activeService}
+                setActive={setActiveService}
+              >
+                프리미엄 교육 서비스
+              </ServiceButton>
+              <ServiceButton
+                id={4}
+                active={activeService}
+                setActive={setActiveService}
+              >
+                앱티핏 검사 단체 구매
+              </ServiceButton>
             </ul>
           </div>
         </nav>
@@ -47,9 +82,10 @@ const ServiceSection = () => {
           </div>
           <p className={s.productTitle}>앱티핏 검사</p>
           <p className={s.productDesc}>
-            앱티핏 검사는 서울대 및 주요 대학의 교수진 자문을 받은 학문 프로파일 데이터와 학생 프로파일 데이터를 학습한
-            AI 추천 모델을 사용하여, 각 학과의 최신 학문적 트렌드와 세부적인 5대 특성을 바탕으로 최적의 학과를
-            추천합니다.
+            앱티핏 검사는 서울대 및 주요 대학의 교수진 자문을 받은 학문 프로파일
+            데이터와 학생 프로파일 데이터를 학습한 AI 추천 모델을 사용하여, 각
+            학과의 최신 학문적 트렌드와 세부적인 5대 특성을 바탕으로 최적의
+            학과를 추천합니다.
           </p>
           <button className={s.button}>검사하기</button>
         </div>
