@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ServiceButton } from "./_components";
+import { ServiceButton, ServiceContent } from "./_components";
 import s from "./ServiceSection.module.css";
 import Aptifit from "@/public/png/aptifit.png";
 
@@ -31,7 +31,7 @@ const ServiceSection = () => {
                 active={activeService}
                 setActive={setActiveService}
               >
-                진로챗봇 서비스
+                진로 챗봇 서비스
               </ServiceButton>
               <ServiceButton
                 id={2}
@@ -76,7 +76,8 @@ const ServiceSection = () => {
           </div>
         </ul>
         {/* 콘텐츠 섹션 */}
-        <div className={s.product}>
+        <ServiceContent id={activeService} />
+        {/* <div className={s.product}>
           <div className={s.productImgContainer}>
             <Image src={Aptifit} alt="앱티핏 검사" fill />
           </div>
@@ -88,7 +89,7 @@ const ServiceSection = () => {
             학과를 추천합니다.
           </p>
           <button className={s.button}>검사하기</button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
