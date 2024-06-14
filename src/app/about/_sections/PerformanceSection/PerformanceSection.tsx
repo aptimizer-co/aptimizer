@@ -1,40 +1,18 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import PerformanceImage from "@/public/png/about-performance.png";
 import { Container, SectionTitle, SectionSubtitle } from "@/src/components";
 import { PerformanceCard } from "@/src/app/about/_components";
 import s from "./PerformanceSection.module.css";
 
 const PerformanceSection = () => {
-  const [animate, setAnimate] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setAnimate(true);
-        }
-      },
-      { threshold: 0.5 } // 섹션의 50%가 뷰포트에 들어왔을 때 트리거
-    );
-
-    const currentSectionRef = sectionRef.current;
-
-    if (currentSectionRef) {
-      observer.observe(currentSectionRef);
-    }
-
-    return () => {
-      if (currentSectionRef) {
-        observer.unobserve(currentSectionRef);
-      }
-    };
-  }, []);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
 
   return (
-    <section className={s.performanceSection} ref={sectionRef}>
+    <section className={`${s.performanceSection} ${inView ? s.performanceSectionAnimate : ""}`} ref={ref}>
       <Container style={s.container}>
         <SectionTitle>PERFORMANCE</SectionTitle>
         <SectionSubtitle>앱티마이저가 보여주는 성과</SectionSubtitle>
@@ -45,10 +23,10 @@ const PerformanceSection = () => {
           </div>
 
           <div className={s.performanceCardContainer}>
-            <PerformanceCard animate={animate} type="students" />
-            <PerformanceCard animate={animate} type="handshake" />
-            <PerformanceCard animate={animate} type="data" />
-            <PerformanceCard animate={animate} type="experiment" />
+            <PerformanceCard animate={inView} type="students" />
+            <PerformanceCard animate={inView} type="handshake" />
+            <PerformanceCard animate={inView} type="data" />
+            <PerformanceCard animate={inView} type="experiment" />
           </div>
         </div>
       </Container>
