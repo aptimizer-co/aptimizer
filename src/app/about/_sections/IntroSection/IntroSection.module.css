@@ -1,8 +1,8 @@
-.intro {
+.introSection {
   padding: var(--spacing-64) 0;
 }
 
-.introAnimate {
+.introSectionAnimate {
   opacity: 0;
   transform: translateY(20px);
   animation: introAnimate 2s forwards;

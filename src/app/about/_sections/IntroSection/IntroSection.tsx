@@ -9,7 +9,7 @@ const IntroSection = () => {
   });
 
   return (
-    <section className={`${s.intro} ${inView ? s.introAnimate : ""}`} ref={ref}>
+    <section className={`${s.introSection} ${inView ? s.introSectionAnimate : ""}`} ref={ref}>
       <Container style={s.container}>
         <SectionTitle>INTRODUCTION</SectionTitle>
         <SectionSubtitle>앱티마이저는 어떤 기업인가</SectionSubtitle>
