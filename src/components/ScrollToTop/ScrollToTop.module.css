@@ -1,0 +1,11 @@
+.scrollToTop {
+  background-color: var(--secondary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50rem;
+  border: none;
+}
+
+.icon path {
+  fill: white;
+}
