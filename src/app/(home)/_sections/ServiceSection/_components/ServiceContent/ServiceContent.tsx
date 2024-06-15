@@ -1,5 +1,9 @@
 import Image from "next/image";
-import Aptifit from "@/public/png/aptifit.png";
+import Aptifit from "@/public/svg/aptifit.svg";
+import Chatbot from "@/public/svg/chatbot.svg";
+import PT from "@/public/svg/pt.svg";
+import GroupTest from "@/public/svg/grouptest.svg";
+import Premium from "@/public/svg/premium.svg";
 import s from "./ServiceContent.module.css";
 
 interface IServiceContent {
@@ -29,7 +33,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
       return (
         <div className={s.product}>
           <div className={s.productImgContainer}>
-            <Image src={Aptifit} alt="진로 챗봇 서비스" fill />
+            <Image src={Chatbot} alt="진로 챗봇 서비스" fill />
           </div>
           <p className={s.productTitle}>진로 챗봇 서비스</p>
           <p className={s.productDesc}>
@@ -46,7 +50,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
       return (
         <div className={s.product}>
           <div className={s.productImgContainer}>
-            <Image src={Aptifit} alt="진로 PT 서비스 구독" fill />
+            <Image src={PT} alt="진로 PT 서비스 구독" fill />
           </div>
           <p className={s.productTitle}>진로 PT 서비스 구독</p>
           <p className={s.productDesc}>
@@ -62,7 +66,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
       return (
         <div className={s.product}>
           <div className={s.productImgContainer}>
-            <Image src={Aptifit} alt="앱티핏 검사 단체 구매" fill />
+            <Image src={GroupTest} alt="앱티핏 검사 단체 구매" fill />
           </div>
           <p className={s.productTitle}>앱티핏 검사 단체 구매</p>
           <p className={s.productDesc}>
@@ -79,7 +83,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
       return (
         <div className={s.product}>
           <div className={s.productImgContainer}>
-            <Image src={Aptifit} alt="프리미엄 교육 서비스" fill />
+            <Image src={Premium} alt="프리미엄 교육 서비스" fill />
           </div>
           <p className={s.productTitle}>프리미엄 교육 서비스</p>
           <p className={s.productDesc}>
