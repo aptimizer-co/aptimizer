@@ -51,5 +51,6 @@
 
   .serviceSidebarMobile {
     display: block;
+    margin-bottom: var(--spacing-24);
   }
 }

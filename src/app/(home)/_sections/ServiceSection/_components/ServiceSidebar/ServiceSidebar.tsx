@@ -67,6 +67,7 @@ const ServiceSidebar = () => {
           </ul>
         </div>
       </nav>
+
       {/* 모바일 */}
       <nav className={s.serviceSidebarMobile}>
         <ul className={s.listMobile}>
