@@ -1,0 +1,55 @@
+.serviceSidebar {
+  width: 28rem;
+  height: 60rem;
+  border: 0.2rem solid var(--tertiary);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-24);
+}
+
+.serviceContainer {
+  margin-bottom: var(--spacing-24);
+}
+
+.title {
+  cursor: default;
+  font-size: var(--text-20);
+  font-weight: var(--font-700);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: var(--spacing-16);
+}
+
+.listItem {
+  height: 5rem;
+}
+
+/* 모바일 */
+.serviceSidebarMobile {
+  display: none;
+}
+
+.listMobile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.listItemMobile {
+  flex: 1 1 calc(50% - 4px);
+  max-width: 50%;
+  height: 5rem;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .serviceSidebar {
+    display: none;
+  }
+
+  .serviceSidebarMobile {
+    display: block;
+  }
+}
