@@ -1,71 +1,9 @@
-.service {
-  display: flex;
-  flex-direction: column;
-  padding: 6rem 0;
+.serviceSection {
   width: 100%;
-}
-
-/* 제목 */
-.title {
-  font-weight: 900;
-  font-size: 3.6rem;
-  line-height: 5.4rem;
-}
-
-.desc {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  margin-bottom: 6rem;
-}
-
-.serviceContainer {
-  display: flex;
-  gap: 3.2rem;
+  padding: var(--spacing-64) 0;
 }
 
 /* 네비게이션 바 */
-.sidenav {
-  width: 28rem;
-  height: 60rem;
-  border: 0.2rem solid #d2d9ea;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-}
-
-.b2c {
-  margin-bottom: 3.2rem;
-}
-
-.b2c h3 {
-  cursor: default;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 2.7rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  padding-left: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-.b2b h3 {
-  cursor: default;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 2.7rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  padding-left: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-.active {
-  background-color: #1f4298;
-  color: #ffffff;
-}
 
 /* 모바일 네비게이션 */
 .navMobile {
@@ -73,19 +11,7 @@
 }
 
 /* 반응형 */
-
-.container {
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding: 6rem 1.6rem;
-  }
-
   .serviceContainer {
     flex-direction: column;
   }
