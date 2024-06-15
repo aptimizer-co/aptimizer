@@ -43,7 +43,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
             개인화된 진로 상담을 제공하며, 24시간 실시간으로 언제 어디서나 즉시
             챗봇의 도움을 받을 수 있습니다.
           </p>
-          <button className={s.button}>검사하기</button>
+          <button className={s.button}>문의하기</button>
         </div>
       );
     case 2:
@@ -59,7 +59,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
             최적의 진로를 설계해보세요. 앱티핏 검사, 챗봇 상담, 멘토링 프로그램
             등 다양한 서비스를 경험할 수 있습니다.
           </p>
-          <button className={s.button}>검사하기</button>
+          <button className={s.button}>문의하기</button>
         </div>
       );
     case 3:
@@ -76,7 +76,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
             제공할 수 있습니다. 개별 학생뿐만 아니라 집단 전체에 대한 분석
             보고서도 받아볼 수 있습니다.
           </p>
-          <button className={s.button}>검사하기</button>
+          <button className={s.button}>문의하기</button>
         </div>
       );
     case 4:
@@ -91,7 +91,7 @@ const ServiceContent = ({ id }: IServiceContent) => {
             단체의 특성에 맞게 PT 서비스를 맞춤형으로 운영해드리며, 온라인과
             오프라인 환경 모두에서 적용 가능합니다.
           </p>
-          <button className={s.button}>검사하기</button>
+          <button className={s.button}>문의하기</button>
         </div>
       );
   }
