@@ -1,12 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import { ServiceButton } from "../index";
 import s from "./ServiceSidebar.module.css";
 
-const ServiceSidebar = () => {
-  const [activeService, setActiveService] = useState(0);
+interface IServiceSidebar {
+  activeService: number;
+  setActiveService: Dispatch<SetStateAction<number>>;
+}
 
+const ServiceSidebar = ({
+  activeService,
+  setActiveService,
+}: IServiceSidebar) => {
   return (
     <>
       {/* PC */}
@@ -17,8 +23,8 @@ const ServiceSidebar = () => {
             <li className={s.listItem}>
               <ServiceButton
                 id={0}
-                active={activeService}
-                setActive={setActiveService}
+                activeService={activeService}
+                setActiveService={setActiveService}
               >
                 앱티핏 검사
               </ServiceButton>
@@ -26,8 +32,8 @@ const ServiceSidebar = () => {
             <li className={s.listItem}>
               <ServiceButton
                 id={1}
-                active={activeService}
-                setActive={setActiveService}
+                activeService={activeService}
+                setActiveService={setActiveService}
               >
                 진로 챗봇 서비스
               </ServiceButton>
@@ -35,8 +41,8 @@ const ServiceSidebar = () => {
             <li className={s.listItem}>
               <ServiceButton
                 id={2}
-                active={activeService}
-                setActive={setActiveService}
+                activeService={activeService}
+                setActiveService={setActiveService}
               >
                 진로 PT 서비스 구독
               </ServiceButton>
@@ -49,8 +55,8 @@ const ServiceSidebar = () => {
             <li className={s.listItem}>
               <ServiceButton
                 id={3}
-                active={activeService}
-                setActive={setActiveService}
+                activeService={activeService}
+                setActiveService={setActiveService}
               >
                 프리미엄 교육 서비스
               </ServiceButton>
@@ -58,8 +64,8 @@ const ServiceSidebar = () => {
             <li className={s.listItem}>
               <ServiceButton
                 id={4}
-                active={activeService}
-                setActive={setActiveService}
+                activeService={activeService}
+                setActiveService={setActiveService}
               >
                 앱티핏 검사 단체 구매
               </ServiceButton>
@@ -74,8 +80,8 @@ const ServiceSidebar = () => {
           <li className={s.listItemMobile}>
             <ServiceButton
               id={0}
-              active={activeService}
-              setActive={setActiveService}
+              activeService={activeService}
+              setActiveService={setActiveService}
             >
               앱티핏 검사
             </ServiceButton>
@@ -83,8 +89,8 @@ const ServiceSidebar = () => {
           <li className={s.listItemMobile}>
             <ServiceButton
               id={1}
-              active={activeService}
-              setActive={setActiveService}
+              activeService={activeService}
+              setActiveService={setActiveService}
             >
               진로 챗봇 서비스
             </ServiceButton>
@@ -92,8 +98,8 @@ const ServiceSidebar = () => {
           <li className={s.listItemMobile}>
             <ServiceButton
               id={2}
-              active={activeService}
-              setActive={setActiveService}
+              activeService={activeService}
+              setActiveService={setActiveService}
             >
               진로 PT 서비스 구독
             </ServiceButton>
@@ -101,8 +107,8 @@ const ServiceSidebar = () => {
           <li className={s.listItemMobile}>
             <ServiceButton
               id={3}
-              active={activeService}
-              setActive={setActiveService}
+              activeService={activeService}
+              setActiveService={setActiveService}
             >
               프리미엄 교육 서비스
             </ServiceButton>
@@ -110,8 +116,8 @@ const ServiceSidebar = () => {
           <li className={s.listItemMobile}>
             <ServiceButton
               id={4}
-              active={activeService}
-              setActive={setActiveService}
+              activeService={activeService}
+              setActiveService={setActiveService}
             >
               앱티핏 검사 단체 구매
             </ServiceButton>

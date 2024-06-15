@@ -1,11 +1,9 @@
 "use client";
-import { SectionTitle, SectionSubtitle } from "@/src/components";
 
 import { useState } from "react";
-import Image from "next/image";
-import { ServiceButton, ServiceContent, ServiceSidebar } from "./_components";
+import { ServiceContent, ServiceSidebar } from "./_components";
+import { SectionTitle, SectionSubtitle } from "@/src/components";
 import s from "./ServiceSection.module.css";
-import Aptifit from "@/public/png/aptifit.png";
 
 const ServiceSection = () => {
   const [activeService, setActiveService] = useState(0);
@@ -18,9 +16,12 @@ const ServiceSection = () => {
       </SectionSubtitle>
       <div className={s.serviceContainer}>
         {/* 사이드바 메뉴 */}
-        <ServiceSidebar />
+        <ServiceSidebar
+          activeService={activeService}
+          setActiveService={setActiveService}
+        />
         {/* 콘텐츠 섹션 */}
-        {/* <ServiceContent id={activeService} /> */}
+        <ServiceContent id={activeService} />
       </div>
     </section>
   );

@@ -3,95 +3,14 @@
   padding: var(--spacing-64) 0;
 }
 
-/* 네비게이션 바 */
-
-/* 모바일 네비게이션 */
-.navMobile {
-  display: none;
+.serviceContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
   .serviceContainer {
     flex-direction: column;
-  }
-
-  .sidenav {
-    display: none;
-  }
-
-  .navMobile {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-  }
-
-  .navMobile div {
-    display: flex;
-    gap: 1.6rem;
-    justify-content: space-between;
-  }
-
-  .navMobile div li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #cdced6;
-    background-color: #eff6ff;
-    border-radius: 0.6rem;
-    width: 100%;
-    height: 5rem;
-    font-weight: 600;
-    padding: 0 0.8rem;
-    transition: background-color 200ms ease-in-out;
-  }
-
-  .navMobile div li:hover {
-    background-color: #798ec1;
-    color: white;
-    transition: background-color 200ms ease-in-out;
-  }
-
-  .navMobile div li:active {
-    background-color: #1f4298;
-    transition: background-color 200ms ease-in-out;
-    color: white;
-  }
-}
-
-@media (max-width: 426px) {
-  .navMobile {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .navMobile div {
-    display: flex;
-    gap: 0.8rem;
-    justify-content: space-between;
-  }
-
-  .navMobile div li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #cdced6;
-    background-color: #eff6ff;
-    border-radius: 0.6rem;
-    width: 100%;
-    height: 4rem;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 376px) {
-  .navMobile div li {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.4rem 0.2rem;
-    text-align: center;
   }
 }

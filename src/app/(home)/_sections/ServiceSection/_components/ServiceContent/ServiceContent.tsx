@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Aptifit from '@/public/png/aptifit.png';
-import s from './ServiceContent.module.css';
+import Image from "next/image";
+import Aptifit from "@/public/png/aptifit.png";
+import s from "./ServiceContent.module.css";
 
 interface IServiceContent {
   id: number;

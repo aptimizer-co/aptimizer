@@ -5,21 +5,26 @@ import s from "./ServiceButton.module.css";
 
 interface IServiceButton {
   id: number;
-  active: number;
-  setActive: Dispatch<SetStateAction<number>>;
+  activeService: number;
+  setActiveService: Dispatch<SetStateAction<number>>;
   children: string;
 }
 
-const ServiceButton = ({ id, active, setActive, children }: IServiceButton) => {
+const ServiceButton = ({
+  id,
+  activeService,
+  setActiveService,
+  children,
+}: IServiceButton) => {
   const selectService = (id: number) => {
-    setActive(id);
+    setActiveService(id);
   };
 
   return (
     <button
-      id={id}
+      data-id={id}
       className={`${s.serviceButton} ${
-        active === id ? s.serviceButtonActive : ""
+        activeService === id ? s.serviceButtonActive : ""
       }`}
       onClick={() => selectService(id)}
     >
