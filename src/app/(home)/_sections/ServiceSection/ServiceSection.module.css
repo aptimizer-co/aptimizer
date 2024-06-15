@@ -62,18 +62,6 @@
   margin-bottom: 1.6rem;
 }
 
-.ul li {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding-left: 1.6rem;
-  height: 5rem;
-  color: #e8e8ee;
-  border-radius: 1rem;
-}
-
 .active {
   background-color: #1f4298;
   color: #ffffff;
@@ -82,62 +70,6 @@
 /* 모바일 네비게이션 */
 .navMobile {
   display: none;
-}
-
-/* 서비스 */
-
-.product {
-  border: 0.2rem solid #d2d9ea;
-  border-radius: 2rem;
-  max-width: 82.8rem;
-  padding: 4rem;
-}
-
-.productImgContainer {
-  width: 50rem;
-  height: 30rem;
-  margin: 0 auto;
-  position: relative;
-  margin-bottom: 4rem;
-}
-
-.productTitle {
-  font-size: 2.1rem;
-  font-weight: bold;
-  line-height: 3.15rem;
-  margin-bottom: 0.8rem;
-}
-
-.productDesc {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  margin-bottom: 1.6rem;
-}
-
-.button {
-  margin: 0 auto;
-  width: 8rem;
-  height: 4rem;
-  border-radius: 0.6rem;
-  border: none;
-  background-color: #d2d9ea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 500;
-  color: white;
-  transition: background-color 200ms ease-in-out;
-}
-
-.button:hover {
-  background-color: #798ec1;
-  transition: background-color 200ms ease-in-out;
-}
-
-.button:active {
-  background-color: #1f4298;
 }
 
 /* 반응형 */
@@ -199,24 +131,6 @@
     transition: background-color 200ms ease-in-out;
     color: white;
   }
-
-  .productImgContainer {
-    width: 75%;
-    height: 25rem;
-  }
-
-  .productTitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 2.7rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .productDesc {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    margin-bottom: 1.6rem;
-  }
 }
 
 @media (max-width: 426px) {
@@ -245,41 +159,13 @@
     line-height: 1.8rem;
     font-weight: 600;
   }
-
-  .productImgContainer {
-    width: 100%;
-    height: 20rem;
-  }
-
-  .productTitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 2.7rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .productDesc {
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-    margin-bottom: 1.6rem;
-  }
 }
 
 @media (max-width: 376px) {
-  .product {
-    padding: 2rem;
-  }
-
   .navMobile div li {
     font-size: 1.2rem;
     font-weight: 500;
     padding: 0.4rem 0.2rem;
     text-align: center;
-  }
-
-  .productImgContainer {
-    width: 20rem;
-    height: 15rem;
-    margin-bottom: 2.4rem;
   }
 }

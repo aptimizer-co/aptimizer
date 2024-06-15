@@ -2,7 +2,7 @@
   border: 0.2rem solid #d2d9ea;
   border-radius: 2rem;
   max-width: 82.8rem;
-  padding: 4rem;
+  padding: var(--spacing-40);
   position: relative;
 }
 
@@ -11,20 +11,19 @@
   height: 30rem;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-24);
 }
 
 .productTitle {
-  font-size: 2.1rem;
-  font-weight: bold;
-  line-height: 3.15rem;
-  margin-bottom: 0.8rem;
+  font-size: var(--text-20);
+  font-weight: var(--font-700);
+  margin-bottom: var(--spacing-16);
 }
 
 .productDesc {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  margin-bottom: 1.6rem;
+  font-size: var(--text-16);
+  line-height: 150%;
+  margin-bottom: var(--spacing-24);
 }
 
 .button {
@@ -33,22 +32,51 @@
   height: 4rem;
   border-radius: 0.6rem;
   border: none;
-  background-color: #d2d9ea;
+  background-color: var(--secondary);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 500;
+  font-size: var(--text-16);
+  font-weight: var(--font-500);
   color: white;
   transition: background-color 200ms ease-in-out;
 }
 
 .button:hover {
-  background-color: #798ec1;
+  background-color: var(--primary);
   transition: background-color 200ms ease-in-out;
 }
 
-.button:active {
-  background-color: #1f4298;
+/* 반응형 */
+@media (max-width: 768px) {
+  .productImgContainer {
+    width: 40rem;
+    height: 25rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .product {
+    padding: var(--spacing-16);
+  }
+
+  .productImgContainer {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .productTitle {
+    font-size: var(--text-18);
+  }
+
+  .productDesc {
+    font-size: var(--text-16);
+  }
+}
+
+@media (max-width: 320px) {
+  .productImgContainer {
+    width: 100%;
+    height: 15rem;
+  }
 }
