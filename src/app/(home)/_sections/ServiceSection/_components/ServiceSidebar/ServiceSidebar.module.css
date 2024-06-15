@@ -1,5 +1,5 @@
 .serviceSidebar {
-  width: 28rem;
+  min-width: 28rem;
   height: 60rem;
   border: 0.2rem solid var(--tertiary);
   border-radius: 2rem;
@@ -44,6 +44,12 @@
 }
 
 /* 반응형 */
+@media (max-width: 1024px) {
+  .serviceSidebar {
+    min-width: 26rem;
+  }
+}
+
 @media (max-width: 768px) {
   .serviceSidebar {
     display: none;

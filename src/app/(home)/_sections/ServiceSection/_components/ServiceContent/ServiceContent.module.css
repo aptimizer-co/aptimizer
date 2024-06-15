@@ -1,7 +1,7 @@
 .product {
   border: 0.2rem solid #d2d9ea;
   border-radius: 2rem;
-  max-width: 82.8rem;
+  width: 72%;
   padding: var(--spacing-40);
   position: relative;
 }
@@ -48,7 +48,17 @@
 }
 
 /* 반응형 */
+@media (max-width: 1024px) {
+  .product {
+    width: 70%;
+  }
+}
+
 @media (max-width: 768px) {
+  .product {
+    width: 100%;
+  }
+
   .productImgContainer {
     width: 40rem;
     height: 25rem;
