@@ -1,8 +1,13 @@
 .notFound {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 6rem);
+}
+
+.image {
+  margin-bottom: 48px;
 }
 
 .textContainer p {
