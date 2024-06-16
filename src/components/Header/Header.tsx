@@ -42,47 +42,31 @@ const Header = () => {
 
         {/* 4. 모바일 */}
         {isMobileMenuOpen ? (
-          <button
-            className={s.mobileButton}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <Image
-              src="/svg/close.svg"
-              alt="모바일 메뉴 숨김 버튼"
-              width={40}
-              height={40}
-            />
+          <button className={s.mobileButton} onClick={() => setIsMobileMenuOpen(false)}>
+            <Image src="/svg/close.svg" alt="모바일 메뉴 숨김 버튼" width={40} height={40} />
           </button>
         ) : (
-          <button
-            className={s.mobileButton}
-            onClick={() => setIsMobileMenuOpen(true)}
-          >
-            <Image
-              src="/svg/menu.svg"
-              alt="모바일 메뉴 표시 버튼"
-              width={40}
-              height={40}
-            />
+          <button className={s.mobileButton} onClick={() => setIsMobileMenuOpen(true)}>
+            <Image src="/svg/menu.svg" alt="모바일 메뉴 표시 버튼" width={40} height={40} />
           </button>
         )}
       </header>
       {isMobileMenuOpen && (
         <nav className={`${s.container} ${s.mobileNav}`}>
           <ul>
-            <li>
+            <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/about"}>앱티마이저</Link>
             </li>
-            <li>
+            <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/"}>서비스</Link>
             </li>
-            <li>
+            <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/"}>공지사항</Link>
             </li>
-            <li>
+            <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/ask"}>문의하기</Link>
             </li>
-            <li>
+            <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/"}>로그인</Link>
             </li>
           </ul>
