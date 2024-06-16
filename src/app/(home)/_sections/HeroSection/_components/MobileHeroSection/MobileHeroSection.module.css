@@ -1,0 +1,24 @@
+/* 반응형 */
+.mobileHeroSection {
+  display: none;
+}
+
+.imageContainerMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imageMobile {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 425px) {
+  .mobileHeroSection {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+}
