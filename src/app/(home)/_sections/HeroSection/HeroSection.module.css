@@ -8,7 +8,10 @@
 }
 
 .titleContainer {
-  margin-bottom: var(--spacing-64);
+  margin-bottom: var(--spacing-48);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleContainer 2s forwards;
 }
 
 .title {
@@ -40,6 +43,9 @@
 .titleContainerMobile {
   display: none;
   margin-bottom: var(--spacing-48);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleContainer 2s forwards;
 }
 
 .titleMobile {
@@ -54,6 +60,21 @@
   font-weight: var(--font-700);
   line-height: 150%;
   text-align: center;
+}
+
+/* 애니메이션 */
+@keyframes titleContainer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleContainerMobile {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 반응형 */
