@@ -1,9 +1,8 @@
-import Image from 'next/image';
-import Doctor from '@/public/png/doctor.png';
-import CEO from '@/public/png/ceo.png';
-import FemaleArtist from '@/public/png/artist.png';
-import MaleArtist from '@/public/png/artist2.png';
-import s from './MobileHeroSection.module.css';
+import Image from "next/image";
+import Doctor from "@/public/png/doctor.png";
+import CEO from "@/public/png/ceo.png";
+import MaleArtist from "@/public/png/artist.png";
+import s from "./MobileHeroSection.module.css";
 
 const MobileHeroSection = () => {
   return (

@@ -7,11 +7,15 @@
   padding: 0 var(--spacing-16);
 }
 
+.topImage {
+  margin-bottom: 64px;
+}
+
 .titleContainer {
-  margin-bottom: var(--spacing-48);
   opacity: 0;
   transform: translateY(20px);
   animation: titleContainer 2s forwards;
+  margin-bottom: 80px;
 }
 
 .title {
@@ -80,7 +84,11 @@
 /* 반응형 */
 @media (max-width: 768px) {
   .heroSection {
-    height: 90vh;
+    height: 80vh;
+  }
+
+  .topImage {
+    width: 64px;
   }
 
   .title {
@@ -95,6 +103,10 @@
 @media (max-width: 425px) {
   .heroSection {
     height: 95vh;
+  }
+
+  .topImage {
+    margin-bottom: 32px;
   }
 
   .titleContainer {
@@ -112,7 +124,7 @@
 
 @media (max-width: 320px) {
   .heroSection {
-    height: 93vh;
+    height: 90vh;
   }
 
   .titleMobile {
