@@ -1,6 +1,6 @@
 .historySection {
   padding: var(--spacing-64) 0;
-  /* background-color: var(--quaternary); */
+  background-color: rgba(239, 246, 255, 0.5);
 }
 
 .historySectionAnimate {

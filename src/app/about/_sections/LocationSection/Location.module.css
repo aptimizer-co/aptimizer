@@ -1,6 +1,6 @@
 .locationSection {
   padding: var(--spacing-64) 0;
-  /* background-color: rgb(249, 250, 251); */
+  background-color: rgba(239, 246, 255, 0.5);
 }
 
 .locationSectionAnimate {

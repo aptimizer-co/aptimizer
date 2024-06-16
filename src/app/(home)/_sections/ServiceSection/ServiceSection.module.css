@@ -1,6 +1,7 @@
 .serviceSection {
   width: 100%;
   padding: var(--spacing-64) 0;
+  background-color: rgba(239, 246, 255, 0.5);
 }
 
 .serviceContainer {

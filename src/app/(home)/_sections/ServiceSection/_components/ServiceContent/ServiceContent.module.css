@@ -1,9 +1,10 @@
 .product {
-  border: 0.2rem solid #d2d9ea;
+  border: 0.2rem solid var(--tertiary);
   border-radius: 2rem;
   width: 72%;
   padding: var(--spacing-40);
   position: relative;
+  background-color: var(--white);
 }
 
 .productImgContainer {
