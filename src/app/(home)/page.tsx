@@ -1,14 +1,11 @@
-import s from "./page.module.css";
-import { HeroSection, ServiceSection } from "./_sections";
-import { Container } from "@/src/components";
+import s from './page.module.css';
+import { HeroSection, ServiceSection } from './_sections';
 
 const Home = () => {
   return (
     <main className={s.home}>
-      <Container>
-        {/* <HeroSection /> */}
-        <ServiceSection />
-      </Container>
+      <HeroSection />
+      {/* <ServiceSection /> */}
     </main>
   );
 };
