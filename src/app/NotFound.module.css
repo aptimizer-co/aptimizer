@@ -1,0 +1,18 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 6rem);
+}
+
+.textContainer p {
+  font-size: var(--text-40);
+  font-weight: var(--font-700);
+  margin-bottom: var(--spacing-32);
+}
+
+.textContainer a {
+  font-size: var(--text-20);
+  font-weight: var(--font-600);
+  color: var(--primary);
+}
