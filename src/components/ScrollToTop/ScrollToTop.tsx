@@ -1,33 +1,31 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import ArrowUp from '@/public/svg/arrow_upward.svg';
-import Image from 'next/image';
-import s from './ScrollToTop.module.css';
+import { useState, useEffect } from "react";
+import ArrowUp from "@/public/svg/arrow_upward.svg";
+import Image from "next/image";
+import s from "./ScrollToTop.module.css";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
-  console.log(window.scrollY);
 
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 600) {
-        console.log(window.scrollY);
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const handleClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
