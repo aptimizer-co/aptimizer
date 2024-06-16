@@ -21,3 +21,14 @@
   font-weight: var(--font-600);
   color: var(--primary);
 }
+
+@media (max-width: 425px) {
+  .textContainer p {
+    font-size: var(--text-20);
+    margin-bottom: var(--spacing-16);
+  }
+
+  .textContainer a {
+    font-size: var(--text-18);
+  }
+}
