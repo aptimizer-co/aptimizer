@@ -9,7 +9,7 @@ const ServiceSection = () => {
   const [activeService, setActiveService] = useState(0);
 
   return (
-    <section className={s.serviceSection}>
+    <section id="serviceSection" className={s.serviceSection}>
       <Container>
         <SectionTitle>SERVICE</SectionTitle>
         <SectionSubtitle>

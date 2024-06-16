@@ -70,7 +70,7 @@ const AskSection = () => {
   };
 
   return (
-    <section className={s.askSection}>
+    <section id="askSection" className={s.askSection}>
       <Container>
         <SectionTitle>ASK US</SectionTitle>
         <SectionSubtitle>
