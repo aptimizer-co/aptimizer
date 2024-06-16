@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <main className={s.home}>
       <HeroSection />
-      {/* <ServiceSection /> */}
+      <ServiceSection />
     </main>
   );
 };
