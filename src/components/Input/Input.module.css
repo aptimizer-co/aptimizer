@@ -21,7 +21,7 @@
 
 .input {
   padding: 1.6rem 1.6rem;
-  border: 1px solid #cdced6;
+  border: 1px solid var(--tertiary);
   font-size: 1.6rem;
   font-weight: 400;
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
@@ -42,13 +42,14 @@
   color: #cdced6;
 }
 
+.input:focus,
 .input:active {
-  border-color: #000000;
+  outline: 2px solid var(--primary);
 }
 
 .textarea {
   padding: 1.6rem 1.6rem;
-  border: 1px solid #cdced6;
+  border: 1px solid var(--tertiary);
   font-weight: 400;
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
@@ -72,6 +73,7 @@
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
+.textarea:focus,
 .textarea:active {
-  border: 1px solid black;
+  outline: 2px solid var(--primary);
 }
