@@ -27,7 +27,7 @@ const AskSection = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const { name, email, phone, text } = askFormValues;
@@ -37,15 +37,36 @@ const AskSection = () => {
       return;
     }
 
-    alert('문의가 접수됐습니다!');
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          text: text,
+        }),
+      });
 
-    setAskFormValues({
-      name: '',
-      email: '',
-      phone: '',
-      text: '',
-    });
-    console.log('Form submitted:', askFormValues);
+      if (!response.ok) {
+        throw new Error('서버에서 오류 응답');
+      }
+
+      const data = await response.json();
+      alert('문의가 접수됐습니다!');
+
+      setAskFormValues({
+        name: '',
+        email: '',
+        phone: '',
+        text: '',
+      });
+    } catch (error) {
+      console.error('오류 발생:', error);
+    }
   };
 
   return (
