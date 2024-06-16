@@ -1,0 +1,11 @@
+.footer {
+  padding: var(--spacing-64) 0;
+}
+
+.footerInner {
+  width: 100%;
+}
+
+.copyright {
+  margin-bottom: var(--spacing-16);
+}
