@@ -94,19 +94,19 @@ const Header = () => {
         <nav className={`${s.container} ${s.mobileNav}`}>
           <ul>
             <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/about"}>앱티마이저</Link>
+              <Link href={"/about"}>회사소개</Link>
             </li>
             <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/"}>서비스</Link>
             </li>
             <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/"}>공지사항</Link>
+              <Link href={"/notify"}>공지사항</Link>
             </li>
-            <li onClick={() => setIsMobileMenuOpen(false)}>
+            {/* <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/ask"}>문의하기</Link>
-            </li>
+            </li> */}
             <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/"}>로그인</Link>
+              <Link href={"/login"}>로그인</Link>
             </li>
           </ul>
         </nav>
