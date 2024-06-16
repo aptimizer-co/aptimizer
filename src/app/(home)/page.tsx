@@ -1,4 +1,5 @@
 import s from './page.module.css';
+import { ScrollToTop } from '@/src/components';
 import { AskSection, HeroSection, ServiceSection } from './_sections';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
       <HeroSection />
       <ServiceSection />
       <AskSection />
+      <ScrollToTop />
     </main>
   );
 };

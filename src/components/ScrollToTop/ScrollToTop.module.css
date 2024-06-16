@@ -3,9 +3,31 @@
   width: 48px;
   height: 48px;
   border-radius: 50rem;
+  opacity: 0;
   border: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .icon path {
   fill: white;
+}
+
+/* 반응형 */
+@media (max-width: 425px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 20px;
+  }
 }

@@ -1,20 +1,48 @@
-"use client";
+'use client';
 
-import ArrowUp from "@/public/svg/arrow_upward.svg";
-import Image from "next/image";
-import s from "./ScrollToTop.module.css";
+import { useState, useEffect } from 'react';
+import ArrowUp from '@/public/svg/arrow_upward.svg';
+import Image from 'next/image';
+import s from './ScrollToTop.module.css';
 
 const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  console.log(window.scrollY);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 600) {
+        console.log(window.scrollY);
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
   const handleClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // 부드럽게 스크롤
+      behavior: 'smooth',
     });
   };
 
   return (
-    <button className={s.scrollToTop} onClick={handleClick}>
-      <Image className={s.icon} src={ArrowUp} alt="" width={24} height={24} />
+    <button
+      className={`${s.scrollToTop} ${isVisible ? s.show : s.hide}`}
+      onClick={handleClick}
+    >
+      <Image
+        className={s.icon}
+        src={ArrowUp}
+        alt="맨 위로"
+        width={24}
+        height={24}
+      />
     </button>
   );
 };

@@ -1,6 +1,12 @@
-import { Navigation, ScrollToTop } from "@/src/components";
-import { BannerSection, HistorySection, IntroSection, LocationSection, PerformanceSection } from "./_sections";
-import s from "./page.module.css";
+import { Navigation, ScrollToTop } from '@/src/components';
+import {
+  BannerSection,
+  HistorySection,
+  IntroSection,
+  LocationSection,
+  PerformanceSection,
+} from './_sections';
+import s from './page.module.css';
 
 const AboutPage = () => {
   return (
@@ -17,9 +23,7 @@ const AboutPage = () => {
       <PerformanceSection />
       {/* 6. 위치 섹션 */}
       <LocationSection />
-      <div className={s.scrollToTop}>
-        <ScrollToTop />
-      </div>
+      <ScrollToTop />
     </main>
   );
 };
