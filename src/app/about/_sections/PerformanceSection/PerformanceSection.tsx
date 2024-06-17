@@ -25,8 +25,8 @@ const PerformanceSection = () => {
           <div className={s.performanceCardContainer}>
             <PerformanceCard animate={inView} type="students" />
             <PerformanceCard animate={inView} type="handshake" />
-            <PerformanceCard animate={inView} type="data" />
-            <PerformanceCard animate={inView} type="experiment" />
+            <PerformanceCard animate={inView} type="mentor" />
+            <PerformanceCard animate={inView} type="survey" />
           </div>
         </div>
       </Container>
