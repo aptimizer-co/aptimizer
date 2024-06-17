@@ -32,7 +32,7 @@ const Header = () => {
               </button> */}
             </li>
             <li>
-              <Link href={"/"}>서비스</Link>
+              <Link href={"/"}>홈</Link>
               {/* <button
                 type="button"
                 className={s.navButton}
@@ -65,28 +65,12 @@ const Header = () => {
 
         {/* 4. 모바일 */}
         {isMobileMenuOpen ? (
-          <button
-            className={s.mobileButton}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <Image
-              src="/svg/close.svg"
-              alt="모바일 메뉴 숨김 버튼"
-              width={40}
-              height={40}
-            />
+          <button className={s.mobileButton} onClick={() => setIsMobileMenuOpen(false)}>
+            <Image src="/svg/close.svg" alt="모바일 메뉴 숨김 버튼" width={40} height={40} />
           </button>
         ) : (
-          <button
-            className={s.mobileButton}
-            onClick={() => setIsMobileMenuOpen(true)}
-          >
-            <Image
-              src="/svg/menu.svg"
-              alt="모바일 메뉴 표시 버튼"
-              width={40}
-              height={40}
-            />
+          <button className={s.mobileButton} onClick={() => setIsMobileMenuOpen(true)}>
+            <Image src="/svg/menu.svg" alt="모바일 메뉴 표시 버튼" width={40} height={40} />
           </button>
         )}
       </header>
@@ -97,7 +81,7 @@ const Header = () => {
               <Link href={"/about"}>회사소개</Link>
             </li>
             <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/"}>서비스</Link>
+              <Link href={"/"}>홈</Link>
             </li>
             <li onClick={() => setIsMobileMenuOpen(false)}>
               <Link href={"/notify"}>공지사항</Link>
