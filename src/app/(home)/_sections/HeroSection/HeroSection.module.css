@@ -83,10 +83,6 @@
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .heroSection {
-    height: 80vh;
-  }
-
   .topImage {
     width: 64px;
   }
@@ -101,10 +97,6 @@
 }
 
 @media (max-width: 425px) {
-  .heroSection {
-    height: 95vh;
-  }
-
   .topImage {
     margin-bottom: 32px;
   }
@@ -123,10 +115,6 @@
 }
 
 @media (max-width: 320px) {
-  .heroSection {
-    height: 90vh;
-  }
-
   .titleMobile {
     font-size: var(--text-20);
   }
