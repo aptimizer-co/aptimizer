@@ -1,0 +1,29 @@
+.PersonaSection {
+  padding: 80px 0;
+}
+
+.speechBubbleContainerCenter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+  transform: translateX(15%);
+}
+
+.speechBubbleContainerLeft {
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(5%);
+  margin-bottom: 16px;
+}
+
+.speechBubbleContainerRight {
+  display: flex;
+  justify-content: flex-end;
+  transform: translateX(-5%);
+  margin-bottom: 16px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
