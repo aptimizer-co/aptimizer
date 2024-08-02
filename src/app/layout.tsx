@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header, Footer } from "@/src/components/index";
 
@@ -10,6 +11,13 @@ export const metadata: Metadata = {
   },
 };
 
+const pretendard = localFont({
+  src: "../static/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-KR">
-      <body>
+      <body className={pretendard.className}>
         <Header />
         {children}
         <Footer />
