@@ -1,0 +1,36 @@
+.Controller {
+  max-width: fit-content;
+  height: 60px;
+  background-color: #282828;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.button {
+  padding: 16px 24px;
+  background-color: #282828;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  transition: 200ms all ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+}
+
+.active {
+  background-color: var(--secondary);
+}
+
+.icon {
+  width: 24px;
+}
