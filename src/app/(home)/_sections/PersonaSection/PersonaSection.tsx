@@ -5,7 +5,7 @@ import { SpeechBubble } from "../../_components";
 import s from "./PersonaSection.module.css";
 import { IndividualPersona, BusinessPersona } from "../../_containers";
 
-const PersonaSection = () => {
+const PersonaSection = ({ type }) => {
   const renderPersona = (type: "individual" | "business") => {
     switch (type) {
       case "individual":
@@ -17,7 +17,7 @@ const PersonaSection = () => {
 
   return (
     <Container>
-      <section className={s.PersonaSection}>{renderPersona("business")}</section>
+      <section className={s.PersonaSection}>{renderPersona(type)}</section>
     </Container>
   );
 };
