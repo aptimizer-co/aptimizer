@@ -14,7 +14,7 @@ const Home = () => {
       {/* <HeroSection /> */}
       <PersonaSection type={type} />
       <FeatureSection type={type} />
-      {/* <ServiceSection /> */}
+      <ServiceSection type={type} />
       {/* <AskSection /> */}
       {/* <ScrollToTop /> */}
       <div className={s.controllerContainer}>

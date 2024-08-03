@@ -1,17 +1,20 @@
-.serviceSection {
-  width: 100%;
-  padding: var(--spacing-64) 0;
-  background-color: rgba(239, 246, 255, 0.5);
+.ServiceSection {
+  padding: 80px 0;
 }
 
-.serviceContainer {
+.serviceCardContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
 }
 
-/* 반응형 */
-@media (max-width: 768px) {
-  .serviceContainer {
-    flex-direction: column;
-  }
+.serviceCardContainer div {
+  flex: 1;
+}
+
+.title {
+  margin-bottom: 64px;
+  font-size: var(--text-40);
+  font-weight: var(--font-700);
+  text-align: center;
 }
