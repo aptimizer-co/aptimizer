@@ -1,0 +1,10 @@
+.FeatureSection {
+  padding: 80px 0;
+}
+
+.title {
+  margin-bottom: 64px;
+  font-size: var(--text-40);
+  font-weight: var(--font-700);
+  text-align: center;
+}
