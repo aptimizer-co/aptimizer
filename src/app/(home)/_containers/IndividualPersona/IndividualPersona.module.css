@@ -1,3 +1,17 @@
+.subtitle {
+  font-size: var(--text-32);
+  font-weight: var(--font-700);
+  margin-bottom: var(--spacing-16);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-40);
+  font-weight: var(--font-700);
+  margin-bottom: var(--spacing-64);
+  text-align: center;
+}
+
 .speechBubbleContainerCenter {
   display: flex;
   justify-content: center;
