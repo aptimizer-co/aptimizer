@@ -1,0 +1,38 @@
+.ServiceCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 24px 16px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.ServiceCard:hover {
+  transform: translateY(-5%);
+}
+
+.imgContainer {
+  width: 100%;
+  height: 300px;
+  padding: 8px;
+  background-color: chocolate;
+  border-radius: 16px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: var(--text-20);
+  font-weight: var(--font-700);
+  margin-bottom: 16px;
+}
+
+.description {
+  line-height: 2.4rem;
+}
