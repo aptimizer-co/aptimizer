@@ -1,11 +1,12 @@
-import Image from "next/image";
-import PersonaIndividual from "@/public/svg/persona_individual.svg";
 import { Container } from "@/src/components";
-import { SpeechBubble } from "../../_components";
 import s from "./PersonaSection.module.css";
 import { IndividualPersona, BusinessPersona } from "../../_containers";
 
-const PersonaSection = ({ type }) => {
+type TPersonaSection = {
+  type: "individual" | "business";
+};
+
+const PersonaSection = ({ type }: TPersonaSection) => {
   const renderPersona = (type: "individual" | "business") => {
     switch (type) {
       case "individual":

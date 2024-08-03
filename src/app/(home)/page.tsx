@@ -7,7 +7,7 @@ import { Controller } from "./_components";
 import { AskSection, HeroSection, PersonaSection, ServiceSection } from "./_sections";
 
 const Home = () => {
-  const [type, setType] = useState("individual");
+  const [type, setType] = useState<"individual" | "business">("individual");
 
   return (
     <main className={s.home}>
