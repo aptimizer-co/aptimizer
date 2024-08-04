@@ -1,4 +1,5 @@
 .ServiceCard {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -7,6 +8,7 @@
   padding: 24px 16px;
   transition: all 300ms ease-in-out;
   cursor: pointer;
+  /* box-shadow: 0px 10px 20px 0px rgba(40, 40, 40, 0.1); */
 }
 
 .ServiceCard:hover {
@@ -14,17 +16,29 @@
 }
 
 .imgContainer {
-  width: 100%;
+  margin: 0 auto;
+  width: 350px;
   height: 300px;
-  padding: 8px;
-  background-color: chocolate;
   border-radius: 16px;
+  position: relative;
+}
+
+.service1,
+.service2,
+.service3 {
+  background-color: rgba(173, 191, 237, 0.8);
+}
+
+.service4,
+.service5,
+.service6 {
+  background-color: rgba(255, 182, 182, 0.8);
 }
 
 .img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  border-radius: 24px;
+  padding: 8px;
 }
 
 .title {
