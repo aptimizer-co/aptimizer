@@ -1,5 +1,9 @@
 export { default as AskSection } from "./AskSection/AskSection";
 export { default as FeatureSection } from "./FeatureSection/FeatureSection";
 export { default as HeroSection } from "./HeroSection/HeroSection";
+export { default as IntroSection } from "./IntroSection/IntroSection";
 export { default as PersonaSection } from "./PersonaSection/PersonaSection";
 export { default as ServiceSection } from "./ServiceSection/ServiceSection";
+export { default as LocationSection } from "./LocationSection/LocationSection";
+export { default as PerformanceSection } from "./PerformanceSection/PerformanceSection";
+export { default as VisionSection } from "./VisionSection/VisionSection";

@@ -1,0 +1,43 @@
+.locationSection {
+  padding: var(--spacing-64) 0;
+  background-color: rgba(239, 246, 255, 0.5);
+}
+
+.locationSectionAnimate {
+  opacity: 0;
+  transform: translateY(10%);
+  animation: locationSectionAnimate 2s forwards;
+}
+
+.map {
+  width: 100%;
+  height: 40rem;
+  border-radius: 2rem;
+  margin-bottom: var(--spacing-32);
+}
+
+.text {
+  font-size: var(--text-16);
+  margin-bottom: var(--spacing-8);
+}
+
+/* 애니메이션 */
+@keyframes locationSectionAnimate {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .map {
+    height: 35rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .map {
+    height: 30rem;
+  }
+}

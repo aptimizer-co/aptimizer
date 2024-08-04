@@ -1,0 +1,88 @@
+.performanceSection {
+  padding: var(--spacing-64) 0;
+  position: relative;
+}
+
+.performanceSectionAnimate {
+  opacity: 0;
+  transform: translateY(20%);
+  animation: performanceSectionAnimate 2s forwards;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  position: relative;
+  width: 50rem;
+  height: 45rem;
+  transform: translateY(30px);
+}
+
+.performanceCardContainer {
+  display: flex;
+  gap: var(--spacing-16);
+  width: 51.6rem;
+  flex-wrap: wrap;
+}
+
+/* 애니메이션 */
+@keyframes performanceSectionAnimate {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 1140px) {
+  .container {
+    padding: 0 var(--spacing-16);
+  }
+}
+
+@media (max-width: 1024px) {
+  .image {
+    width: 40rem;
+    height: 35rem;
+  }
+
+  .innerContainer {
+    justify-content: space-between;
+  }
+
+  .performanceCardContainer {
+    width: 41.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 30rem;
+    height: 25rem;
+  }
+
+  .performanceCardContainer {
+    width: 31.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 25rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-64);
+  }
+
+  .performanceCardContainer {
+    width: 100%;
+    justify-content: center;
+  }
+}

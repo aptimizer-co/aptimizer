@@ -1,0 +1,132 @@
+.performanceCard {
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: #eff6ff;
+}
+
+.icon {
+  margin-bottom: var(--spacing-24);
+}
+
+.title {
+  font-size: var(--text-18);
+  font-weight: var(--font-500);
+  margin-bottom: var(--spacing-8);
+}
+
+.numbers {
+  font-size: var(--text-32);
+  font-weight: var(--font-700);
+  color: var(--primary);
+}
+
+.counter {
+  font-size: var(--text-18);
+  font-weight: var(--font-500);
+  color: var(--black);
+}
+
+@media (max-width: 1024px) {
+  .performanceCard {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .title {
+    font-size: var(--text-16);
+  }
+
+  .numbers {
+    font-size: var(--text-28);
+  }
+
+  .counter {
+    font-size: var(--text-16);
+  }
+}
+
+@media (max-width: 768px) {
+  .performanceCard {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: var(--spacing-16);
+  }
+
+  .numbers {
+    font-size: var(--text-20);
+  }
+}
+
+@media (max-width: 425px) {
+  .performanceCard {
+    width: 18rem;
+    height: 20rem;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: var(--spacing-16);
+  }
+
+  .numbers {
+    font-size: var(--text-24);
+  }
+}
+
+@media (max-width: 375px) {
+  .performanceCard {
+    width: 16rem;
+    height: 18rem;
+  }
+
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .numbers {
+    font-size: var(--text-24);
+  }
+
+  .title {
+    margin-bottom: var(--spacing-4);
+  }
+}
+
+@media (max-width: 320px) {
+  .performanceCard {
+    width: 13rem;
+    height: 15rem;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--spacing-16);
+  }
+
+  .numbers {
+    font-size: var(--text-20);
+  }
+
+  .title,
+  .counter {
+    font-size: var(--text-14);
+  }
+}
