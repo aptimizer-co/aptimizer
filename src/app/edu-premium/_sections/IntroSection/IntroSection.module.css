@@ -1,0 +1,29 @@
+.IntroSection {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.videoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+/* .video {
+  border-radius: 40px;
+} */
+
+.description {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 2.7rem;
+  margin-bottom: 16px;
+}
