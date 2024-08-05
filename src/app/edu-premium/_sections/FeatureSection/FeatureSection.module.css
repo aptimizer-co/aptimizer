@@ -1,0 +1,46 @@
+.FeatureSection {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 64px;
+}
+
+.feature {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+.order {
+  order: 2;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.imgContainer {
+  flex: 1;
+}
+
+.number {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 3rem;
+}
+
+.img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
