@@ -1,0 +1,51 @@
+.ScheduleSection {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 64px;
+}
+
+.day {
+  padding: 16px 24px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+}
+
+.num {
+  background-color: var(--secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dayTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dayDesc {
+  font-size: 16px;
+  line-height: 2.4rem;
+}
+
+.scheduleContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
