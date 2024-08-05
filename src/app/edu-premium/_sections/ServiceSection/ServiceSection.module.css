@@ -1,0 +1,14 @@
+.ServiceSection {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 64px;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 3rem;
+}
