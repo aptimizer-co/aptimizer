@@ -1,0 +1,40 @@
+.EffectSection {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+.iconContianer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconImg {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.iconTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.description {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 3rem;
+  margin-bottom: 16px;
+}
