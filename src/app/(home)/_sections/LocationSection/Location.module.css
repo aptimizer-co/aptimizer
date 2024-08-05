@@ -1,13 +1,13 @@
 .locationSection {
   padding: var(--spacing-64) 0;
-  background-color: rgba(239, 246, 255, 0.5);
+  /* background-color: rgba(239, 246, 255, 0.5); */
 }
-
+/* 
 .locationSectionAnimate {
   opacity: 0;
   transform: translateY(10%);
   animation: locationSectionAnimate 2s forwards;
-}
+} */
 
 .map {
   width: 100%;

@@ -21,15 +21,15 @@ const Home = () => {
 
   return (
     <main className={s.home}>
-      {/* <HeroSection /> */}
-      {/* <IntroSection /> */}
-      <VisionSection />
-      {/* <PerformanceSection /> */}
-      {/* <PersonaSection type={type} /> */}
-      {/* <FeatureSection type={type} /> */}
-      {/* <ServiceSection type={type} /> */}
+      <HeroSection />
+      <IntroSection />
+      {/* <VisionSection /> */}
+      <PerformanceSection />
+      <PersonaSection type={type} />
+      <FeatureSection type={type} />
+      <ServiceSection type={type} />
       {/* <AskSection /> */}
-      {/* <LocationSection /> */}
+      <LocationSection />
       {/* <ScrollToTop /> */}
       {/* <div className={s.controllerContainer}>
         <Controller type={type} setType={setType} />
