@@ -17,7 +17,7 @@ const PersonaSection = ({ type }: TPersonaSection) => {
   };
 
   return (
-    <section className={s.PersonaSection}>
+    <section className={s.PersonaSection} id="persona">
       <Container>{renderPersona(type)}</Container>
     </section>
   );

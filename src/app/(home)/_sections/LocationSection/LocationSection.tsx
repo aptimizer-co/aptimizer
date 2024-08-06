@@ -10,7 +10,7 @@ const LocationSection = () => {
   });
 
   return (
-    <section className={`${s.locationSection} ${inView ? s.locationSectionAnimate : ""}`} ref={ref}>
+    <section className={`${s.locationSection} ${inView ? s.locationSectionAnimate : ""}`} ref={ref} id="location">
       <Container style={s.container}>
         <SectionTitle>LOCATION</SectionTitle>
         <SectionSubtitle>찾으러 오시는 길</SectionSubtitle>

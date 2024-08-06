@@ -4,7 +4,7 @@ import s from "./ServiceSection.module.css";
 
 const ServiceSection = ({ type }) => {
   return (
-    <section className={s.ServiceSection}>
+    <section className={s.ServiceSection} id="service">
       <Container>
         <p className={s.title}>앱티마이저가 제공하는 서비스를 지금 만나보세요!</p>
         <div className={s.serviceCardContainer}>

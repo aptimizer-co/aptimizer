@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, use, useEffect } from "react";
 import s from "./page.module.css";
 import { ScrollToTop } from "@/src/components";
 import { Controller } from "./_components";
+import { useInView } from "react-intersection-observer";
 import {
   AskSection,
   FeatureSection,
@@ -25,13 +26,16 @@ const Home = () => {
       <IntroSection />
       {/* <VisionSection /> */}
       <PerformanceSection />
+      <div className={`${s.controllerContainer}`}>
+        <Controller type={type} setType={setType} />
+      </div>
       <PersonaSection type={type} />
       <FeatureSection type={type} />
       <ServiceSection type={type} />
       {/* <AskSection /> */}
       <LocationSection />
-      {/* <ScrollToTop /> */}
-      {/* <div className={s.controllerContainer}>
+      <ScrollToTop />
+      {/* <div className={`${s.controllerContainer} ${inView ? s.show : ""}`}>
         <Controller type={type} setType={setType} />
       </div> */}
     </main>

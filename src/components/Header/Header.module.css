@@ -18,10 +18,54 @@
 /* 네비게이션 */
 .nav ul {
   display: flex;
-  gap: 1.6rem;
+  gap: 0.8rem;
 }
 
-.nav li {
+.li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.linkIcon {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+}
+
+.button {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: white;
+  border-radius: 4px;
+  transition: 200ms all ease-in-out;
+  font-family: "Pretendard";
+}
+
+.button:hover {
+  background-color: #e8e8ee;
+}
+
+.link {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: white;
+  border-radius: 4px;
+  transition: 200ms all ease-in-out;
+}
+
+.link:hover {
+  background-color: #e8e8ee;
+}
+
+/* .nav li {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -43,9 +87,9 @@
 .nav li:active {
   background-color: #cdced6;
   transition: background-color 200ms ease-in-out;
-}
+} */
 
-.navButton {
+/* .navButton {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -60,10 +104,10 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-}
+} */
 
 /* 로그인 버튼 */
-.buttonLogin {
+/* .buttonLogin {
   width: 8rem;
   height: 4rem;
   border-radius: 0.6rem;
@@ -86,7 +130,7 @@
 
 .buttonLogin:active {
   background-color: #1f4298;
-}
+} */
 
 /* 모바일 */
 

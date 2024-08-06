@@ -2,12 +2,29 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import LinkIcon from "@/public/svg/link.svg";
 import Image from "next/image";
 import s from "./Header.module.css";
 import Logo from "@/public/svg/logo.svg";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToSection = (section) => {
+    if (pathname !== "/") {
+      router.push("/");
+    }
+
+    const element = document.getElementById(section);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={s.outer}>
@@ -22,45 +39,45 @@ const Header = () => {
         {/* 2. 네비게이션 */}
         <nav className={s.nav}>
           <ul>
-            <li>
-              <Link href={"/about"}>회사소개</Link>
-              {/* <button
-                type="button"
-                className={s.navButton}
-              >
-                회사소개
-              </button> */}
-            </li>
-            <li>
-              <Link href={"/"}>홈</Link>
-              {/* <button
-                type="button"
-                className={s.navButton}
-                onClick={() => scrollToView('serviceSection')}
-              >
-                서비스
-              </button> */}
-            </li>
-            {/* <li>
-              <Link href={'/ask'}>문의하기</Link>
-              <button
-                type="button"
-                className={s.navButton}
-                onClick={() => scrollToView('askSection')}
-              >
-                문의하기
+            <li className={s.li}>
+              <button className={s.button} onClick={() => scrollToSection("intro")}>
+                기업 소개
               </button>
-            </li> */}
-            <li>
-              <Link href={"/notice"}>공지사항</Link>
+            </li>
+            <li className={s.li}>
+              <button className={s.button} onClick={() => scrollToSection("persona")}>
+                고객모델
+              </button>
+            </li>
+            <li className={s.li}>
+              <button className={s.button} onClick={() => scrollToSection("service")}>
+                서비스
+              </button>
+            </li>
+            <li className={s.li}>
+              <button className={s.button} onClick={() => scrollToSection("location")}>
+                회사 위치
+              </button>
+            </li>
+            <li className={s.li}>
+              <Link className={s.link} href={"/"}>
+                공지사항
+                <Image className={s.linkIcon} src={LinkIcon} alt="" />
+              </Link>
+            </li>
+            <li className={s.li}>
+              <Link className={s.link} href={"/edu-premium"}>
+                에듀 프리미엄
+                <Image className={s.linkIcon} src={LinkIcon} alt="" />
+              </Link>
             </li>
           </ul>
         </nav>
 
         {/* 3. 로그인 버튼 */}
-        <Link className={s.buttonLogin} href={"/login"}>
+        {/* <Link className={s.buttonLogin} href={"/login"}>
           로그인
-        </Link>
+        </Link> */}
         {/* <button className={s.buttonLogin}>로그인</button> */}
 
         {/* 4. 모바일 */}
