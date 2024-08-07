@@ -2,26 +2,10 @@
   position: relative;
 }
 
-/* .controllerContainer {
+.controllerContainer {
   position: fixed;
   z-index: 1;
   top: 64px;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
-} */
-
-.controllerContainer {
-  /* position: fixed;
-  z-index: 1;
-  top: 64px;
-  left: 50%;
-  transform: translateX(-50%); */
-  /* display: none; */
-  display: flex;
-  justify-content: center;
-}
-
-.show {
-  display: block;
 }

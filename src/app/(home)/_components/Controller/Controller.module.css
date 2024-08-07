@@ -7,6 +7,8 @@
   justify-content: center;
   gap: 8px;
   padding: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .button {
@@ -21,6 +23,7 @@
   color: white;
   border-radius: 10px;
   transition: 200ms all ease-in-out;
+  display: flex;
 }
 
 .button:hover {
@@ -33,4 +36,21 @@
 
 .icon {
   width: 24px;
+}
+
+/* .hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+} */
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
 }
