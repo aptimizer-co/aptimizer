@@ -1,0 +1,31 @@
+.TestSection {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--secondary);
+  transition: all 200ms ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--primary);
+}

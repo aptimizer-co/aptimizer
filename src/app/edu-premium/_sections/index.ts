@@ -4,3 +4,4 @@ export { default as EffectSection } from "./EffectSection/EffectSection";
 export { default as ServiceSection } from "./ServiceSection/ServiceSection";
 export { default as ScheduleSection } from "./ScheduleSection/ScheduleSection";
 export { default as ApplySection } from "./ApplySection/ApplySection";
+export { default as TestSection } from "./TestSection/TestSection";
