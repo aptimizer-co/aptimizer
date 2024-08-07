@@ -44,14 +44,19 @@ const Header = () => {
                 기업 소개
               </button>
             </li>
-            <li className={s.li}>
+            {/* <li className={s.li}>
               <button className={s.button} onClick={() => scrollToSection("persona")}>
                 고객모델
               </button>
-            </li>
+            </li> */}
             <li className={s.li}>
               <button className={s.button} onClick={() => scrollToSection("service")}>
                 서비스
+              </button>
+            </li>
+            <li className={s.li}>
+              <button className={s.button} onClick={() => scrollToSection("askSection")}>
+                문의
               </button>
             </li>
             <li className={s.li}>
@@ -62,12 +67,6 @@ const Header = () => {
             <li className={s.li}>
               <Link className={s.link} href={"/"}>
                 공지사항
-                <Image className={s.linkIcon} src={LinkIcon} alt="" />
-              </Link>
-            </li>
-            <li className={s.li}>
-              <Link className={s.link} href={"/edu-premium"}>
-                에듀 프리미엄
                 <Image className={s.linkIcon} src={LinkIcon} alt="" />
               </Link>
             </li>
