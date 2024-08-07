@@ -1,3 +1,12 @@
 .VisionSection {
-  padding: 8rem 0;
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.title {
+  margin-bottom: 64px;
+  font-size: var(--text-40);
+  font-weight: var(--font-700);
+  text-align: center;
+  line-height: 150%;
 }

@@ -15,11 +15,8 @@ const PerformanceSection = () => {
   return (
     <section className={`${s.performanceSection} ${inView ? s.performanceSectionAnimate : ""}`} ref={ref}>
       <Container style={s.container}>
-        {/* <SectionTitle>PERFORMANCE</SectionTitle>
-        <SectionSubtitle>앱티마이저가 보여주는 성과</SectionSubtitle> */}
-
-        <p className={s.title}>믿을 수 있는 경험과 운영 노하우를 지닌 기업!</p>
-
+        <SectionTitle>PERFORMANCE</SectionTitle>
+        <SectionSubtitle>앱티마이저가 보여주는 성과</SectionSubtitle>
         <div className={s.innerContainer}>
           <div className={s.image}>
             <Image src={Performance} alt="데이터 이미지" fill />
@@ -32,6 +29,7 @@ const PerformanceSection = () => {
             <PerformanceCard animate={inView} type="survey" />
           </div>
         </div>
+        <p className={s.title}>믿을 수 있는 경험과 운영 노하우를 지닌 기업</p>
       </Container>
     </section>
   );

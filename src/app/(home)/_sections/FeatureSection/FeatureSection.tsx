@@ -1,12 +1,11 @@
 import { Feature } from "../../_containers";
-import { Container } from "@/src/components";
+import { Container, SectionSubtitle, SectionTitle } from "@/src/components";
 import s from "./FeatureSection.module.css";
 
 const FeatureSection = ({ type }) => {
   return (
     <section className={s.FeatureSection}>
       <Container>
-        <p className={s.title}>오직 앱티마이저만이 줄 수 있는 혜택!</p>
         {/* 개인상품 */}
         {type === "individual" && (
           <>

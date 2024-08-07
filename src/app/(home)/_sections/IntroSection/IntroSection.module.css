@@ -1,5 +1,6 @@
 .introSection {
   padding: 80px 0;
+  background-color: #fff;
   /* background-color: rgba(239, 246, 255, 0.5); */
 }
 
@@ -29,7 +30,7 @@
 
 .message {
   flex: 1;
-  font-size: var(--text-32);
+  font-size: var(--text-40);
   font-weight: var(--font-700);
   line-height: 150%;
   text-align: center;

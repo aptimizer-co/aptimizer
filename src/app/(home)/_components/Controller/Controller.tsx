@@ -11,7 +11,7 @@ const Controller = ({ type, setType }) => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 2500 && window.scrollY < 5500) {
+      if (window.scrollY > 2500 && window.scrollY < 6000) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

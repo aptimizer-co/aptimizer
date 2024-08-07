@@ -1,14 +1,14 @@
 .subtitle {
   font-size: var(--text-32);
   font-weight: var(--font-700);
-  margin-bottom: var(--spacing-16);
   text-align: center;
+  margin-bottom: var(--spacing-16);
 }
 
 .title {
   font-size: var(--text-40);
   font-weight: var(--font-700);
-  margin-bottom: var(--spacing-64);
+  /* margin-bottom: var(--spacing-64); */
   text-align: center;
 }
 
@@ -36,4 +36,5 @@
 .imgContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: var(--spacing-64);
 }

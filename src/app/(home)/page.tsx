@@ -2,7 +2,7 @@
 
 import { useState, useRef, use, useEffect } from "react";
 import s from "./page.module.css";
-import { ScrollToTop } from "@/src/components";
+import { ScrollToTop, Banner } from "@/src/components";
 import { Controller } from "./_components";
 import { useInView } from "react-intersection-observer";
 import {
@@ -32,12 +32,14 @@ const Home = () => {
       <PersonaSection type={type} />
       <FeatureSection type={type} />
       <ServiceSection type={type} />
-      {/* <AskSection /> */}
+      <AskSection />
       <LocationSection />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       {/* <div className={`${s.controllerContainer} ${inView ? s.show : ""}`}>
         <Controller type={type} setType={setType} />
       </div> */}
+
+      <Banner />
     </main>
   );
 };

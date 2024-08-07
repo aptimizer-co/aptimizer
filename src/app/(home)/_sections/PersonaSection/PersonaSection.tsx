@@ -1,4 +1,4 @@
-import { Container } from "@/src/components";
+import { Container, SectionTitle, SectionSubtitle } from "@/src/components";
 import s from "./PersonaSection.module.css";
 import { IndividualPersona, BusinessPersona } from "../../_containers";
 
@@ -18,7 +18,11 @@ const PersonaSection = ({ type }: TPersonaSection) => {
 
   return (
     <section className={s.PersonaSection} id="persona">
-      <Container>{renderPersona(type)}</Container>
+      <Container>
+        <SectionTitle>SPECIALTY</SectionTitle>
+        <SectionSubtitle>앱티마이저를 골라야 하는 이유</SectionSubtitle>
+        {renderPersona(type)}
+      </Container>
     </section>
   );
 };

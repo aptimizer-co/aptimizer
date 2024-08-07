@@ -11,7 +11,8 @@ const IntroSection = () => {
   return (
     <section className={`${s.introSection} ${inView ? s.introSectionAnimate : ""}`} ref={ref} id="intro">
       <Container style={s.container}>
-        <p className={s.title}>앱티마이저는 어떤 기업인가?</p>
+        <SectionTitle>INTRODUCTION</SectionTitle>
+        <SectionSubtitle>앱티마이저는 어떤 기업인가</SectionSubtitle>
         <div className={s.videoContainer}>
           <iframe
             width="800"

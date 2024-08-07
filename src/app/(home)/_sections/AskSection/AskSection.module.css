@@ -1,5 +1,5 @@
 .askSection {
-  padding: var(--spacing-64) 0;
+  padding: 80px 0;
 }
 
 .askFormContainer {
@@ -33,6 +33,7 @@
   font-weight: var(--font-500);
   color: white;
   transition: background-color 200ms ease-in-out;
+  font-family: "pretendard";
 }
 
 .askFormButton:hover {

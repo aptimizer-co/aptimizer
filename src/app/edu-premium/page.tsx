@@ -6,6 +6,7 @@ import {
   ServiceSection,
   ScheduleSection,
   ApplySection,
+  TestSection,
 } from "./_sections";
 import s from "./EduPremiumPage.module.css";
 
@@ -18,8 +19,9 @@ const EduPremiumPage = () => {
         <EffectSection />
         <ServiceSection />
         <ScheduleSection />
-        <ApplySection />
       </Container>
+      <TestSection />
+      <ApplySection />
     </main>
   );
 };
