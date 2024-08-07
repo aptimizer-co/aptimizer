@@ -1,0 +1,64 @@
+.Banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 450px;
+  background-color: #231815;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img {
+  margin-bottom: 16px;
+}
+
+.description {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  line-height: 2.7rem;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #282828;
+  background-color: white;
+}
+
+.cancel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
