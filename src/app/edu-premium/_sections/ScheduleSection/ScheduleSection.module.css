@@ -49,3 +49,54 @@
   flex-direction: column;
   gap: 16px;
 }
+
+@media (max-width: 425px) {
+  .ScheduleSection {
+    padding: 64px 0;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .scheduleContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .day {
+    padding: 8px 16px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+
+  .num {
+    background-color: var(--secondary);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dayTitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dayDesc {
+    font-size: 16px;
+    line-height: 2.4rem;
+  }
+
+  .days {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
