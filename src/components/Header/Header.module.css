@@ -65,73 +65,6 @@
   background-color: #e8e8ee;
 }
 
-/* .nav li {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10rem;
-  height: 4rem;
-  border-radius: 0.6rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  background-color: white;
-  transition: background-color 200ms ease-in-out;
-}
-
-.nav li:hover {
-  background-color: #e8e8ee;
-  transition: background-color 200ms ease-in-out;
-}
-
-.nav li:active {
-  background-color: #cdced6;
-  transition: background-color 200ms ease-in-out;
-} */
-
-/* .navButton {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-} */
-
-/* 로그인 버튼 */
-/* .buttonLogin {
-  width: 8rem;
-  height: 4rem;
-  border-radius: 0.6rem;
-  border: none;
-  background-color: #d2d9ea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 500;
-  color: white;
-  transition: background-color 200ms ease-in-out;
-}
-
-.buttonLogin:hover {
-  background-color: #798ec1;
-  transition: background-color 200ms ease-in-out;
-}
-
-.buttonLogin:active {
-  background-color: #1f4298;
-} */
-
 /* 모바일 */
 
 .mobileButton {
@@ -153,6 +86,7 @@
   gap: 0.8rem;
   flex-direction: column;
   padding: 0.8rem 0;
+  background-color: white;
 }
 
 .mobileNav li {
@@ -177,12 +111,26 @@
   transition: background-color 200ms ease-in-out;
 }
 
-.mobileNav a {
+.mobileLink {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+  background: transparent;
+  border: none;
+  font-family: "Pretendard";
+  font-size: 16px;
+}
+
+.mobilea {
+  position: relative;
+}
+
+.mobilea img {
+  position: absolute;
+  top: -5px;
+  right: -15px;
 }
 
 /* 반응형 */
@@ -205,6 +153,15 @@
 
 /* md */
 @media (max-width: 768px) {
+  .blackBackground {
+    background-color: rgba(0, 0, 0);
+    opacity: 0.8;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
   .header {
     margin-bottom: 0;
   }
@@ -223,5 +180,6 @@
 
   .mobileNav {
     display: block;
+    background-color: #fff;
   }
 }

@@ -15,6 +15,8 @@ const Header = () => {
   const pathname = usePathname();
 
   const scrollToSection = (section) => {
+    setIsMobileMenuOpen(false);
+
     if (pathname !== "/") {
       router.push("/");
     }
@@ -91,25 +93,34 @@ const Header = () => {
         )}
       </header>
       {isMobileMenuOpen && (
-        <nav className={`${s.container} ${s.mobileNav}`}>
-          <ul>
-            <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/about"}>회사소개</Link>
-            </li>
-            <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/"}>홈</Link>
-            </li>
-            <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/notify"}>공지사항</Link>
-            </li>
-            {/* <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/ask"}>문의하기</Link>
-            </li> */}
-            <li onClick={() => setIsMobileMenuOpen(false)}>
-              <Link href={"/login"}>로그인</Link>
-            </li>
-          </ul>
-        </nav>
+        <>
+          <nav className={`${s.container} ${s.mobileNav}`}>
+            <ul>
+              <li>
+                <button className={s.mobileLink} onClick={() => scrollToSection("intro")}>
+                  기업 소개
+                </button>
+              </li>
+              <li>
+                <button className={s.mobileLink} onClick={() => scrollToSection("service")}>
+                  서비스
+                </button>
+              </li>
+              <li>
+                <button className={s.mobileLink} onClick={() => scrollToSection("askSection")}>
+                  문의
+                </button>
+              </li>
+              <li>
+                <Link className={s.mobilea} href={"/notice"}>
+                  공지사항
+                  <Image className={s.linkIcon} src={LinkIcon} alt="" />
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className={s.blackBackground}></div>
+        </>
       )}
     </div>
   );
