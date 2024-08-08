@@ -121,10 +121,7 @@
   border: none;
   font-family: "Pretendard";
   font-size: 16px;
-}
-
-.mobilea {
-  position: relative;
+  font-weight: 500;
 }
 
 .mobilea img {
@@ -181,5 +178,11 @@
   .mobileNav {
     display: block;
     background-color: #fff;
+  }
+
+  .mobilea {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
