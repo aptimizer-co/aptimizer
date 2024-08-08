@@ -15,13 +15,13 @@ const EduPremiumPage = () => {
     <main className={s.EduPremiumPage}>
       <Container>
         <IntroSection />
-        <FeatureSection />
+        {/* <FeatureSection />
         <EffectSection />
         <ServiceSection />
-        <ScheduleSection />
+        <ScheduleSection /> */}
       </Container>
-      <TestSection />
-      <ApplySection />
+      {/* <TestSection /> */}
+      {/* <ApplySection /> */}
     </main>
   );
 };
