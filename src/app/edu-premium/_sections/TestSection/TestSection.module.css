@@ -29,3 +29,27 @@
 .button:hover {
   background-color: var(--primary);
 }
+
+/* 모바일 */
+@media (max-width: 425px) {
+  .TestSection {
+    padding: 64px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}

@@ -25,8 +25,33 @@
   font-weight: 700;
   background-color: var(--secondary);
   transition: all 200ms ease-in-out;
+  font-family: "pretendard";
 }
 
 .button:hover {
   background-color: var(--primary);
+}
+
+/* 모바일 */
+@media (max-width: 425px) {
+  .ApplySection {
+    padding: 64px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
 }

@@ -20,8 +20,8 @@ const EduPremiumPage = () => {
         <ServiceSection />
         <ScheduleSection />
       </Container>
-      {/* <TestSection /> */}
-      {/* <ApplySection /> */}
+      <TestSection />
+      <ApplySection />
     </main>
   );
 };
