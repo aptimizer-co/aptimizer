@@ -10,5 +10,27 @@
 
 .description {
   font-size: 20px;
-  line-height: 3rem;
+  line-height: 150%;
+}
+
+/* 반응형 */
+@media (max-width: 425px) {
+  .ServiceSection {
+    padding: 64px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 64px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
