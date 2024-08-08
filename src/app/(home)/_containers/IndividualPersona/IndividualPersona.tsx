@@ -16,7 +16,7 @@ const IndividualPersona = () => {
         <SpeechBubble direction="right" content="학과가 나랑 너무 안 맞아!" />
       </div>
       <div className={s.imgContainer}>
-        <Image src={PersonaIndividual} alt="고민하는 여학생" />
+        <Image className={s.img} src={PersonaIndividual} alt="고민하는 여학생" />
       </div>
       <p className={s.subtitle}>다음과 같은 고민을 한 번이라도 해보셨다면</p>
       <p className={s.title}>앱티마이저가 필요하다는 뜻입니다!</p>

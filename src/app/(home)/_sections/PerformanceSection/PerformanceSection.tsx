@@ -30,6 +30,9 @@ const PerformanceSection = () => {
           </div>
         </div>
         <p className={s.title}>믿을 수 있는 경험과 운영 노하우를 지닌 기업</p>
+        <p className={s.mobileTitle}>
+          믿을 수 있는 경험과 운영<br></br>노하우를 지닌 기업
+        </p>
       </Container>
     </section>
   );

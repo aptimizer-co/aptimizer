@@ -39,6 +39,10 @@
   margin-bottom: 64px;
 }
 
+.mobileTitle {
+  display: none;
+}
+
 /* 애니메이션 */
 @keyframes performanceSectionAnimate {
   to {
@@ -95,5 +99,18 @@
   .performanceCardContainer {
     width: 100%;
     justify-content: center;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .mobileTitle {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 150%;
+    font-weight: var(--font-700);
   }
 }

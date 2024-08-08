@@ -9,13 +9,28 @@
   margin-bottom: 100px;
 }
 
-/* .serviceCardContainer div {
-  flex: 1;
-} */
-
 .title {
   margin-bottom: 64px;
   font-size: var(--text-40);
   font-weight: var(--font-700);
   text-align: center;
+  line-height: 150%;
+}
+
+@media (max-width: 425px) {
+  .ServiceSection {
+    margin: 64px 0;
+  }
+
+  .serviceCardContainer {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight: var(--font-700);
+    text-align: center;
+  }
 }

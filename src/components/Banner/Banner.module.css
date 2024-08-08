@@ -62,3 +62,37 @@
   right: 10px;
   cursor: pointer;
 }
+
+@media (max-width: 425px) {
+  .Banner {
+    display: none;
+  }
+
+  .mobileBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #231815;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .mobileBannerImg {
+    border-radius: 100%;
+  }
+
+  .hide {
+    visibility: hidden;
+  }
+
+  .show {
+    opacity: 1;
+    visibility: visible;
+  }
+}

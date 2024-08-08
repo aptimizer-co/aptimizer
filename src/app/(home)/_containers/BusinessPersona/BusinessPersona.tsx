@@ -16,7 +16,7 @@ const BusinessPersona = () => {
         <SpeechBubble direction="right" content="우리 직원들을 어떻게 유형화할 수 있을까?" />
       </div>
       <div className={s.imgContainer}>
-        <Image src={PersonaBusiness} alt="고민하는 직장인" />
+        <Image className={s.img} src={PersonaBusiness} alt="고민하는 직장인" />
       </div>
       <p className={s.subtitle}>다음과 같은 고민을 한 번이라도 해보셨다면</p>
       <p className={s.title}>앱티마이저가 필요하다는 뜻입니다!</p>
