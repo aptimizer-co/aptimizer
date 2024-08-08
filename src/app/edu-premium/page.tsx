@@ -16,8 +16,8 @@ const EduPremiumPage = () => {
       <Container>
         <IntroSection />
         <FeatureSection />
-        {/*
         <EffectSection />
+        {/*
         <ServiceSection />
         <ScheduleSection /> */}
       </Container>
