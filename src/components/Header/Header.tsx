@@ -66,12 +66,12 @@ const Header = () => {
                 회사 위치
               </button>
             </li>
-            <li className={s.li}>
+            {/* <li className={s.li}>
               <Link className={s.link} href={"/"}>
                 공지사항
                 <Image className={s.linkIcon} src={LinkIcon} alt="" />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -112,11 +112,16 @@ const Header = () => {
                 </button>
               </li>
               <li>
+                <button className={s.mobileLink} onClick={() => scrollToSection("location")}>
+                  회사 위치
+                </button>
+              </li>
+              {/* <li>
                 <Link className={s.mobilea} href={"/notice"}>
                   공지사항
                   <Image className={s.linkIcon} src={LinkIcon} alt="" />
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className={s.blackBackground}></div>
