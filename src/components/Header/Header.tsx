@@ -46,11 +46,6 @@ const Header = () => {
                 기업 소개
               </button>
             </li>
-            {/* <li className={s.li}>
-              <button className={s.button} onClick={() => scrollToSection("persona")}>
-                고객모델
-              </button>
-            </li> */}
             <li className={s.li}>
               <button className={s.button} onClick={() => scrollToSection("service")}>
                 서비스
@@ -66,12 +61,12 @@ const Header = () => {
                 회사 위치
               </button>
             </li>
-            {/* <li className={s.li}>
-              <Link className={s.link} href={"/"}>
+            <li className={s.li}>
+              <Link className={s.link} href={"/notice"}>
                 공지사항
                 <Image className={s.linkIcon} src={LinkIcon} alt="" />
               </Link>
-            </li> */}
+            </li>
           </ul>
         </nav>
 
@@ -116,12 +111,12 @@ const Header = () => {
                   회사 위치
                 </button>
               </li>
-              {/* <li>
+              <li>
                 <Link className={s.mobilea} href={"/notice"}>
                   공지사항
                   <Image className={s.linkIcon} src={LinkIcon} alt="" />
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </nav>
           <div className={s.blackBackground}></div>
