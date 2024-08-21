@@ -23,12 +23,12 @@ const Home = () => {
   return (
     <main className={s.home}>
       <HeroSection />
-      <IntroSection />
-      {/* <VisionSection /> */}
-      <PerformanceSection />
       <div className={`${s.controllerContainer}`}>
         <Controller type={type} setType={setType} />
       </div>
+      <IntroSection />
+      {/* <VisionSection /> */}
+      <PerformanceSection />
       <PersonaSection type={type} />
       <FeatureSection type={type} />
       <ServiceSection type={type} />
