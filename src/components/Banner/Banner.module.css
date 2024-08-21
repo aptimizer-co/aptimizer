@@ -67,6 +67,21 @@
   display: none;
 }
 
+.cancelButton {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.cancelIcon {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 425px) {
   .Banner {
     display: none;

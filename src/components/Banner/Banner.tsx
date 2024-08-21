@@ -1,31 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import Close from "@/public/svg/banner_close.svg";
+import Close from "@/public/svg/banner_close.svg";
 import Logo from "@/public/png/edu-premium-logo.png";
 import s from "./Banner.module.css";
+import { useRemoveBanner, useScrollInView } from "./hooks";
 
 const Banner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const isVisible = useScrollInView();
+  const { isBannerRemoved, removeBanner } = useRemoveBanner();
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 800) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+  // ScrollY가 범위 안에 들지 않았거나 세션 스토리지에 제거 데이터가 있을 시에는 렌더링하지 않는다.
+  if (!isVisible || isBannerRemoved) {
+    return null;
+  }
 
   return (
     <>
+      {/* PC */}
       <div className={`${s.Banner} ${isVisible ? s.show : s.hide}`}>
         <Image className={s.img} src={Logo} alt="" width={150} height={150} />
         <p className={s.description}>
@@ -39,6 +32,9 @@ const Banner = () => {
         <Link className={s.link} href="/edu-premium">
           지금 신청하기
         </Link>
+        <button className={s.cancelButton} onClick={removeBanner}>
+          <Image src={Close} alt="" className={s.cancelIcon} />
+        </button>
       </div>
 
       {/* 모바일 */}
