@@ -1,25 +1,18 @@
-'use client';
+"use client";
 
-import { useState, ChangeEvent, FormEvent } from 'react';
-import {
-  Container,
-  SectionTitle,
-  SectionSubtitle,
-  Input,
-} from '@/src/components';
-import s from './AskSection.module.css';
+import { useState, ChangeEvent, FormEvent } from "react";
+import { Container, SectionTitle, SectionSubtitle, Input } from "@/src/components";
+import s from "./AskSection.module.css";
 
 const AskSection = () => {
   const [askFormValues, setAskFormValues] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    text: '',
+    name: "",
+    email: "",
+    phone: "",
+    text: "",
   });
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setAskFormValues({
       ...askFormValues,
@@ -33,15 +26,15 @@ const AskSection = () => {
     const { name, email, phone, text } = askFormValues;
 
     if (!name || !email || !phone || !text) {
-      alert('모든 내용을 입력해주세요!');
+      alert("모든 내용을 입력해주세요!");
       return;
     }
 
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name: name,
@@ -52,20 +45,20 @@ const AskSection = () => {
       });
 
       if (!response.ok) {
-        throw new Error('서버에서 오류 응답');
+        throw new Error("서버에서 오류 응답");
       }
 
       const data = await response.json();
-      alert('문의가 접수됐습니다!');
+      alert("문의가 접수됐습니다!");
 
       setAskFormValues({
-        name: '',
-        email: '',
-        phone: '',
-        text: '',
+        name: "",
+        email: "",
+        phone: "",
+        text: "",
       });
     } catch (error) {
-      console.error('오류 발생:', error);
+      console.error("오류 발생:", error);
     }
   };
 
@@ -73,9 +66,7 @@ const AskSection = () => {
     <section id="askSection" className={s.askSection}>
       <Container>
         <SectionTitle>ASK US</SectionTitle>
-        <SectionSubtitle>
-          자세한 내용이 궁금하다면 편하게 문의해보세요
-        </SectionSubtitle>
+        <SectionSubtitle>자세한 내용이 궁금하다면 편하게 문의해보세요 (운영 시간: 09:00 - 18:00)</SectionSubtitle>
         <form onSubmit={handleSubmit}>
           <div className={s.askFormContainer}>
             <Input
