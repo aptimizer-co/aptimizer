@@ -4,7 +4,6 @@ import { useState, useRef, use, useEffect } from "react";
 import s from "./page.module.css";
 import { ScrollToTop, Banner } from "@/src/components";
 import { Controller } from "./_components";
-import { useInView } from "react-intersection-observer";
 import {
   AskSection,
   FeatureSection,
@@ -14,7 +13,6 @@ import {
   ServiceSection,
   LocationSection,
   PerformanceSection,
-  VisionSection,
 } from "./_sections";
 
 const Home = () => {
@@ -27,7 +25,6 @@ const Home = () => {
         <Controller type={type} setType={setType} />
       </div>
       <IntroSection />
-      {/* <VisionSection /> */}
       <PerformanceSection />
       <PersonaSection type={type} />
       <FeatureSection type={type} />
@@ -35,10 +32,6 @@ const Home = () => {
       <AskSection />
       <LocationSection />
       {/* <ScrollToTop /> */}
-      {/* <div className={`${s.controllerContainer} ${inView ? s.show : ""}`}>
-        <Controller type={type} setType={setType} />
-      </div> */}
-
       <Banner />
     </main>
   );
