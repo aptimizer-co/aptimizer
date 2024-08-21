@@ -1,6 +1,6 @@
 import Image from "next/image";
 import B2C1 from "@/public/jpg/edu1.jpg";
-import B2C2 from "@/public/jpg/edu2.png";
+import B2C2 from "@/public/jpg/edu2.jpg";
 import B2C3 from "@/public/jpg/edu3.jpg";
 import B2B1 from "@/public/jpg/edu4.jpg";
 import s from "./Service.module.css";
