@@ -1,0 +1,19 @@
+.KaKaoTalkChannel {
+  right: 24px;
+  bottom: 24px;
+  position: fixed;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe812;
+}
+
+.img {
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+}

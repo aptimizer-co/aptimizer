@@ -7,3 +7,4 @@ export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 export { default as SectionSubtitle } from "./SectionSubtitle/SectionSubtitle";
 export { default as SectionTitle } from "./SectionTitle/SectionTitle";
 export { default as Banner } from "./Banner/Banner";
+export { default as KaKaoTalkChannel } from "./KaKaoTalkChannel/KakaoTalkChannel";
