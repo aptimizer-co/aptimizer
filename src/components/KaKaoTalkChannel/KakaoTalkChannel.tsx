@@ -15,7 +15,7 @@ const KakaoTalkChannel = () => {
   const startChat = () => {
     if (window.Kakao) {
       window.Kakao.Channel.chat({
-        channelPublicId: "_ZeUTxl",
+        channelPublicId: `${process.env.NEXT_PUBLIC_API_KAKAO_HOME_ID}`,
       });
     } else {
       alert("실패!");
@@ -26,17 +26,17 @@ const KakaoTalkChannel = () => {
     <>
       <Script
         src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
-        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
+        integrity={`${process.env.NEXT_PUBLIC_API_KAKAO_INTEGRITY}`}
         crossOrigin="anonymous"
         onLoad={() => {
           if (window.Kakao) {
-            window.Kakao.init("c089c8172def97eb00c07217cae17495");
+            window.Kakao.init(`${process.env.NEXT_PUBLIC_API_KAKAO_API}`);
           }
         }}
         strategy="afterInteractive"
       ></Script>
       <button className={s.KaKaoTalkChannel} onClick={startChat}>
-        <Image className={s.img} src={KaKaoTalkChannelLogo} alt="카카오 상담톡"></Image>
+        <Image className={s.img} src={KaKaoTalkChannelLogo} alt="카카오 상담톡" />
       </button>
     </>
   );
