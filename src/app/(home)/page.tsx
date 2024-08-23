@@ -2,7 +2,7 @@
 
 import { useState, useRef, use, useEffect } from "react";
 import s from "./page.module.css";
-import { ScrollToTop, Banner } from "@/src/components";
+import { ScrollToTop, Banner, KaKaoTalkChannel } from "@/src/components";
 import { Controller } from "./_components";
 import {
   AskSection,
@@ -33,6 +33,7 @@ const Home = () => {
       <LocationSection />
       {/* <ScrollToTop /> */}
       <Banner />
+      <KaKaoTalkChannel />
     </main>
   );
 };
