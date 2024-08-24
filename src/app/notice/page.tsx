@@ -1,5 +1,5 @@
-import { NewsCard } from "./_components";
-import { Container, SectionTitle, SectionSubtitle } from "@/src/components";
+import { NewsSection, NoticeSection } from "./_sections";
+import { Container } from "@/src/components";
 import s from "./NoticePage.module.css";
 
 const NoticePage = () => {
@@ -8,6 +8,8 @@ const NoticePage = () => {
       <Container>
         {/* 홍보 자료 */}
         <NewsSection />
+        {/* 공지사항 */}
+        <NoticeSection />
       </Container>
     </main>
   );
