@@ -1,0 +1,27 @@
+.NoticeDetailPage {
+  padding: 80px 0;
+}
+
+.link {
+  font-size: 14px;
+  color: blue;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 64px;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 150%;
+}
