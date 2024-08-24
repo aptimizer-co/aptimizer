@@ -6,11 +6,8 @@ const NoticePage = () => {
   return (
     <main className={s.NoticePage}>
       <Container>
-        <SectionTitle>NEWS</SectionTitle>
-        <SectionSubtitle>언론 속의 앱티마이저</SectionSubtitle>
-        <div className={s.newsContainer}>
-          <NewsCard />
-        </div>
+        {/* 홍보 자료 */}
+        <NewsSection />
       </Container>
     </main>
   );
