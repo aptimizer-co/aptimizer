@@ -1,3 +1,10 @@
 .NoticePage {
   padding: 80px 0;
+  position: relative;
+}
+
+.buttonContainer {
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
 }
