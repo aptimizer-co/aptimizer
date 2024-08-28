@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Pencil from "@/public/svg/pencil.svg";
 import { useRouter } from "next/navigation";
 import s from "./PostButton.module.css";
 
@@ -12,7 +14,7 @@ const PostButton = () => {
 
   return (
     <button className={s.PostButton} onClick={handleClick}>
-      글쓰기
+      <Image src={Pencil} alt="글쓰기" />
     </button>
   );
 };
