@@ -1,12 +1,21 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { PostButton } from "./_components";
 import { NewsSection, NoticeSection } from "./_sections";
 import { Container } from "@/src/components";
 import s from "./NoticePage.module.css";
 
 const NoticePage = () => {
-  const auth = sessionStorage.getItem("aptimizer-auth");
+  const [auth, setAuth] = useState(false);
+
+  useEffect(() => {
+    const auth = sessionStorage.getItem("aptimizer-auth");
+
+    if (auth) {
+      setAuth(true);
+    }
+  }, []);
 
   return (
     <main className={s.NoticePage}>
