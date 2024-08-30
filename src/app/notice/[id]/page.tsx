@@ -1,19 +1,118 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter, useParams } from "next/navigation";
 import { Container } from "@/src/components";
 import s from "./NoticeDetailPage.module.css";
 
 const NoticeDetailPage = () => {
+  const params = useParams();
+  const router = useRouter();
+
+  const [editMode, setEditMode] = useState(false);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  const handleInput = (e, setState) => {
+    setState(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = fetch(`${process.env.NEXT_PUBLIC_API_NOTICE}/${params.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: title,
+          content: content,
+          image: "",
+        }),
+      });
+
+      console.log(res);
+    } catch (error) {
+      console.error(error);
+    }
+
+    setEditMode(false);
+  };
+
+  const editPost = () => {
+    setEditMode(true);
+  };
+
+  const deletePost = async () => {
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_NOTICE}/${params.id}`, {
+        method: "DELETE",
+      });
+      alert("글이 삭제됐습니다!");
+    } catch (error) {
+      console.error(error);
+    }
+
+    router.push("/notice");
+  };
+
+  useEffect(() => {
+    const getNoticeDetail = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_NOTICE}/${params.id}`);
+
+        // 응답이 성공적인지 확인합니다
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+
+        // 응답 데이터를 JSON으로 변환합니다
+        const data = await res.json();
+
+        const { title, content } = data;
+        setTitle(title);
+        setContent(content);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    getNoticeDetail();
+  }, []);
+
   return (
     <main className={s.NoticeDetailPage}>
       <Container>
-        <p className={s.date}>2024.05.14</p>
-        <h2 className={s.title}>앱티마이저 서비스 정식출시!</h2>
-        <p className={s.content}>
-          국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에
-          의하여 보장된다. 근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다. 감사위원은 원장의 제청으로
-          대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 모든 국민은 인간으로서의 존엄과 가치를
-          가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를
-          진다.
-        </p>
+        {editMode === false && (
+          <>
+            <div className={s.titleContainer}>
+              <div className={s.titleContainerLeft}>
+                <p className={s.date}>2024.05.14</p>
+                <h2 className={s.title}>{title}</h2>
+              </div>
+              <div className={s.titleContainerRight}>
+                <button className={`${s.button} ${s.edit}`} onClick={editPost}>
+                  수정
+                </button>
+                <button className={`${s.button} ${s.delete}`} onClick={deletePost}>
+                  삭제
+                </button>
+              </div>
+            </div>
+            <p className={s.content}>{content}</p>
+          </>
+        )}
+        {editMode && (
+          <>
+            <form className={s.form} onSubmit={handleSubmit}>
+              <input type="text" className={s.input} value={title} onChange={(e) => handleInput(e, setTitle)} />
+              <textarea className={s.textarea} value={content} onChange={(e) => handleInput(e, setContent)} />
+              <input type="file" className={s.file} />
+              <button className={s.button}>수정하기</button>
+            </form>
+          </>
+        )}
       </Container>
     </main>
   );
