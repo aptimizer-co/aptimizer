@@ -41,7 +41,7 @@ const NoticeDetailPage = () => {
                 </div>
               )}
             </div>
-            <p className={s.content}>{content}</p>
+            <p className={s.content} dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, "<br />") }}></p>
           </>
         )}
         {editMode && (
