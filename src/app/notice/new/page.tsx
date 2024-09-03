@@ -5,7 +5,7 @@ import s from "./NoticeNewPage.module.css";
 import { usePostNotice } from "@/src/hooks/_index";
 
 const NoticeNewPage = () => {
-  const { title, setTitle, content, setContent, handleInput, handleSubmit } = usePostNotice;
+  const { title, setTitle, content, setContent, handleInput, handleSubmit } = usePostNotice();
 
   return (
     <main className={s.NoticeNewPage}>
