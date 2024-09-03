@@ -1,31 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useAdminLogin } from "@/src/hooks/_index";
 import { Container } from "@/src/components";
 import s from "./NoticeAuthPage.module.css";
 
 const NoticeAuthPage = () => {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
-
-  const router = useRouter();
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (id === "admin" && password === "admin") {
-      alert("로그인 성공!");
-      router.push("/notice");
-      sessionStorage.setItem("aptimizer-auth", "true");
-    } else {
-      alert("로그인 실패!");
-    }
-  };
-
-  const handleInputChange = (e, setState) => {
-    setState(e.target.value);
-  };
+  const { id, setId, password, setPassword, handleLogin, handleInputChange } = useAdminLogin();
 
   return (
     <main className={s.NoticeAuthPage}>
