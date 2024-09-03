@@ -12,6 +12,7 @@ const NoticeDetailPage = () => {
     setTitle,
     content,
     setContent,
+    currentDate,
     handleInput,
     handleSubmit,
     editPost,
@@ -26,7 +27,7 @@ const NoticeDetailPage = () => {
           <>
             <div className={s.titleContainer}>
               <div className={s.titleContainerLeft}>
-                <p className={s.date}>2024.05.14</p>
+                <p className={s.date}>{currentDate}</p>
                 <h2 className={s.title}>{title}</h2>
               </div>
               {auth && (

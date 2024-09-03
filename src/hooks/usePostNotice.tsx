@@ -7,6 +7,15 @@ const usePostNotice = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   // const [file, setFile] = useState("");
+  const [currentDate, setCurrentDate] = useState(() => {
+    const now = new Date();
+
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  });
 
   const handleInput = (e, setState) => {
     setState(e.target.value);
@@ -25,6 +34,7 @@ const usePostNotice = () => {
           title: title,
           content: content,
           image: "",
+          date: currentDate,
         }),
       });
 
