@@ -1,6 +1,6 @@
 "use client";
 
-import { useUpdateNotice } from "@/src/hooks/_index";
+import { useUpdateNotice, useAuth } from "@/src/hooks/_index";
 import { Container } from "@/src/components";
 import s from "./NoticeDetailPage.module.css";
 
@@ -17,6 +17,7 @@ const NoticeDetailPage = () => {
     editPost,
     deletePost,
   } = useUpdateNotice();
+  const auth = useAuth();
 
   return (
     <main className={s.NoticeDetailPage}>
@@ -28,14 +29,16 @@ const NoticeDetailPage = () => {
                 <p className={s.date}>2024.05.14</p>
                 <h2 className={s.title}>{title}</h2>
               </div>
-              <div className={s.titleContainerRight}>
-                <button className={`${s.button} ${s.edit}`} onClick={editPost}>
-                  수정
-                </button>
-                <button className={`${s.button} ${s.delete}`} onClick={deletePost}>
-                  삭제
-                </button>
-              </div>
+              {auth && (
+                <div className={s.titleContainerRight}>
+                  <button className={`${s.button} ${s.edit}`} onClick={editPost}>
+                    수정
+                  </button>
+                  <button className={`${s.button} ${s.delete}`} onClick={deletePost}>
+                    삭제
+                  </button>
+                </div>
+              )}
             </div>
             <p className={s.content}>{content}</p>
           </>
