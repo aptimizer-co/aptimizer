@@ -1,0 +1,20 @@
+.lineBanner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #d5f0ff;
+}
+
+.link {
+  max-width: 1286px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
