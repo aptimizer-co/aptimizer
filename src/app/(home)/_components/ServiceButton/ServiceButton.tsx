@@ -39,7 +39,13 @@ const ServiceButton = ({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={styles.label}>{label}</div>
+      <div
+        className={`${styles.label} ${
+          isComingSoon ? styles.comingSoonLabel : styles.defaultLabel
+        }`}
+      >
+        {label}
+      </div>
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
         <div className={styles.childrenContainer}>{children}</div>

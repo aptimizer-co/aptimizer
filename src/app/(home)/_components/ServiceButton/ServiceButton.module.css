@@ -16,14 +16,21 @@
   position: absolute;
   top: 12px;
   right: 12px;
-
-  background-color: #fae100;
-  color: black;
   padding: 4px 16px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 600;
   z-index: 1;
+}
+
+.defaultLabel {
+  background-color: #fae100;
+  color: black;
+}
+
+.comingSoonLabel {
+  background-color: #e2e2e2;
+  color: black;
 }
 
 .content {
@@ -32,8 +39,9 @@
   font-size: 14px;
   font-weight: var(--font-500);
   color: black;
-  width: 240px;
+  width: 80%;
   height: 100%;
+  border: 1px solid blue;
 }
 
 .title {
