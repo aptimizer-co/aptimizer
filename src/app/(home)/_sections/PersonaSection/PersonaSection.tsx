@@ -20,7 +20,7 @@ const PersonaSection = ({ type }: TPersonaSection) => {
     <section className={s.PersonaSection} id="persona">
       <Container>
         <SectionTitle>SPECIALTY</SectionTitle>
-        <SectionSubtitle>앱티마이저를 골라야 하는 이유</SectionSubtitle>
+        <SectionSubtitle>앱티마이저가 필요한 이유</SectionSubtitle>
         {renderPersona(type)}
       </Container>
     </section>
