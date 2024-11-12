@@ -16,57 +16,43 @@ const ServiceSection = ({ type }) => {
         <div className={s.serviceButtonContainer}>
           <ServiceButton
             href="https://www.aptifit.co.kr/"
-            label="APTIFIT"
+            label="TRY NOW"
             title="앱티핏 2025 수능 특별판"
           >
-            <p>
-              설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글
-              입니다. 설명글 입니다. 설명글 입니다.
+            <p className={s.serviceButtonText}>
+              대학 진학을 앞둔 고3 및 수능응시생
             </p>
           </ServiceButton>
           <ServiceButton
             href="https://www.aptifit.co.kr/"
-            label="APTIFIT"
+            label="TRY NOW"
             title="앱티핏 대학생·성인용 "
           >
-            <p>
-              설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글
-              입니다. 설명글 입니다. 설명글 입니다.
+            <p className={s.serviceButtonText}>
+              전공선택을 앞두거나, 전과, 복수전공, <br /> 부전공을 고민하는
+              대학생
             </p>
           </ServiceButton>
+        </div>
+        <div className={s.serviceButtonContainer}>
           <ServiceButton
             isComingSoon
             comingSoonDate="2025년 1월"
             label="1월 출시예정"
             title="앱티핏 고등학생용"
-          >
-            <p>
-              설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글
-              입니다. 설명글 입니다. 설명글 입니다.
-            </p>
-          </ServiceButton>
+          ></ServiceButton>
           <ServiceButton
             isComingSoon
             comingSoonDate="2025년 1월"
             label="1월 출시예정"
             title="앱티핏 중학생용"
-          >
-            <p>
-              설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글
-              입니다. 설명글 입니다. 설명글 입니다.
-            </p>
-          </ServiceButton>
+          ></ServiceButton>
           <ServiceButton
             isComingSoon
             comingSoonDate="2025년 3월"
             label="3월 출시예정"
             title="앱티핏 초등학생용"
-          >
-            <p>
-              설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글
-              입니다. 설명글 입니다. 설명글 입니다.
-            </p>
-          </ServiceButton>
+          ></ServiceButton>
         </div>
         {/* <HomeCardAnimation /> */}
         {/* 

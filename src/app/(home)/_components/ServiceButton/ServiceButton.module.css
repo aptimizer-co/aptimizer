@@ -6,17 +6,17 @@
   padding: 12px;
   padding-right: 54px;
   border-radius: 16px;
-  width: 330px;
-  height: 120px;
+  width: 360px;
+  min-height: 100px;
   position: relative;
   border: none;
 }
 
 .label {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 4px 16px;
+  top: 13px;
+  right: 13px;
+  padding: 8px 16px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 600;
@@ -24,8 +24,8 @@
 }
 
 .defaultLabel {
-  background-color: #fae100;
-  color: black;
+  background-color: var(--primary);
+  color: white;
 }
 
 .comingSoonLabel {
@@ -36,17 +36,30 @@
 .content {
   position: relative;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: var(--font-500);
   color: black;
-  width: 80%;
+  width: 100%;
   height: 100%;
-  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentOnly {
+  justify-content: center;
+}
+
+.contentOnly .title {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 0;
+  padding-left: 36px;
+  /* border: 1px solid black; */
 }
 
 .title {
-  /* border: 1px solid red; */
-  font-size: 20px;
+  line-height: 150%;
+  font-size: 22px;
   font-weight: var(--font-600);
   padding-left: 4px;
   margin-bottom: 20px;
@@ -73,7 +86,7 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
-  background-color: black;
+  background-color: #222;
   border-radius: 50%;
   width: 36px;
   height: 36px;
