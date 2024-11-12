@@ -1,0 +1,80 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: hsl(0, 0%, 95%);
+  padding: 12px;
+  padding-right: 54px;
+  border-radius: 16px;
+  width: 330px;
+  height: 120px;
+  position: relative;
+  border: none;
+}
+
+.label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  background-color: #fae100;
+  color: black;
+  padding: 4px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  font-weight: var(--font-500);
+  color: black;
+  width: 240px;
+  height: 100%;
+}
+
+.title {
+  /* border: 1px solid red; */
+  font-size: 20px;
+  font-weight: var(--font-600);
+  padding-left: 4px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.childrenContainer {
+  padding-left: 4px;
+}
+
+.iconContainer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px 0 0 0;
+  background-color: #fff;
+  color: white;
+}
+
+.iconWrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: black;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.button:hover .iconWrapper {
+  transform: translateX(4px);
+}
