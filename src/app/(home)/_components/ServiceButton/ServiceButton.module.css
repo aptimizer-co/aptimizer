@@ -53,17 +53,25 @@
   font-size: 24px;
   text-align: left;
   margin-bottom: 0;
-  padding-left: 36px;
+  margin-left: 36px;
   /* border: 1px solid black; */
+  background: none; /* 형광펜 효과 제거 */
 }
 
 .title {
   line-height: 150%;
+  width: fit-content;
   font-size: 22px;
   font-weight: var(--font-600);
   padding-left: 4px;
   margin-bottom: 20px;
   text-align: left;
+  background: linear-gradient(
+    180deg,
+    transparent 60%,
+    rgba(255, 255, 0, 0.4) 40%
+  );
+  display: inline;
 }
 
 .childrenContainer {
