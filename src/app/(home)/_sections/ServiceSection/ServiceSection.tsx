@@ -2,7 +2,6 @@ import { ServiceCard } from "../../_components";
 import { Container, SectionSubtitle, SectionTitle } from "@/src/components";
 import s from "./ServiceSection.module.css";
 import HomeCardAnimation from "../../_components/HomeCardAnimation/HomeCardAnimation";
-import Button from "../../_components/Button/Button";
 import ServiceButton from "../../_components/ServiceButton/ServiceButton";
 
 const ServiceSection = ({ type }) => {
@@ -69,7 +68,7 @@ const ServiceSection = ({ type }) => {
             </p>
           </ServiceButton>
         </div>
-        <HomeCardAnimation />
+        {/* <HomeCardAnimation /> */}
         {/* 
         {type === "individual" && (
           <div className={s.serviceCardContainer}>
