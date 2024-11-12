@@ -34,6 +34,22 @@
   font-weight: var(--font-700);
   line-height: 150%;
   text-align: center;
+  margin-bottom: var(--spacing-32);
+}
+
+.descriptionContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+  border-radius: 2rem;
+  padding: var(--spacing-40) var(--spacing-32);
+  background-color: #f2f2f2;
+}
+
+.description {
+  font-size: var(--text-18);
+  font-weight: var(--font-500);
+  line-height: 150%;
 }
 
 .messageMobile {
@@ -61,6 +77,10 @@
 
 @media (max-width: 425px) {
   .message {
+    display: none;
+  }
+
+  .descriptionContainer {
     display: none;
   }
 
