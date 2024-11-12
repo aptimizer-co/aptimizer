@@ -92,6 +92,10 @@
   display: none;
 }
 
+.mobileBanner {
+  display: none;
+}
+
 @media (max-width: 425px) {
   .Banner {
     display: none;
@@ -106,6 +110,7 @@
   }
 
   .sideMobileBanner {
+    z-index: 100;
     display: block;
     width: 48px;
     height: 48px;
@@ -119,6 +124,7 @@
   }
 
   .mobileBanner {
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
