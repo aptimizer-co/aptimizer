@@ -53,7 +53,7 @@ const Banner = () => {
       </div>
 
       {/* 새로운 모바일 배너 */}
-      <Link href="/edu-premium">
+      <Link href="https://www.aptifit.co.kr/">
         <div className={`${s.sideMobileBanner} ${isVisible ? s.show : s.hide}`}>
           <Image
             src="/png/sidemobilebanner.png"
