@@ -36,7 +36,8 @@ const ServiceSection = ({ type }) => {
             </p>
           </ServiceButton>
           <ServiceButton
-            href="/"
+            isComingSoon
+            comingSoonDate="2025년 1월"
             label="1월 출시예정"
             title="앱티핏 고등학생용"
           >
@@ -45,14 +46,20 @@ const ServiceSection = ({ type }) => {
               입니다. 설명글 입니다. 설명글 입니다.
             </p>
           </ServiceButton>
-          <ServiceButton href="/" label="1월 출시예정" title="앱티핏 중학생용">
+          <ServiceButton
+            isComingSoon
+            comingSoonDate="2025년 1월"
+            label="1월 출시예정"
+            title="앱티핏 중학생용"
+          >
             <p>
               설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글 입니다. 설명글
               입니다. 설명글 입니다. 설명글 입니다.
             </p>
           </ServiceButton>
           <ServiceButton
-            href="/"
+            isComingSoon
+            comingSoonDate="2025년 3월"
             label="3월 출시예정"
             title="앱티핏 초등학생용"
           >

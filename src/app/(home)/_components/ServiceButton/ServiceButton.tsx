@@ -5,7 +5,9 @@ interface ServiceButtonProps {
   onClick?: () => void;
   label?: string;
   title: string;
-  href: string;
+  href?: string;
+  isComingSoon?: boolean;
+  comingSoonDate?: string; // 출시 예정일 prop 추가
 }
 
 const ServiceButton = ({
@@ -14,16 +16,29 @@ const ServiceButton = ({
   label,
   title,
   href,
+  isComingSoon = false,
+  comingSoonDate,
 }: ServiceButtonProps) => {
+  const handleClick = (e: React.MouseEvent) => {
+    if (isComingSoon) {
+      e.preventDefault();
+      const message = comingSoonDate
+        ? `${comingSoonDate} 출시 예정입니다.`
+        : "출시 예정입니다.";
+      alert(message);
+      return;
+    }
+    onClick?.();
+  };
+
   return (
     <a
-      href={href}
-      onClick={onClick}
+      href={href || "#"}
+      onClick={handleClick}
       className={styles.button}
       target="_blank"
       rel="noopener noreferrer"
     >
-      {/* 나머지 내용은 동일 */}
       <div className={styles.label}>{label}</div>
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
