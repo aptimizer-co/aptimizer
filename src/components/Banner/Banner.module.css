@@ -4,15 +4,40 @@
   align-items: center;
   justify-content: center;
   width: 200px;
-  height: 450px;
+  height: 250px;
   background-color: #231815;
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 570px;
   right: 40px;
   border-radius: 16px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.sideBanner {
+  width: 200px;
+  height: 450px;
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  border-radius: 16px;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.sideBannerCancelButton {
+  position: fixed; /* absolute에서 fixed로 변경 */
+  top: 116px; /* sideBanner의 top(100px) + 16px */
+  right: 56px; /* sideBanner의 right(40px) + 16px */
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
 }
 
 .hide {
@@ -26,14 +51,6 @@
 
 .img {
   margin-bottom: 16px;
-}
-
-.description {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  line-height: 2.7rem;
-  margin-bottom: 8px;
 }
 
 .title {
@@ -56,17 +73,6 @@
   background-color: white;
 }
 
-.cancel {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.mobileBanner {
-  display: none;
-}
-
 .cancelButton {
   width: 24px;
   height: 24px;
@@ -82,12 +88,43 @@
   height: 100%;
 }
 
+.sideMobileBanner {
+  display: none;
+}
+
+.mobileBanner {
+  display: none;
+}
+
 @media (max-width: 425px) {
   .Banner {
     display: none;
   }
 
+  .sideBanner {
+    display: none;
+  }
+
+  .sideBannerCancelButton {
+    display: none;
+  }
+
+  .sideMobileBanner {
+    z-index: 100;
+    display: block;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 148px;
+    right: 24px;
+    border-radius: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
   .mobileBanner {
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +133,7 @@
     background-color: #231815;
     border-radius: 100%;
     position: fixed;
-    bottom: 84px;
+    bottom: 85px;
     right: 24px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;

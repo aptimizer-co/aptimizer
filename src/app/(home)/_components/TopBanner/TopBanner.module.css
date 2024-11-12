@@ -1,0 +1,41 @@
+.lineBanner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #d5f0ff;
+}
+
+.link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.mobileBanner {
+  display: none;
+}
+
+.desktopBanner {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .mobileBanner {
+    display: block;
+  }
+
+  .desktopBanner {
+    display: none;
+  }
+
+  .bannerImage {
+    max-height: 200px;
+  }
+}

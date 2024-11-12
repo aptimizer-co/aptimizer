@@ -10,9 +10,9 @@ const HeroSection = () => {
       <Image className={s.topImage} src={Idea} alt="영감" width={60} />
 
       <div className={s.titleContainer}>
-        <p className={s.title}>AI 기반 맞춤형 진로 설계 서비스</p>
+        <p className={s.title}>AI 기반 맞춤형 적성 진단 서비스</p>
         <p className={s.subTitle}>
-          앱티마이저와 함께 당신의 미래를 설계하세요!
+          앱티마이저와 함께 여러분의 인생 진로를 설계해 보세요!
         </p>
       </div>
 
