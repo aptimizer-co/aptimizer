@@ -1,7 +1,7 @@
 import styles from "./ServiceButton.module.css";
 
 interface ServiceButtonProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: () => void;
   label?: string;
   title: string;
@@ -39,10 +39,18 @@ const ServiceButton = ({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={styles.label}>{label}</div>
-      <div className={styles.content}>
+      <div
+        className={`${styles.label} ${
+          isComingSoon ? styles.comingSoonLabel : styles.defaultLabel
+        }`}
+      >
+        {label}
+      </div>
+      <div
+        className={`${styles.content} ${!children ? styles.contentOnly : ""}`}
+      >
         <div className={styles.title}>{title}</div>
-        <div className={styles.childrenContainer}>{children}</div>
+        {children && <div className={styles.childrenContainer}>{children}</div>}
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.iconWrapper}>

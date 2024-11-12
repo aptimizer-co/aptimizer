@@ -14,33 +14,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 100px;
+  margin-bottom: 24px;
   justify-content: center;
-}
-
-.testButton {
-  padding: 16px 32px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #222;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  margin: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.testButton:hover {
-  transform: translateY(-2px);
-  background-color: #357abd;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.testButton:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .buttonLabel {
@@ -54,6 +29,11 @@
   font-size: var(--text-40);
   font-weight: var(--font-700);
   text-align: center;
+  line-height: 150%;
+}
+
+.serviceButtonText {
+  font-size: 16px;
   line-height: 150%;
 }
 
