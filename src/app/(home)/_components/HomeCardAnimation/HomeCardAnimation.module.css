@@ -1,0 +1,56 @@
+.HomeCardAnimation {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 466px;
+}
+
+.iphone {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+@media screen and (max-width: 1536px) {
+  .HomeCardAnimation {
+    height: 436.88px;
+  }
+
+  .iphone {
+    max-width: 300px; /* 300px로 조정 */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .HomeCardAnimation {
+    height: 349.5px;
+  }
+
+  .iphone {
+    max-width: 240px; /* 240px로 조정 */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HomeCardAnimation {
+    height: 291.25px;
+  }
+
+  .iphone {
+    max-width: 200px; /* 200px로 조정 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .HomeCardAnimation {
+    height: 233px;
+  }
+
+  .iphone {
+    max-width: 160px; /* 160px로 조정 */
+  }
+}
