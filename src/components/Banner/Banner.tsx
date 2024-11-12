@@ -11,46 +11,56 @@ import { useRemoveBanner, useScrollInView } from "./hooks";
 
 const Banner = () => {
   const isVisible = useScrollInView();
-  const { isBannerRemoved, removeBanner } = useRemoveBanner();
-
-  if (!isVisible || isBannerRemoved) {
-    return null;
-  }
+  const {
+    isBannerRemoved: isAptifitBannerRemoved,
+    removeBanner: removeAptifitBanner,
+  } = useRemoveBanner("aptifit");
+  const { isBannerRemoved: isEduBannerRemoved, removeBanner: removeEduBanner } =
+    useRemoveBanner("edu");
 
   return (
     <>
       {/* 앱티핏 PC 배너 */}
-      <div>
-        <Link href="https://www.aptifit.co.kr/">
-          <div className={`${s.sideBanner} ${isVisible ? s.show : s.hide}`}>
+      {!isAptifitBannerRemoved && (
+        <div>
+          <Link href="https://www.aptifit.co.kr/">
+            <div className={`${s.sideBanner} ${isVisible ? s.show : s.hide}`}>
+              <Image
+                src={aptifitBanner}
+                alt="앱티핏 바로가기 오른쪽 배너"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </Link>
+          <button
+            className={`${s.sideBannerCancelButton} ${
+              isVisible ? s.show : s.hide
+            }`}
+            onClick={removeAptifitBanner}
+          >
             <Image
-              src={aptifitBanner}
-              alt="앱티핏 바로가기 오른쪽 배너"
-              fill
-              style={{ objectFit: "cover" }}
+              src={CloseBlack}
+              alt="앱티핏 바로가기 오른쪽 배너 안보기"
+              className={s.cancelIcon}
             />
-          </div>
-        </Link>
-        <button className={s.sideBannerCancelButton} onClick={removeBanner}>
-          <Image
-            src={CloseBlack}
-            alt="앱티핏 바로가기 오른쪽 배너 안보기"
-            className={s.cancelIcon}
-          />
-        </button>
-      </div>
+          </button>
+        </div>
+      )}
 
       {/* 에듀프리미엄 PC 배너 */}
-      <div className={`${s.Banner} ${isVisible ? s.show : s.hide}`}>
-        <Image className={s.img} src={Logo} alt="" width={100} height={100} />
-        <p className={s.title}>에듀 프리미엄</p>
-        <Link className={s.link} href="/edu-premium">
-          지금 신청하기
-        </Link>
-        <button className={s.cancelButton} onClick={removeBanner}>
-          <Image src={Close} alt="" className={s.cancelIcon} />
-        </button>
-      </div>
+      {!isEduBannerRemoved && (
+        <div className={`${s.Banner} ${isVisible ? s.show : s.hide}`}>
+          <Image className={s.img} src={Logo} alt="" width={100} height={100} />
+          <p className={s.title}>에듀 프리미엄</p>
+          <Link className={s.link} href="/edu-premium">
+            지금 신청하기
+          </Link>
+          <button className={s.cancelButton} onClick={removeEduBanner}>
+            <Image src={Close} alt="" className={s.cancelIcon} />
+          </button>
+        </div>
+      )}
 
       {/* 새로운 모바일 배너 */}
       <Link href="https://www.aptifit.co.kr/">
