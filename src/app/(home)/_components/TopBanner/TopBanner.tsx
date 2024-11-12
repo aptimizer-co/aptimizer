@@ -7,11 +7,19 @@ const TopBanner = () => {
     <div className={s.lineBanner}>
       <Link href="https://www.aptifit.co.kr/" className={s.link}>
         <Image
-          className={s.bannerImage}
+          className={`${s.bannerImage} ${s.desktopBanner}`}
           src="/png/topbanner.png"
           alt="앱티핏 바로가기 배너 이미지"
           width={1286}
           height={120}
+          priority
+        />
+        <Image
+          className={`${s.bannerImage} ${s.mobileBanner}`}
+          src="/png/mobile_top_banner_200.png"
+          alt="앱티핏 바로가기 배너 이미지"
+          width={640}
+          height={200}
           priority
         />
       </Link>

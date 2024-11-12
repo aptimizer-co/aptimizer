@@ -3,7 +3,7 @@
 import { useState, useRef, use, useEffect } from "react";
 import s from "./page.module.css";
 import { ScrollToTop, Banner, KaKaoTalkChannel } from "@/src/components";
-import { Controller } from "./_components";
+import { Controller, TopBanner } from "./_components";
 import {
   AskSection,
   FeatureSection,
@@ -20,12 +20,13 @@ const Home = () => {
 
   return (
     <main className={s.home}>
+      <TopBanner />
       <HeroSection />
       {/* <div className={`${s.controllerContainer}`}>
         <Controller type={type} setType={setType} />
       </div> */}
-      {/* <IntroSection />
-      <PerformanceSection /> */}
+      <IntroSection />
+      {/* <PerformanceSection /> */}
       <PersonaSection type={type} />
       <FeatureSection type={type} />
       <ServiceSection type={type} />

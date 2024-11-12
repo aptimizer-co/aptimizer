@@ -6,7 +6,6 @@
 }
 
 .link {
-  max-width: 1286px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,4 +16,26 @@
   height: auto;
   max-height: 120px;
   object-fit: contain;
+}
+
+.mobileBanner {
+  display: none;
+}
+
+.desktopBanner {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .mobileBanner {
+    display: block;
+  }
+
+  .desktopBanner {
+    display: none;
+  }
+
+  .bannerImage {
+    max-height: 200px;
+  }
 }
