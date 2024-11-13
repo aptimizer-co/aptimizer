@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  verification: {
+    other: {
+      "naver-site-verification": "e83c08ec32445708604eef0865c3e0b3ab49c318",
+    },
+  },
 };
 
 const pretendard = localFont({
