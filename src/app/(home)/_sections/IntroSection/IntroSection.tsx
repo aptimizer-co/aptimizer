@@ -21,7 +21,7 @@ const IntroSection = () => {
           <iframe
             width="800"
             height="450"
-            src="https://www.youtube.com/embed/a1jaQzP8feY?si=v6HeD-Rllmpa_BNA"
+            src="https://www.youtube.com/embed/uStv-iT6c3I?si=l26SoZOgl1p5N0hO"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             className={s.video}
