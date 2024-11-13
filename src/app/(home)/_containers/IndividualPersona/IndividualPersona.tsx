@@ -9,19 +9,19 @@ const IndividualPersona = () => {
       <div className={s.speechBubbleContainerCenter}>
         <SpeechBubble
           direction="right"
-          content="새로운 공부를 한다면 어떤 분야를 선택해야 할까?"
+          content="어떤 학과를 가야 하는지 모르겠어."
         />
       </div>
       <div className={s.speechBubbleContainerLeft}>
         <SpeechBubble
           direction="left"
-          content="어떤 학과를 가야 하는지 모르겠어."
+          content="지금 학과가 나랑 너무 안 맞아!"
         />
       </div>
       <div className={s.speechBubbleContainerRight}>
         <SpeechBubble
           direction="right"
-          content="지금 학과가 나랑 너무 안 맞아!"
+          content="새로운 공부를 한다면 어떤 분야를 선택해야 할까?"
         />
       </div>
       <div className={s.speechBubbleContainerLeft}>
