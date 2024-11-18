@@ -20,14 +20,14 @@ const IntroSection = () => {
         <div className={s.videoContainer}>
           <iframe
             width="544"
-            src="https://www.youtube.com/embed/uStv-iT6c3I?si=l26SoZOgl1p5N0hO"
+            src="https://www.youtube.com/embed/qOyzW0dwkfw?si=4S8zNbl2s4UwSfGZ"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             className={s.video}
           />
           <iframe
             width="544"
-            src="https://www.youtube.com/embed/qOyzW0dwkfw?si=4S8zNbl2s4UwSfGZ"
+            src="https://www.youtube.com/embed/uStv-iT6c3I?si=l26SoZOgl1p5N0hO"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             className={s.video}
