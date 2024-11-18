@@ -29,7 +29,7 @@ const HeroSection = () => {
 
       {/* 모바일  */}
       <div className={s.titleContainerMobile}>
-        <p className={s.titleMobile}>AI 기반 맞춤형 진로 설계 서비스</p>
+        <p className={s.titleMobile}>AI 기반 맞춤형 적성 진단 서비스</p>
         <p className={s.subTitleMobile}>
           앱티마이저와 함께
           <br />
