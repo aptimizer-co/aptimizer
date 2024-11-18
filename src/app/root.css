@@ -28,6 +28,7 @@
   /* 간격 */
   --spacing-4: 0.4rem;
   --spacing-8: 0.8rem; /* 작은 간격 */
+  --spacing-12: 1.2rem; /* 중간 간격 */
   --spacing-16: 1.6rem; /* 보통 간격 */
   --spacing-24: 2.4rem; /* 큰 간격 */
   --spacing-32: 3.2rem;
@@ -35,4 +36,6 @@
   --spacing-48: 4.8rem;
   --spacing-56: 5.6rem;
   --spacing-64: 6.4rem; /* 섹션 간격 */
+  --spacing-80: 8rem;
+  --spacing-128: 12.8rem; /* 큰 섹션 간격 */
 }
