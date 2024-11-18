@@ -73,44 +73,6 @@
 
 .latestNewsContentContainer {
   width: 530px;
-  display: flex;
-  flex-direction: column;
-}
-
-.latestNewsProject {
-  font-size: var(--text-16);
-  font-weight: 700;
-  color: var(--primary);
-  padding-top: var(--spacing-40);
-  margin-bottom: var(--spacing-24);
-}
-
-.latestNewsTitle {
-  font-size: var(--text-32);
-  font-weight: 600;
-  margin-bottom: var(--spacing-12);
-  line-height: 1.6;
-}
-
-.latestNewsContent {
-  font-size: var(--text-18);
-  font-weight: 500;
-  color: #3f3f46;
-  max-height: 380px;
-  margin-bottom: var(--spacing-24);
-}
-
-.latestNewsDate {
-  font-size: var(--text-16);
-  color: #717180;
-  font-weight: 400;
-  margin-bottom: var(--spacing-32);
-}
-
-.latestNewsButtonContainer {
-  display: flex;
-  gap: 14px;
-  align-self: flex-start;
 }
 
 .sidebar {
