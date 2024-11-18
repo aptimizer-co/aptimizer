@@ -18,14 +18,19 @@
 } */
 
 .videoContainer {
-  flex: 1;
   display: flex;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: var(--spacing-56);
+  flex-wrap: wrap;
 }
 
 .video {
+  flex: 0 1 544px;
+  width: 100%;
+  aspect-ratio: 16/9;
   border-radius: 2rem;
+  height: auto;
+  display: block;
 }
 
 .message {
@@ -34,6 +39,7 @@
   font-weight: var(--font-700);
   line-height: 150%;
   text-align: center;
+  margin-top: var(--spacing-56);
   margin-bottom: var(--spacing-32);
 }
 
@@ -58,6 +64,7 @@
   font-weight: var(--font-700);
   line-height: 150%;
   text-align: center;
+  margin-top: var(--spacing-56);
 }
 
 @keyframes introAnimate {
@@ -68,12 +75,12 @@
 }
 
 /* 반응형 */
-@media (max-width: 768px) {
-  .video {
-    width: 60rem;
-    height: 34rem;
+/* @media (max-width: 768px) {
+  .videoContainer {
+    flex-direction: column;
+    align-items: center;
   }
-}
+} */
 
 @media (max-width: 425px) {
   .message {
@@ -89,7 +96,7 @@
   }
 
   .video {
+    max-width: 544px;
     width: 100%;
-    height: 22rem;
   }
 }
