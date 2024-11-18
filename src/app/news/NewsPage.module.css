@@ -1,0 +1,132 @@
+.NewsPage {
+  /* 전체 레이아웃 */
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* 전체 줄 간격 */
+  line-height: 1.5;
+}
+
+.currentLocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: var(--spacing-128);
+}
+
+.currentLocationText {
+  font-size: var(--text-16);
+  font-weight: 400;
+  color: #71717a;
+}
+
+.currentLocationText:last-child::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("/svg/next_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  position: relative;
+  top: -1px;
+}
+
+.currentLocationText:last-child {
+  color: #000;
+  font-weight: 500;
+}
+
+.titleContainer {
+  width: 100%;
+  padding: 32px 18px 120px;
+}
+
+.title {
+  font-size: var(--text-48);
+  font-weight: 700;
+  text-align: center;
+}
+
+.latestNewsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 450px;
+  margin-bottom: var(--spacing-128);
+}
+
+.latestNewsImage {
+  width: 590px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-right: var(--spacing-80);
+}
+
+.latestNewsContentContainer {
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+}
+
+.latestNewsProject {
+  font-size: var(--text-16);
+  font-weight: 700;
+  color: var(--primary);
+  padding-top: var(--spacing-40);
+  margin-bottom: var(--spacing-24);
+}
+
+.latestNewsTitle {
+  font-size: var(--text-32);
+  font-weight: 600;
+  margin-bottom: var(--spacing-12);
+  line-height: 1.6;
+}
+
+.latestNewsContent {
+  font-size: var(--text-18);
+  font-weight: 500;
+  color: #3f3f46;
+  max-height: 380px;
+  margin-bottom: var(--spacing-24);
+}
+
+.latestNewsDate {
+  font-size: var(--text-16);
+  color: #717180;
+  font-weight: 400;
+  margin-bottom: var(--spacing-32);
+}
+
+.latestNewsButtonContainer {
+  display: flex;
+  gap: 14px;
+  align-self: flex-start;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+}
+
+.carouselButton {
+  cursor: pointer;
+  transition: filter 0.4s ease-in-out;
+}
+
+.carouselButton:hover {
+  filter: invert(1);
+}
+
+.prevButton {
+  transform: rotate(180deg);
+}
