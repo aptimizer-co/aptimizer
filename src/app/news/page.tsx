@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import NewsNavbar from "./_components/NewsNavbar/NewsNavbar";
 import s from "./NewsPage.module.css";
 import NewsContent from "./_components/NewsContent/NewsContent";
+import CarouselButtons from "./_components/CarouselButtons/CarouselButtons";
 
 const NewsPage = () => {
   return (
@@ -33,23 +36,10 @@ const NewsPage = () => {
           date="2025.03.05"
           className={s.latestNewsContentContainer}
         />
-        {/* 이동 버튼 */}
-        <div className={s.latestNewsButtonContainer}>
-          <Image
-            src="/svg/carousel_arrow.svg"
-            alt="이전 뉴스"
-            width={40}
-            height={40}
-            className={`${s.carouselButton} ${s.prevButton}`}
-          />
-          <Image
-            src="/svg/carousel_arrow.svg"
-            alt="다음 뉴스"
-            width={40}
-            height={40}
-            className={s.carouselButton}
-          />
-        </div>
+        <CarouselButtons
+          onPrevClick={() => console.log("이전 뉴스")}
+          onNextClick={() => console.log("다음 뉴스")}
+        />
       </div>
 
       <NewsNavbar />
