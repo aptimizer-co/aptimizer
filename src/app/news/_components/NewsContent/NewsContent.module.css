@@ -1,6 +1,10 @@
 .contentContainer {
   display: flex;
   flex-direction: column;
+
+  word-break: keep-all; /* 한중일 텍스트에서 단어 분리 방지 */
+  white-space: normal; /* 줄바꿈 허용 */
+  overflow-wrap: break-word; /* 컨테이너를 벗어날 때 줄바꿈 */
 }
 
 .projectName {
@@ -27,7 +31,7 @@
 }
 
 .date {
-  font-size: var(--text-16);
+  font-size: var(--text-14);
   color: #717180;
   font-weight: 400;
   margin-bottom: var(--spacing-32);
