@@ -33,7 +33,7 @@ const HeroSection = () => {
         <p className={s.subTitleMobile}>
           앱티마이저와 함께
           <br />
-          당신의 미래를 설계하세요!
+          당신의 미래를 설계해보세요!
         </p>
       </div>
 
