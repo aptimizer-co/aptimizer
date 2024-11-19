@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import s from "./NewsNavbar.module.css";
+import s from "./Navigation.module.css";
 
-const NewsNavbar = () => {
+const Navigation = () => {
   const [activeTab, setActiveTab] = useState("보도자료");
 
   const menuItems = ["보도자료", "공지사항", "소셜 미디어"];
@@ -25,4 +25,4 @@ const NewsNavbar = () => {
   );
 };
 
-export default NewsNavbar;
+export default Navigation;
