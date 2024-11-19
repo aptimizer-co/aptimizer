@@ -15,18 +15,23 @@
 }
 
 .nav_item {
-  padding: 20px 0;
-  position: relative;
   flex: 1;
+  position: relative;
+}
+
+.nav_link {
+  display: block;
+  padding: 20px 0;
   text-align: center;
   cursor: pointer;
   color: #71717a;
   font-size: var(--text-18);
   font-weight: 600;
   transition: color 0.3s ease-out;
+  text-decoration: none;
 }
 
-.nav_item:hover {
+.nav_link:hover {
   color: #000;
 }
 
@@ -47,7 +52,7 @@
   opacity: 0.3;
 }
 
-.active {
+.active .nav_link {
   color: #000;
 }
 
