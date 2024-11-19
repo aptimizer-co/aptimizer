@@ -5,7 +5,9 @@
 
 .carouselButton {
   cursor: pointer;
-  transition: filter 0.4s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  -webkit-user-drag: none; /* 추가 */
+  user-select: none; /* 추가 */
 }
 
 .prevButton {
@@ -14,4 +16,14 @@
 
 .carouselButton:hover {
   filter: invert(1);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: brightness(1);
+}
+
+.disabled:hover {
+  filter: brightness(1);
 }
