@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import NewsCard from "../NewsCard/NewsCard";
+import CarouselCard from "../CarouselCard/CarouselCard";
 import CarouselButtons from "../CarouselButtons/CarouselButtons";
 import { newsData } from "./mockData";
 import s from "./Carousel.module.css";
@@ -31,7 +31,7 @@ const Carousel = () => {
       <div
         className={`${s.newsCardWrapper} ${isAnimating ? s.fadeEffect : ""}`}
       >
-        <NewsCard {...newsData[currentIndex]} />
+        <CarouselCard {...newsData[currentIndex]} />
         <div className={s.buttonWrapper}>
           <CarouselButtons
             onPrevClick={handlePrevClick}
