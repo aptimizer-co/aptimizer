@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   border-bottom: 1px solid #eaeaea;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-24);
 }
 
 .nav_list {

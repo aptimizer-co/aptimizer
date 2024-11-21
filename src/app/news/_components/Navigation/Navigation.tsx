@@ -7,10 +7,13 @@ import s from "./Navigation.module.css";
 const Navigation = () => {
   const pathname = usePathname();
 
+  if (/\/news\/[^/]+\/\d+$/.test(pathname)) {
+    return null;
+  }
+
   const menuItems = [
-    { name: "보도자료", path: "/news" },
+    { name: "보도자료", path: "/news/press" },
     { name: "공지사항", path: "/news/notice" },
-    { name: "소셜 미디어", path: "/news/social" },
   ];
 
   return (
@@ -20,9 +23,9 @@ const Navigation = () => {
           <li
             key={item.name}
             role="tab"
-            aria-selected={pathname === item.path}
+            aria-selected={pathname.startsWith(item.path)}
             className={`${s.nav_item} ${
-              pathname === item.path ? s.active : ""
+              pathname.startsWith(item.path) ? s.active : ""
             }`}
           >
             <Link href={item.path} className={s.nav_link}>
