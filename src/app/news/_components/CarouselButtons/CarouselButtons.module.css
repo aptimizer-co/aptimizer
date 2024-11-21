@@ -6,8 +6,8 @@
 .carouselButton {
   cursor: pointer;
   transition: filter 0.3s ease-in-out;
-  -webkit-user-drag: none; /* 추가 */
-  user-select: none; /* 추가 */
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .prevButton {
