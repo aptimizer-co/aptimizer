@@ -16,7 +16,7 @@
   color: #71717a;
 }
 
-.currentLocationText:last-child::before {
+.currentLocationText:not(:first-child)::before {
   content: "";
   display: inline-block;
   width: 12px;
