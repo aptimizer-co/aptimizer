@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import { Carousel, Navigation, Title } from "./_components";
 import s from "./Newslayout.module.css";
 
