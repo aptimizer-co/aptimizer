@@ -1,6 +1,6 @@
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import { Carousel, Navigation, Title } from "./_components";
-import s from "./Newslayout.module.css";
+import s from "./NewsLayout.module.css";
 
 export default async function NewsLayout({
   children,
