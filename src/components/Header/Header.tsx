@@ -42,28 +42,40 @@ const Header = () => {
         <nav className={s.nav}>
           <ul>
             <li className={s.li}>
-              <button className={s.button} onClick={() => scrollToSection("intro")}>
+              <button
+                className={s.button}
+                onClick={() => scrollToSection("intro")}
+              >
                 기업 소개
               </button>
             </li>
             <li className={s.li}>
-              <button className={s.button} onClick={() => scrollToSection("service")}>
+              <button
+                className={s.button}
+                onClick={() => scrollToSection("service")}
+              >
                 서비스
               </button>
             </li>
             <li className={s.li}>
-              <button className={s.button} onClick={() => scrollToSection("askSection")}>
+              <button
+                className={s.button}
+                onClick={() => scrollToSection("askSection")}
+              >
                 문의
               </button>
             </li>
             <li className={s.li}>
-              <button className={s.button} onClick={() => scrollToSection("location")}>
+              <button
+                className={s.button}
+                onClick={() => scrollToSection("location")}
+              >
                 회사 위치
               </button>
             </li>
             <li className={s.li}>
-              <Link className={s.link} href={"/notice"}>
-                공지사항
+              <Link className={s.link} href={"/news"}>
+                뉴스룸
                 <Image className={s.linkIcon} src={LinkIcon} alt="" />
               </Link>
             </li>
@@ -78,12 +90,28 @@ const Header = () => {
 
         {/* 4. 모바일 */}
         {isMobileMenuOpen ? (
-          <button className={s.mobileButton} onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src="/svg/close.svg" alt="모바일 메뉴 숨김 버튼" width={40} height={40} />
+          <button
+            className={s.mobileButton}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <Image
+              src="/svg/close.svg"
+              alt="모바일 메뉴 숨김 버튼"
+              width={40}
+              height={40}
+            />
           </button>
         ) : (
-          <button className={s.mobileButton} onClick={() => setIsMobileMenuOpen(true)}>
-            <Image src="/svg/menu.svg" alt="모바일 메뉴 표시 버튼" width={40} height={40} />
+          <button
+            className={s.mobileButton}
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <Image
+              src="/svg/menu.svg"
+              alt="모바일 메뉴 표시 버튼"
+              width={40}
+              height={40}
+            />
           </button>
         )}
       </header>
@@ -92,22 +120,34 @@ const Header = () => {
           <nav className={`${s.container} ${s.mobileNav}`}>
             <ul>
               <li>
-                <button className={s.mobileLink} onClick={() => scrollToSection("intro")}>
+                <button
+                  className={s.mobileLink}
+                  onClick={() => scrollToSection("intro")}
+                >
                   기업 소개
                 </button>
               </li>
               <li>
-                <button className={s.mobileLink} onClick={() => scrollToSection("service")}>
+                <button
+                  className={s.mobileLink}
+                  onClick={() => scrollToSection("service")}
+                >
                   서비스
                 </button>
               </li>
               <li>
-                <button className={s.mobileLink} onClick={() => scrollToSection("askSection")}>
+                <button
+                  className={s.mobileLink}
+                  onClick={() => scrollToSection("askSection")}
+                >
                   문의
                 </button>
               </li>
               <li>
-                <button className={s.mobileLink} onClick={() => scrollToSection("location")}>
+                <button
+                  className={s.mobileLink}
+                  onClick={() => scrollToSection("location")}
+                >
                   회사 위치
                 </button>
               </li>
