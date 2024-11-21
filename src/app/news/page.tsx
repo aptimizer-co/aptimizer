@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 const NewsPage = () => {
-  redirect("/news/press");
+  redirect("/news/press#top");
 };
 
 export default NewsPage;
