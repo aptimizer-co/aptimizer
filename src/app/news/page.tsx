@@ -1,13 +1,7 @@
-"use client";
-
-import s from "./NewsPage.module.css";
+import { redirect } from "next/navigation";
 
 const NewsPage = () => {
-  return (
-    <main className={s.NewsPage}>
-      <aside className={s.sidebar}>test</aside>
-    </main>
-  );
+  redirect("/news/press");
 };
 
 export default NewsPage;

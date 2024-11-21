@@ -7,42 +7,8 @@
   line-height: 1.5;
 }
 
-.latestNewsContainer {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 450px;
-  margin-bottom: var(--spacing-128);
-}
-
-.latestNewsImage {
-  width: 590px;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-right: var(--spacing-80);
-}
-
-.latestNewsCard {
-  width: 530px;
-}
-
 .sidebar {
-  width: 200px;
-  background-color: #f0f0f0;
-}
-
-.carouselButton {
-  cursor: pointer;
-  transition: filter 0.4s ease-in-out;
-}
-
-.carouselButton:hover {
-  filter: invert(1);
-}
-
-.prevButton {
-  transform: rotate(180deg);
+  width: 100%;
+  height: 100%;
+  border: 1px solid orange;
 }
