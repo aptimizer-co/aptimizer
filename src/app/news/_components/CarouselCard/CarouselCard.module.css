@@ -8,10 +8,23 @@
   margin-bottom: var(--spacing-128);
 }
 
-.latestNewsImage {
-  object-fit: cover;
+.imageWrapper {
+  overflow: hidden;
   border-radius: 20px;
   margin-right: var(--spacing-80);
+  width: 590px;
+  height: 450px;
+}
+
+.latestNewsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cardContainer:hover .latestNewsImage {
+  transform: scale(1.1);
 }
 
 .contentContainer {
@@ -38,6 +51,14 @@
 }
 
 .content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  line-height: 1.5;
+  height: 4.5em; /* line-height * 줄 수 */
   font-size: var(--text-18);
   font-weight: 500;
   color: #3f3f46;
@@ -54,4 +75,17 @@
   color: #717180;
   font-weight: 400;
   margin-bottom: var(--spacing-32);
+}
+
+.imageLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.contentLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }

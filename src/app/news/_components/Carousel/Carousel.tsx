@@ -1,14 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import CarouselCard from "../CarouselCard/CarouselCard";
 import CarouselButtons from "../CarouselButtons/CarouselButtons";
-import { newsData } from "./mockData";
+import { newsData } from "../../_data/mockData";
 import s from "./Carousel.module.css";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const pathname = usePathname();
+
+  if (/\/news\/[^/]+\/\d+$/.test(pathname)) {
+    return null;
+  }
 
   const handlePrevClick = () => {
     if (currentIndex > 0 && !isAnimating) {
