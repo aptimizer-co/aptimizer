@@ -1,0 +1,25 @@
+.shareButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-8);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-12) var(--spacing-16);
+}
+
+.shareButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 999px;
+}
+
+.icon {
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+}
+
+.shareText {
+  font-size: var(--text-16);
+  font-weight: var(--font-600);
+}

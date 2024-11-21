@@ -1,0 +1,29 @@
+.latestNewsButtonContainer {
+  display: flex;
+  gap: 14px;
+}
+
+.carouselButton {
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.prevButton {
+  transform: rotate(180deg);
+}
+
+.carouselButton:hover {
+  filter: invert(1);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: brightness(1);
+}
+
+.disabled:hover {
+  filter: brightness(1);
+}

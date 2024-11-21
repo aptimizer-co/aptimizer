@@ -1,0 +1,14 @@
+.NewsPage {
+  /* 전체 레이아웃 */
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* 전체 줄 간격 */
+  line-height: 1.5;
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  border: 1px solid orange;
+}

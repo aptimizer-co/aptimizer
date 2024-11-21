@@ -1,0 +1,8 @@
+.newsContainer {
+  /* 전체 레이아웃 */
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* 전체 줄 간격 */
+  line-height: 1.5;
+}
