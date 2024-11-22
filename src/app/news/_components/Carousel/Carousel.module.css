@@ -18,3 +18,28 @@
   bottom: var(--spacing-32);
   right: 436px;
 }
+
+@media (max-width: 1200px) {
+  .carouselContainer {
+    margin: 0 auto;
+    width: 700px;
+    margin-bottom: 80px;
+  }
+
+  .buttonWrapper {
+    right: 0;
+    bottom: 23px;
+  }
+}
+
+@media (max-width: 800px) {
+  .carouselContainer {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .carouselContainer {
+    margin-bottom: 80px;
+  }
+}

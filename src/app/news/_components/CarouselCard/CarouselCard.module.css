@@ -89,3 +89,46 @@
   display: block;
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  .cardContainer {
+    margin: 0 auto;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    width: 700px;
+    margin-right: 0;
+    height: 400px;
+  }
+
+  .contentContainer {
+    width: 700px;
+  }
+}
+
+@media (max-width: 800px) {
+  .cardContainer {
+    height: auto;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .imageWrapper {
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--text-24);
+  }
+
+  .content {
+    font-size: var(--text-16);
+  }
+
+  .contentContainer {
+    width: 100%;
+  }
+}

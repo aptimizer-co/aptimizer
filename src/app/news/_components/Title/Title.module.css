@@ -47,3 +47,17 @@
   font-weight: 700;
   text-align: center;
 }
+
+@media (max-width: 800px) {
+  .currentLocation {
+    padding-top: 30px;
+  }
+
+  .titleContainer {
+    padding: 24px 16px 80px;
+  }
+
+  .title {
+    font-size: var(--text-40);
+  }
+}

@@ -152,8 +152,12 @@ const Header = () => {
                 </button>
               </li>
               <li>
-                <Link className={s.mobilea} href={"/notice"}>
-                  공지사항
+                <Link
+                  className={s.mobilea}
+                  href={"/news"}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  뉴스룸
                   <Image className={s.linkIcon} src={LinkIcon} alt="" />
                 </Link>
               </li>

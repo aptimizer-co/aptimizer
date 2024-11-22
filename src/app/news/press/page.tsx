@@ -6,7 +6,7 @@ import s from "./PressPage.module.css";
 const PressPage = () => {
   return (
     <main className={s.pressPage}>
-      <aside className={s.sidebar}>
+      <aside className={s.newsList}>
         {newsData.map((news) => (
           <Link key={news.id} href={`/news/press/${news.id}`}>
             {/* 추가 */}
