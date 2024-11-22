@@ -128,16 +128,67 @@
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .pressArticle {
-    padding: 1rem;
+    padding: var(--spacing-16) var(--spacing-12);
+  }
+
+  .header {
+    margin-bottom: var(--spacing-40);
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: var(--text-24);
+    margin-bottom: var(--spacing-24);
+    word-break: break-all;
+  }
+
+  .date {
+    font-size: var(--text-14);
+  }
+
+  .shareButton {
+    padding: var(--spacing-8);
+  }
+
+  .shareButton .icon {
+    width: var(--spacing-20);
+    height: var(--spacing-20);
+  }
+
+  .shareText {
+    font-size: var(--text-14);
+  }
+
+  .summary {
+    padding: var(--spacing-16);
+    margin-bottom: var(--spacing-24);
+  }
+
+  .summaryItem {
+    font-size: var(--text-14);
+    word-break: break-all;
   }
 
   .content {
-    font-size: 1rem;
+    font-size: var(--text-16);
+    line-height: 1.6;
+    margin-top: var(--spacing-24);
+    word-break: break-all;
+  }
+
+  .sourceLink {
+    padding: var(--spacing-12) var(--spacing-16);
+    font-size: var(--text-16);
+  }
+
+  .footer {
+    margin-top: var(--spacing-48);
+    padding-top: var(--spacing-32);
+  }
+
+  .listLink {
+    padding: var(--spacing-12) var(--spacing-16);
+    font-size: var(--text-16);
   }
 }

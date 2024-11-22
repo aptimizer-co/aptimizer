@@ -5,8 +5,14 @@
   padding: var(--spacing-64) 0;
 }
 
-.sidebar {
+.newsList {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-64);
+}
+
+@media (max-width: 1200px) {
+  .pressPage {
+    padding: 0 24px;
+  }
 }

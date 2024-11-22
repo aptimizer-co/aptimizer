@@ -74,3 +74,25 @@
   color: #717180;
   font-weight: 400;
 }
+
+@media (max-width: 800px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: var(--spacing-24);
+  }
+
+  .title {
+    font-size: var(--text-20);
+  }
+
+  .content {
+    max-width: 100%;
+  }
+}
