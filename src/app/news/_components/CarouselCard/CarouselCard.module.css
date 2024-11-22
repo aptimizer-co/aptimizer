@@ -92,7 +92,6 @@
 
 @media (max-width: 1200px) {
   .cardContainer {
-    border: 1px solid red;
     margin: 0 auto;
     flex-direction: column;
     height: auto;
@@ -100,14 +99,12 @@
   }
 
   .imageWrapper {
-    border: 1px solid green;
     width: 700px;
     margin-right: 0;
     height: 400px;
   }
 
   .contentContainer {
-    border: 1px solid green;
     width: 700px;
   }
 }
@@ -117,7 +114,6 @@
     height: auto;
     flex-direction: column;
     margin: 0 auto;
-    border: 1px solid red;
   }
 
   .imageWrapper {
