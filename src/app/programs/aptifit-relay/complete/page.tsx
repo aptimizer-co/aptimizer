@@ -50,7 +50,9 @@ function CompletePageContent() {
       }
 
       try {
-        const response = await fetch(`/apply/${apply_id}`);
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/apply/${apply_id}`
+        );
         setIsValid(response.ok);
       } catch (error) {
         console.error("신청 정보 확인 중 오류:", error);

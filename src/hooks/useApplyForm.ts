@@ -85,7 +85,7 @@ export const useApplyForm = () => {
         phone: formData.phone.replace(/-/g, ""),
       };
 
-      const response = await fetch("/apply", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apply`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
