@@ -14,7 +14,7 @@ const ProgramTitle = () => {
     const pathSegments = pathname.split("/").filter(Boolean);
 
     const titleMap: { [key: string]: string } = {
-      "aptifit-relay": "앱티핏 캠퍼스 토크콘서트 시즌 1",
+      "aptifit-relay": "앱티핏 캠퍼스 토크콘서트",
       apply: "신청하기",
     };
 
