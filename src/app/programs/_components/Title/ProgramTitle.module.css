@@ -48,16 +48,36 @@
   text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .currentLocation {
-    padding-top: 30px;
+    padding-top: 80px;
   }
 
   .titleContainer {
     padding: 24px 16px 80px;
   }
 
+  .currentLocationText {
+    font-size: 14px;
+  }
+
   .title {
-    font-size: var(--text-40);
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .currentLocation {
+    display: none;
+  }
+
+  .titleContainer {
+    padding: 100px 16px 80px;
+  }
+
+  .title {
+    font-size: 32px;
+    word-break: keep-all;
+    word-wrap: break-word;
   }
 }
