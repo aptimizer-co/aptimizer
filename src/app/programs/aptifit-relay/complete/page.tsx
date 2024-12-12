@@ -1,8 +1,86 @@
+"use client";
+
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function CompletePage() {
+  const searchParams = useSearchParams();
+  const apply_id = searchParams.get("apply_id");
+  const [isValid, setIsValid] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const validateApplyId = async () => {
+      if (!apply_id) {
+        setIsValid(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(`/apply/${apply_id}`);
+        setIsValid(response.ok);
+      } catch (error) {
+        console.error("신청 정보 확인 중 오류:", error);
+        setIsValid(false);
+      }
+    };
+
+    validateApplyId();
+  }, [apply_id]);
+
+  if (isValid === null) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.logoContainer}>
+          <Image
+            src="/company/aptimizer_symbol.svg"
+            alt="aptimizer"
+            className={styles.symbol}
+            width={100}
+            height={40}
+          />
+          <Image
+            src="/company/aptimizer_logo.svg"
+            alt="aptimizer"
+            className={styles.logo}
+            width={40}
+            height={40}
+          />
+        </div>
+        <p className={styles.description}>신청 접수 확인 중...</p>
+      </div>
+    );
+  }
+
+  if (!isValid) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.logoContainer}>
+          <Image
+            src="/company/aptimizer_symbol.svg"
+            alt="aptimizer"
+            className={styles.symbol}
+            width={100}
+            height={40}
+          />
+          <Image
+            src="/company/aptimizer_logo.svg"
+            alt="aptimizer"
+            className={styles.logo}
+            width={40}
+            height={40}
+          />
+        </div>
+        <h1 className={styles.title}>잘못된 접근입니다</h1>
+        <Link href="/" className={styles.link}>
+          홈으로
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>
