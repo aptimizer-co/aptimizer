@@ -82,6 +82,9 @@ const Header = () => {
           </ul>
         </nav>
 
+        <Link className={s.applyLink} href={"/programs/aptifit-relay/apply"}>
+          토크콘서트 신청
+        </Link>
         {/* 3. 로그인 버튼 */}
         {/* <Link className={s.buttonLogin} href={"/login"}>
           로그인
@@ -159,6 +162,15 @@ const Header = () => {
                 >
                   뉴스룸
                   <Image className={s.linkIcon} src={LinkIcon} alt="" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={s.mobilea}
+                  href={"/programs/aptifit-relay/apply"}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  토크콘서트 신청
                 </Link>
               </li>
             </ul>
