@@ -6,12 +6,15 @@ import s from "./ProgramTitle.module.css";
 const ProgramTitle = () => {
   const pathname = usePathname();
 
+  if (pathname.includes("complete")) {
+    return null;
+  }
+
   const getPageInfo = () => {
     const pathSegments = pathname.split("/").filter(Boolean);
-    console.log(pathSegments);
 
     const titleMap: { [key: string]: string } = {
-      "aptifit-relay": "앱티핏 릴레이",
+      "aptifit-relay": "앱티핏 캠퍼스 토크콘서트 시즌 1",
       apply: "신청하기",
     };
 
