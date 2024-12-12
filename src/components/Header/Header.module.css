@@ -179,6 +179,10 @@
     margin-bottom: 0;
   }
 
+  .applyLink {
+    display: none;
+  }
+
   .nav {
     display: none;
   }

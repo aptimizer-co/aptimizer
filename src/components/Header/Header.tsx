@@ -164,6 +164,15 @@ const Header = () => {
                   <Image className={s.linkIcon} src={LinkIcon} alt="" />
                 </Link>
               </li>
+              <li>
+                <Link
+                  className={s.mobilea}
+                  href={"/programs/aptifit-relay/apply"}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  토크콘서트 신청
+                </Link>
+              </li>
             </ul>
           </nav>
           <div className={s.blackBackground}></div>
