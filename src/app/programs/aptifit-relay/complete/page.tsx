@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,36 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function CompletePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className={styles.container}>
+          <div className={styles.logoContainer}>
+            <Image
+              src="/company/aptimizer_symbol.svg"
+              alt="aptimizer"
+              className={styles.symbol}
+              width={100}
+              height={40}
+            />
+            <Image
+              src="/company/aptimizer_logo.svg"
+              alt="aptimizer"
+              className={styles.logo}
+              width={40}
+              height={40}
+            />
+          </div>
+          <p className={styles.description}>로딩 중...</p>
+        </div>
+      }
+    >
+      <CompletePageContent />
+    </Suspense>
+  );
+}
+
+function CompletePageContent() {
   const searchParams = useSearchParams();
   const apply_id = searchParams.get("apply_id");
   const [isValid, setIsValid] = useState<boolean | null>(null);
