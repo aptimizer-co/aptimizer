@@ -124,6 +124,7 @@
   color: #d7260d;
   margin-left: 4px;
 }
+
 .inputField:focus {
   border-color: #222;
   transition: border-color 0.4s ease;
@@ -175,4 +176,22 @@
   .inputField {
     font-size: 14px;
   }
+}
+
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.submitButton:disabled {
+  background-color: #999;
+  cursor: not-allowed;
 }
