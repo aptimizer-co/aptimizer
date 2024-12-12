@@ -1,7 +1,12 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
-import { Container, SectionTitle, SectionSubtitle, Input } from "@/src/components";
+import {
+  Container,
+  SectionTitle,
+  SectionSubtitle,
+  Input,
+} from "@/src/components";
 import s from "./AskSection.module.css";
 
 const AskSection = () => {
@@ -12,7 +17,9 @@ const AskSection = () => {
     text: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setAskFormValues({
       ...askFormValues,
@@ -31,18 +38,21 @@ const AskSection = () => {
     }
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          phone: phone,
-          text: text,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/send_email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            text: text,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("서버에서 오류 응답");
@@ -66,7 +76,10 @@ const AskSection = () => {
     <section id="askSection" className={s.askSection}>
       <Container>
         <SectionTitle>ASK US</SectionTitle>
-        <SectionSubtitle>자세한 내용이 궁금하다면 편하게 문의해보세요 (운영 시간: 09:00 - 18:00)</SectionSubtitle>
+        <SectionSubtitle>
+          자세한 내용이 궁금하다면 편하게 문의해보세요 (운영 시간: 09:00 -
+          18:00)
+        </SectionSubtitle>
         <form onSubmit={handleSubmit}>
           <div className={s.askFormContainer}>
             <Input
