@@ -3,15 +3,32 @@
 import React from "react";
 import styles from "./ApplyForm.module.css";
 import { useApplyForm } from "@/src/hooks/useApplyForm";
+import { useRouter } from "next/navigation";
 
 export const ApplyForm = () => {
+  const router = useRouter();
   const { formData, handleSubmit, handleInputChange, handleCheckboxChange } =
     useApplyForm();
+
+  const onSubmit = async (e: React.FormEvent) => {
+    try {
+      const result = await handleSubmit(e);
+
+      if (result.success && result.apply_id) {
+        router.push(
+          `/programs/aptifit-relay/complete?apply_id=${result.apply_id}`
+        );
+      }
+    } catch (error) {
+      console.error("폼 제출 중 오류:", error);
+      alert("예기치 못한 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    }
+  };
 
   return (
     <div className={styles.formContainer}>
       <span className={styles.requiredText}>*필수입력항목</span>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={onSubmit}>
         <div className={styles.inputSection}>
           <label className={styles.label}>
             학교 또는 기관명<span className={styles.required}>*</span>
