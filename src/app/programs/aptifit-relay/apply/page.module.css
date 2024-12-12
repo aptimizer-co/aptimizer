@@ -36,7 +36,7 @@
   border: 1px solid rgb(228, 228, 231);
   border-radius: 8px;
   margin-left: 20px;
-  resize: vertical;
+  resize: none;
 }
 
 .selectBox {
