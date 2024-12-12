@@ -34,3 +34,9 @@ input,
 textarea {
   outline: none;
 }
+
+input[type="datetime-local"] {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  color: #222;
+}
