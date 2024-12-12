@@ -65,6 +65,22 @@
   background-color: #e8e8ee;
 }
 
+.applyLink {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  transition: 200ms all ease-in-out;
+  background-color: #333;
+}
+
+.applyLink:hover {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* 모바일 */
 
 .mobileButton {
@@ -164,10 +180,6 @@
   }
 
   .nav {
-    display: none;
-  }
-
-  .buttonLogin {
     display: none;
   }
 
