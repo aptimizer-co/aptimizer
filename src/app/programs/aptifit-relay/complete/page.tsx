@@ -136,8 +136,8 @@ function CompletePageContent() {
       <h1 className={styles.title}>신청 접수가 완료되었습니다.</h1>
 
       <p className={styles.description}>
-        해당 담당자가 영업일 2일 이내로 연락드릴 예정입니다. 신청 내역은
-        등록하신 이메일에서 확인하실 수 있습니다.
+        해당 담당자가 영업일 2일 이내로 연락드릴 예정입니다. <br />
+        (신청 내역은 등록하신 이메일에서 확인하실 수 있습니다.)
       </p>
 
       <div className={styles.contactInfo}>

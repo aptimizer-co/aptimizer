@@ -71,3 +71,31 @@
 .confirmButton:hover {
   background-color: #444;
 }
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .contactItem {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 18px;
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+}
