@@ -17,24 +17,39 @@ export const ApplyForm = () => {
     isSubmitting,
   } = useApplyForm();
 
+  const handleError = (error: string) => {
+    alert(error);
+    setIsLoading(false);
+  };
+
   const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // 이미 제출 중이면 중복 제출 방지
+    if (isSubmitting || isLoading) {
+      return;
+    }
+
+    setIsLoading(true);
+
     try {
-      setIsLoading(true);
       const result = await handleSubmit(e);
 
-      if (result.error) {
-        alert(result.error);
+      if (!result.success) {
+        handleError(result.error || "알 수 없는 오류가 발생했습니다.");
         return;
       }
 
-      if (result.success && result.apply_id) {
+      if (result.apply_id) {
         router.push(
           `/programs/aptifit-relay/complete?apply_id=${result.apply_id}`
         );
       }
     } catch (error) {
       console.error("폼 제출 중 오류:", error);
-      alert("예기치 못한 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+      handleError(
+        "예기치 못한 오류가 발생했습니다. 잠시 후 다시 시도해주세요."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -214,7 +229,7 @@ export const ApplyForm = () => {
             className={styles.submitButton}
             disabled={isLoading || isSubmitting}
           >
-            {isLoading || isSubmitting ? "신청 접수 중" : "신청하기"}
+            {isLoading ? "신청 접수 중..." : "신청하기"}
           </button>
         </footer>
       </form>
