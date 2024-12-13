@@ -197,6 +197,7 @@ export const ApplyForm = () => {
             onChange={handleInputChange}
             placeholder="희망일시를 선택해주세요."
             className={styles.inputField}
+            max="2030-01-01"
           />
         </div>
         <div className={styles.inputSection}>
