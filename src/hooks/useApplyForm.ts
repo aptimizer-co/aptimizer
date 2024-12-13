@@ -16,7 +16,7 @@ export const useApplyForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
-  const DEBOUNCE_DELAY = 3000; // 3초
+  const DEBOUNCE_DELAY = 3000;
 
   // 이메일 형식 검증 함수
   const isValidEmail = (email: string): boolean => {
@@ -44,58 +44,23 @@ export const useApplyForm = () => {
 
       // 디바운스 체크
       const now = Date.now();
-      if (isSubmitting || now - lastSubmitTime < DEBOUNCE_DELAY) {
+      if (now - lastSubmitTime < DEBOUNCE_DELAY) {
         return {
           success: false,
-          error: "잠시 후에 다시 시도해주세요.",
+          error: "요청이 너무 많습니다. 잠시 후에 다시 시도해주세요.",
         };
       }
 
       setIsSubmitting(true);
       setLastSubmitTime(now);
 
-      const requiredFields: (keyof ApplyFormData)[] = [
-        "organization",
-        "manager",
-        "phone",
-        "email",
-        "targetGroup",
-        "participantCount",
-        "preferredDate",
-        "location",
-      ];
-
-      const emptyFields = requiredFields.filter((field) => {
-        if (field === "targetGroup") {
-          return formData[field].length === 0;
-        }
-        return !formData[field];
-      });
-
-      let errorMessage = "";
-
-      if (emptyFields.length > 0) {
-        errorMessage += "필수 항목을 모두 입력해주세요.\n";
-      }
-
-      if (!isValidEmail(formData.email)) {
-        errorMessage += "올바른 이메일 형식이 아닙니다.\n";
-      }
-
-      if (!isValidPhone(formData.phone)) {
-        errorMessage += "전화번호는 최소 7자리 이상이어야 합니다.\n";
-      }
-
-      if (!isValidDate(formData.preferredDate)) {
-        errorMessage += "선택한 날짜와 시간은 현재 시점 이후여야 합니다.\n";
-      }
-
-      if (errorMessage) {
-        alert(errorMessage.trim());
-        return { success: false, error: errorMessage.trim() };
-      }
-
       try {
+        // 유효성 검사
+        const validationError = validateForm(formData);
+        if (validationError) {
+          return { success: false, error: validationError };
+        }
+
         const submissionData = {
           ...formData,
           participantCount: parseInt(formData.participantCount) || 0,
@@ -119,22 +84,10 @@ export const useApplyForm = () => {
           throw new Error(data.message || "신청 처리 중 오류가 발생했습니다.");
         }
 
-        // 폼 초기화
-        setFormData({
-          organization: "",
-          manager: "",
-          phone: "",
-          email: "",
-          targetGroup: [],
-          participantCount: "",
-          preferredDate: "",
-          location: "",
-          message: "",
-        });
-
+        // 성공 시 폼 초기화
+        resetForm();
         return { success: true, apply_id: data.apply_id };
       } catch (error) {
-        console.error("Error submitting form:", error);
         return {
           success: false,
           error:
@@ -146,8 +99,59 @@ export const useApplyForm = () => {
         setIsSubmitting(false);
       }
     },
-    [isSubmitting, lastSubmitTime, formData]
+    [formData, lastSubmitTime]
   );
+
+  // 폼 유효성 검사 함수
+  const validateForm = (data: ApplyFormData): string | null => {
+    const requiredFields: (keyof ApplyFormData)[] = [
+      "organization",
+      "manager",
+      "phone",
+      "email",
+      "targetGroup",
+      "participantCount",
+      "preferredDate",
+      "location",
+    ];
+
+    if (
+      requiredFields.some((field) =>
+        field === "targetGroup" ? data[field].length === 0 : !data[field]
+      )
+    ) {
+      return "필수 항목을 모두 입력해주세요.";
+    }
+
+    if (!isValidEmail(data.email)) {
+      return "올바른 이메일 형식이 아닙니다.";
+    }
+
+    if (!isValidPhone(data.phone)) {
+      return "전화번호는 최소 7자리 이상이어야 합니다.";
+    }
+
+    if (!isValidDate(data.preferredDate)) {
+      return "선택한 날짜는 현재 시점 이후여야 합니다.";
+    }
+
+    return null;
+  };
+
+  // 폼 초기화 함수
+  const resetForm = () => {
+    setFormData({
+      organization: "",
+      manager: "",
+      phone: "",
+      email: "",
+      targetGroup: [],
+      participantCount: "",
+      preferredDate: "",
+      location: "",
+      message: "",
+    });
+  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
