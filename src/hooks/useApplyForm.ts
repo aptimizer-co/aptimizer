@@ -36,6 +36,41 @@ export const useApplyForm = () => {
     return selectedDate >= now;
   };
 
+  const validateForm = useCallback((data: ApplyFormData): string | null => {
+    const requiredFields: (keyof ApplyFormData)[] = [
+      "organization",
+      "manager",
+      "phone",
+      "email",
+      "targetGroup",
+      "participantCount",
+      "preferredDate",
+      "location",
+    ];
+
+    if (
+      requiredFields.some((field) =>
+        field === "targetGroup" ? data[field].length === 0 : !data[field]
+      )
+    ) {
+      return "필수 항목을 모두 입력해주세요.";
+    }
+
+    if (!isValidEmail(data.email)) {
+      return "올바른 이메일 형식이 아닙니다.";
+    }
+
+    if (!isValidPhone(data.phone)) {
+      return "전화번호는 최소 7자리 이상이어야 합니다.";
+    }
+
+    if (!isValidDate(data.preferredDate)) {
+      return "선택한 날짜는 현재 시점 이후여야 합니다.";
+    }
+
+    return null;
+  }, []);
+
   const handleSubmit = useCallback(
     async (
       e: React.FormEvent
@@ -99,44 +134,8 @@ export const useApplyForm = () => {
         setIsSubmitting(false);
       }
     },
-    [formData, lastSubmitTime]
+    [formData, lastSubmitTime, validateForm]
   );
-
-  // 폼 유효성 검사 함수
-  const validateForm = (data: ApplyFormData): string | null => {
-    const requiredFields: (keyof ApplyFormData)[] = [
-      "organization",
-      "manager",
-      "phone",
-      "email",
-      "targetGroup",
-      "participantCount",
-      "preferredDate",
-      "location",
-    ];
-
-    if (
-      requiredFields.some((field) =>
-        field === "targetGroup" ? data[field].length === 0 : !data[field]
-      )
-    ) {
-      return "필수 항목을 모두 입력해주세요.";
-    }
-
-    if (!isValidEmail(data.email)) {
-      return "올바른 이메일 형식이 아닙니다.";
-    }
-
-    if (!isValidPhone(data.phone)) {
-      return "전화번호는 최소 7자리 이상이어야 합니다.";
-    }
-
-    if (!isValidDate(data.preferredDate)) {
-      return "선택한 날짜는 현재 시점 이후여야 합니다.";
-    }
-
-    return null;
-  };
 
   // 폼 초기화 함수
   const resetForm = () => {
