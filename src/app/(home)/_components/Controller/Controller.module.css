@@ -55,7 +55,7 @@
   visibility: visible;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .icon {
     width: 16px;
     height: 16px;

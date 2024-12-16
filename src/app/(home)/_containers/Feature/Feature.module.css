@@ -33,7 +33,7 @@
   margin-bottom: var(--spacing-16);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .Feature {
     display: flex;
     flex-direction: column;

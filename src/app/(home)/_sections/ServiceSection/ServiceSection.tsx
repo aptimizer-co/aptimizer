@@ -17,15 +17,6 @@ const ServiceSection = ({ type }) => {
           <ServiceButton
             href="https://www.aptifit.co.kr/"
             label="TRY NOW"
-            title="앱티핏 2025 수능 특별판"
-          >
-            <p className={s.serviceButtonText}>
-              대학 진학을 앞둔 고3 및 수능응시생
-            </p>
-          </ServiceButton>
-          <ServiceButton
-            href="https://www.aptifit.co.kr/"
-            label="TRY NOW"
             title="앱티핏 대학생·성인용 "
           >
             <p className={s.serviceButtonText}>
@@ -33,14 +24,15 @@ const ServiceSection = ({ type }) => {
               대학생
             </p>
           </ServiceButton>
+          <ServiceButton
+            href="https://www.aptifit.co.kr/"
+            label="TRY NOW"
+            title="앱티핏 고등학생용"
+          >
+            <p className={s.serviceButtonText}>대학 진학을 앞둔 고등학생</p>
+          </ServiceButton>
         </div>
         <div className={s.serviceButtonContainer}>
-          <ServiceButton
-            isComingSoon
-            comingSoonDate="2025년 1월"
-            label="1월 출시예정"
-            title="앱티핏 고등학생용"
-          ></ServiceButton>
           <ServiceButton
             isComingSoon
             comingSoonDate="2025년 1월"

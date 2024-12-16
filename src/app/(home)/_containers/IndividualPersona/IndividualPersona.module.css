@@ -41,7 +41,7 @@
   margin-bottom: var(--spacing-64);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .subtitle {
     font-size: 16px;
     line-height: 150%;
