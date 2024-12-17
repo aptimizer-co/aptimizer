@@ -17,7 +17,7 @@ export const newsData = [
 
 `,
     date: "2024.12.12",
-    link: "/news/press",
+    link: "https://news.unn.net/news/articleView.html?idxno=572531",
   },
   {
     id: 2,
