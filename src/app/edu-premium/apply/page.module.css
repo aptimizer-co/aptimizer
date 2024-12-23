@@ -1,0 +1,154 @@
+.formContainer {
+  margin: 0 18px;
+}
+
+.form {
+  border-top: 2px solid #222;
+}
+
+.inputSection {
+  padding: 23px 0;
+
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(228, 228, 231);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  display: block;
+  font-weight: var(--font-700);
+  line-height: 1.5;
+  font-size: 20px;
+  padding: 11px 16px;
+  height: 100%;
+  min-width: 342px;
+}
+
+.inputField {
+  width: 100%;
+  max-width: 800px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: var(--font-500);
+  line-height: 1.5;
+  border: 1px solid rgb(228, 228, 231);
+  border-radius: 8px;
+  margin-left: 20px;
+  resize: none;
+}
+
+.selectBox {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkboxContainer {
+  width: 100%;
+  max-width: 800px;
+  margin-left: 20px;
+}
+
+.infoText {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.infoText::before {
+  content: "- ";
+  margin-right: 4px;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.checkboxWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  display: block;
+  padding: 14px 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid rgb(228, 228, 231);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+.checkbox:checked + .checkboxLabel {
+  background-color: rgb(242, 242, 242);
+  border-color: #222;
+  font-weight: var(--font-700);
+}
+
+.checkbox:hover + .checkboxLabel {
+  border-color: #222;
+}
+
+.atSymbol {
+  color: #d7260d;
+  margin-right: 10px;
+}
+
+.requiredText {
+  color: #d7260d;
+  font-size: 14px;
+  font-weight: var(--font-500);
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.required {
+  color: #d7260d;
+  margin-left: 4px;
+}
+.inputField:focus {
+  border-color: #222;
+  transition: border-color 0.4s ease;
+}
+
+.footer {
+  margin-top: var(--spacing-48);
+  padding-top: var(--spacing-48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-80);
+}
+
+.submitButton {
+  font-size: 16px;
+  background-color: #222;
+  border-radius: 9999px;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-weight: var(--font-600);
+  color: var(--white);
+}
+
+.submitButton:hover {
+  background-color: #444;
+}
