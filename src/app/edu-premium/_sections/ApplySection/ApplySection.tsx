@@ -1,19 +1,16 @@
 "use client";
 
 import s from "./ApplySection.module.css";
+import Link from "next/link";
 
 const ApplySection = () => {
-  const handleClick = () => {
-    alert("지금은 신청 기간이 아닙니다!");
-  };
-
   return (
     <section className={s.ApplySection}>
       <p className={s.title}>에듀 프리미엄 지금 바로 신청하기</p>
       <div className={s.buttonContainer}>
-        <button className={s.button} onClick={handleClick}>
+        <Link href="/edu-premium/apply" className={s.button}>
           신청하기
-        </button>
+        </Link>
       </div>
     </section>
   );
