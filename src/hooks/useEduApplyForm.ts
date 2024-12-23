@@ -98,8 +98,6 @@ export const useEduApplyForm = () => {
         };
       }
 
-      console.log("=== 교육 신청 시작 ===");
-      console.log("로딩 상태:", true);
       setIsSubmitting(true);
       setLastSubmitTime(now);
 
@@ -107,20 +105,26 @@ export const useEduApplyForm = () => {
         // 유효성 검사
         const validationError = validateForm(formData);
         if (validationError) {
-          console.log("유효성 검사 실패:", validationError);
           return { success: false, error: validationError };
         }
 
-        // API 요청 부분 주석 처리
-        /*
+        // 전화번호에서 하이픈 제거
+        const submissionData = {
+          ...formData,
+          studentPhone: formData.studentPhone.replace(/-/g, ""),
+          guardianPhone: formData.guardianPhone.replace(/-/g, ""),
+          contractorPhone: formData.contractorPhone.replace(/-/g, ""),
+        };
+
+        // 실제 API 호출
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/edu-apply`,
+          `${process.env.NEXT_PUBLIC_API_URL}/apply_edu_premium`,
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify(submissionData),
           }
         );
 
@@ -129,27 +133,10 @@ export const useEduApplyForm = () => {
         if (!response.ok) {
           throw new Error(data.message || "신청 처리 중 오류가 발생했습니다.");
         }
-        */
 
-        // 실제 API 호출을 시뮬레이션하기 위한 딜레이
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-
-        console.log("=== 교육 신청 폼 데이터 ===");
-        console.log("전송될 데이터:", formData);
-        console.log(
-          "백엔드 엔드포인트:",
-          `${process.env.NEXT_PUBLIC_API_URL}/edu-apply`
-        );
-        console.log("요청 메소드: POST");
-        console.log("요청 헤더:", {
-          "Content-Type": "application/json",
-        });
-
-        // 임시로 성공 응답 반환
-        const tempApplyId = "temp-" + Date.now();
-        console.log("신청 성공! 신청 ID:", tempApplyId);
-
-        return { success: true, apply_id: tempApplyId };
+        // 성공 시 폼 초기화
+        resetForm();
+        return { success: true, apply_id: data.apply_id };
       } catch (error) {
         const errorMessage =
           error instanceof Error
@@ -162,7 +149,6 @@ export const useEduApplyForm = () => {
           error: errorMessage,
         };
       } finally {
-        console.log("로딩 상태:", false);
         setIsSubmitting(false);
       }
     },

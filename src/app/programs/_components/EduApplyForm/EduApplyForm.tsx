@@ -41,9 +41,7 @@ export const EduApplyForm = () => {
       }
 
       if (result.apply_id) {
-        router.push(
-          `/programs/aptifit-relay/complete?apply_id=${result.apply_id}`
-        );
+        router.push(`/edu-premium/complete?apply_id=${result.apply_id}`);
       }
     } catch (error) {
       console.error("폼 제출 중 오류:", error);
