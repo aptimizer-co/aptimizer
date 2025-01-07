@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: "앱티마이저",
     template: "%s | 앱티마이저",
   },
-  description: "꿈을 이루는 걸 도와주는 기업",
+  description: "AI기반 적성 진단 및 맞춤형 교육 서비스 기업",
   keywords: ["앱티마이저", "앱티핏", "적성", "학과", "대학", "AI", "진단"],
   authors: [{ name: "앱티마이저" }],
   icons: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "앱티마이저",
     title: "앱티마이저 - AI 솔루션 전문기업",
-    description: "꿈을 이루는 걸 도와주는 기업",
+    description: "AI기반 적성 진단 및 맞춤형 교육 서비스 기업",
     url: "https://www.aptimizer.co.kr",
     locale: "ko_KR",
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "앱티마이저 - AI 솔루션 전문기업",
-    description: "꿈을 이루는 걸 도와주는 기업",
+    description: "AI기반 적성 진단 및 맞춤형 교육 서비스 기업",
     images: ["/png/aptifit-kakao.png"],
   },
   alternates: {
