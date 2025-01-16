@@ -25,6 +25,10 @@ export const EduApplyForm = () => {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // 임시로 신청을 막고 알림 표시
+    alert("에듀 프리미엄 신청 가능한 기간이 아닙니다.");
+    return;
+
     // 이미 제출 중이면 중복 제출 방지
     if (isSubmitting || isLoading) {
       return;
