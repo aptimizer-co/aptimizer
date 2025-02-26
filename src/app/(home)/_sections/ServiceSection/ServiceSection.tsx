@@ -10,41 +10,24 @@ const ServiceSection = ({ type }) => {
       <Container>
         <SectionTitle>SERVICES</SectionTitle>
         <SectionSubtitle>앱티마이저가 제공해주는 서비스</SectionSubtitle>
-        <p className={s.title}>
-          앱티마이저가 제공하는 서비스를 지금 바로 만나보세요!
-        </p>
+        <p className={s.title}>앱티마이저가 제공하는 서비스를 지금 바로 만나보세요!</p>
         <div className={s.serviceButtonContainer}>
-          <ServiceButton
-            href="https://www.aptifit.co.kr/"
-            label="TRY NOW"
-            title="앱티핏 대학생·성인용 "
-          >
+          <ServiceButton href="https://www.aptifit.co.kr/" label="TRY NOW" title="앱티핏 대학생·성인용 ">
             <p className={s.serviceButtonText}>
-              전공선택을 앞두거나, 전과, 복수전공, <br /> 부전공을 고민하는
-              대학생
+              전공선택을 앞두거나, 전과, 복수전공, <br /> 부전공을 고민하는 대학생
             </p>
           </ServiceButton>
-          <ServiceButton
-            href="https://www.aptifit.co.kr/"
-            label="TRY NOW"
-            title="앱티핏 고등학생용"
-          >
+          <ServiceButton href="https://www.aptifit.co.kr/" label="TRY NOW" title="앱티핏 고등학생용">
             <p className={s.serviceButtonText}>대학 진학을 앞둔 고등학생</p>
           </ServiceButton>
         </div>
         <div className={s.serviceButtonContainer}>
-          <ServiceButton
-            isComingSoon
-            comingSoonDate="2025년 1월"
-            label="1월 출시예정"
-            title="앱티핏 중학생용"
-          ></ServiceButton>
-          <ServiceButton
-            isComingSoon
-            comingSoonDate="2025년 3월"
-            label="3월 출시예정"
-            title="앱티핏 초등학생용"
-          ></ServiceButton>
+          <ServiceButton href="https://www.aptifit.co.kr/" label="TRY NOW" title="앱티핏 중학생용">
+            <p className={s.serviceButtonText}>고등학교 진학을 앞둔 중학생</p>
+          </ServiceButton>
+          <ServiceButton href="https://www.aptifit.co.kr/" label="TRY NOW" title="앱티핏 초등학생용">
+            <p className={s.serviceButtonText}>중학교 진학을 앞둔 초등학생</p>
+          </ServiceButton>
         </div>
         {/* <HomeCardAnimation /> */}
         {/* 
