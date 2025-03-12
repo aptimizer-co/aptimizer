@@ -8,15 +8,15 @@ const TopBanner = () => {
       <Link href="https://www.aptifit.co.kr/" className={s.link}>
         <Image
           className={`${s.bannerImage} ${s.desktopBanner}`}
-          src="/png/topbanner.png"
+          src="/jpg/250312_kt_banner_1286x160.jpg"
           alt="앱티핏 바로가기 배너 이미지"
           width={1286}
-          height={120}
+          height={160}
           priority
         />
         <Image
           className={`${s.bannerImage} ${s.mobileBanner}`}
-          src="/png/mobile_top_banner_200.png"
+          src="/jpg/250312_kt_banner_640x200.jpg"
           alt="앱티핏 바로가기 배너 이미지"
           width={640}
           height={200}
