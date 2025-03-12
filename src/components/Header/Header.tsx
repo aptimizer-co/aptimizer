@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import LinkIcon from "@/public/svg/link.svg";
 import Image from "next/image";
 import s from "./Header.module.css";
-import Logo from "@/public/svg/logo.svg";
+import Logo from "@/public/company/aptimizer_web_logo.svg";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
