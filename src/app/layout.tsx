@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: ["앱티마이저", "앱티핏", "적성", "학과", "대학", "AI", "진단"],
   authors: [{ name: "앱티마이저" }],
   icons: {
-    icon: "/favicon.svg",
+    icon: "/aptimizer_favicon_32x32_bg.ico",
   },
   verification: {
     google: "구글 서치 콘솔 인증 코드",
