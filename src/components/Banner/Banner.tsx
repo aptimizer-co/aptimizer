@@ -102,7 +102,7 @@ const Banner = () => {
       <Link href="https://www.aptifit.co.kr/">
         <div className={`${s.sideMobileBanner} ${s.show}`}>
           <Image
-            src="/png/sidemobilebanner.png"
+            src="/png/240314_kt_banner_200x200.png"
             alt="모바일 사이드 배너"
             fill
             style={{ objectFit: "cover" }}

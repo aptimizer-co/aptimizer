@@ -137,6 +137,14 @@
     display: none;
   }
 
+  .aptifitBannerContainer {
+    display: none;
+  }
+
+  .aptifitBannerButton {
+    display: none;
+  }
+
   .sideBanner {
     display: none;
   }
