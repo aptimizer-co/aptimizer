@@ -5,7 +5,9 @@ import Link from "next/link";
 import Close from "@/public/svg/banner_close.svg";
 import CloseBlack from "@/public/svg/banner_close_black.svg";
 import Logo from "@/public/png/edu-premium-logo.png";
-import aptifitBanner from "@/public/png/sidebanner.png";
+import aptifitBanner from "@/public/png/250314_aptimizer_side_834x1876_bg.png";
+import aptifitBannerButton from "@/public/png/250314_banner_button.png";
+import aptifitBannerDetail from "@/public/png/250314_banner_button_2.png";
 import s from "./Banner.module.css";
 import { useRemoveBanner, useScrollInView } from "./hooks";
 
@@ -22,9 +24,13 @@ const Banner = () => {
     <>
       {/* 앱티핏 PC 배너 */}
       {!isAptifitBannerRemoved && (
-        <div>
-          <Link href="https://www.aptifit.co.kr/">
-            <div className={`${s.sideBanner} ${isVisible ? s.show : s.hide}`}>
+        <div className={s.aptifitBannerContainer}>
+          <Link href="https://aptifit.co.kr">
+            <div
+              className={`${s.sideBanner} ${s.aptifitBanner} ${
+                isVisible ? s.show : s.hide
+              }`}
+            >
               <Image
                 src={aptifitBanner}
                 alt="앱티핏 바로가기 오른쪽 배너"
@@ -33,6 +39,48 @@ const Banner = () => {
               />
             </div>
           </Link>
+          <button
+            className={`${s.aptifitBannerButton} ${
+              isVisible ? s.show : s.hide
+            }`}
+            onClick={() => window.open("https://aptifit.co.kr", "_blank")}
+          >
+            <Image
+              src={aptifitBannerButton}
+              alt="앱티핏 바로가기 오른쪽 배너"
+              width={375}
+              height={98}
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </button>
+          <button
+            className={`${s.aptifitBannerDetailButton} ${
+              isVisible ? s.show : s.hide
+            }`}
+            onClick={() =>
+              window.open(
+                "https://blog.naver.com/aptimizer/223795632863",
+                "_blank"
+              )
+            }
+          >
+            <Image
+              src={aptifitBannerDetail}
+              alt="블로그 가기 오른쪽 배너"
+              width={842}
+              height={186}
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </button>
+
           <button
             className={`${s.sideBannerCancelButton} ${
               isVisible ? s.show : s.hide

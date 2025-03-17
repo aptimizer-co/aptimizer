@@ -28,6 +28,42 @@
   z-index: 100;
 }
 
+.aptifitBannerContainer {
+  width: 200px;
+  height: 450px;
+  position: relative;
+}
+
+.aptifitBannerButton {
+  position: fixed;
+  top: 300px;
+  right: 90px;
+  width: 96px;
+  height: 25px;
+  z-index: 9999;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+}
+
+.aptifitBannerDetailButton {
+  position: fixed;
+  top: 510px;
+  right: 40px;
+  width: 200px;
+  height: 44px;
+  z-index: 9999;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
 .sideBannerCancelButton {
   position: fixed; /* absolute에서 fixed로 변경 */
   top: 116px; /* sideBanner의 top(100px) + 16px */
