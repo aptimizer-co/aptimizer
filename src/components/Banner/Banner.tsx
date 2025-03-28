@@ -89,7 +89,11 @@ const Banner = () => {
         <div className={`${s.Banner} ${s.show}`}>
           <Image className={s.img} src={Logo} alt="" width={100} height={100} />
           <p className={s.title}>에듀 프리미엄</p>
-          <Link className={s.link} href="/edu-premium">
+          <Link
+            className={s.link}
+            href="https://edu-premium.aptimizer.co.kr/"
+            target="_blank"
+          >
             지금 신청하기
           </Link>
           <button className={s.cancelButton} onClick={removeEduBanner}>
